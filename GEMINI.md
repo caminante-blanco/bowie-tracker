@@ -1,0 +1,21 @@
+# Bowie Tracker Project Memories
+
+- **Core Tech:** Rust/WASM web application using the **Leptos** framework.
+- **Data Source:** Syncs listening data from **ListenBrainz**.
+- **Storage:** Uses a local **IndexedDB** (via the `rexie` crate) as the source of truth for statistics and mappings.
+- **Focus:** Specifically filters for and tracks metrics related to the artist **'David Bowie'**.
+- **Data Normalization:**
+    - **Concept:** Ported from the `interzic` crate (Alistral project).
+    - **Mechanism:** Uses a local `mappings` object store in IndexedDB to link Messy IDs (MSIDs) to Canonical Metadata (MBIDs).
+    - **Training:** The DB is "trained" (updated) with mapping data provided by the ListenBrainz API during every sync.
+    - **Fallback:** A heuristic regex normalizer (`src/normalization.rs`) handles tracks without database mappings.
+- **Dependencies:** 
+    - `interzic` dependency was **removed** due to build failures on Windows/WASM (requires native SQLite/tuillez).
+    - Logic was ported to `src/db.rs` and `src/normalization.rs`.
+- **Current Status:** 
+    - Application compiles successfully (`cargo check` passed).
+    - `wasm-bindgen-futures` added to dependencies.
+    - Build target `wasm32-unknown-unknown` required for final artifact.
+- **UI/UX Design:** 
+    - Theme: **Gruvbox Medium Dark**.
+    - Design System: **Material Lite**.

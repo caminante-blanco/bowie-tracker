@@ -1,1 +1,14 @@
 /target
+/dist
+/venv
+*.log
+*.tmp
+.processed_releases.json
+release_groups.json
+listens_sample.json
+recent_listens.json
+actual_headers.txt
+actual_verbose.txt
+headers_listens.txt
+wget_log.txt
+build_log*.txt
