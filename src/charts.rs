@@ -23,7 +23,7 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
             <section class="card">
                 <h3 class="stat-label">"Album Completion (Unique Tracks)"</h3>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
-                    {m.album_completion.iter().map(|(title, pct, art)| {
+                    {m.album_completion.iter().map(|(title, pct, _art)| {
                         view! {
                             <div style="display: flex; flex-direction: column; gap: 4px;">
                                 <div style="display: flex; justify-content: space-between; font-size: 0.7rem;">
@@ -70,10 +70,11 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
                 <h3 class="stat-label">"Top Tracks by Total Time"</h3>
                 <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
                     {m.track_time_leaderboard.iter().map(|(name, mins)| {
+                        let mins_str = format!("{}m", mins);
                         view! {
                             <div style="display: flex; justify-content: space-between; font-size: 0.8rem; border-bottom: 1px solid var(--surface); padding-bottom: 4px;">
                                 <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1;">{name}</span>
-                                <span style="font-weight: 900; color: var(--accent);">{mins}"m"</span>
+                                <span style="font-weight: 900; color: var(--accent);">{mins_str}</span>
                             </div>
                         }
                     }).collect_view()}
@@ -87,7 +88,7 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
                     {let total: usize = m.type_distribution.iter().map(|x| x.1).sum();
                      let colors = ["var(--primary)", "var(--secondary)", "var(--accent)", "#98971a", "#8ec07c"];
                      m.type_distribution.iter().enumerate().map(|(i, (t, count))| {
-                        let w = (*count as f64 / total as f64) * 100.0;
+                        let w = (*count as f64 / total.max(1) as f64) * 100.0;
                         view! { <div style=format!("width: {}%; background: {}; height: 100%;", w, colors[i % colors.len()]) title=format!("{}: {}%", t, w as i32)></div> }
                     }).collect_view()}
                 </div>
@@ -100,9 +101,9 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
             <section class="card">
                 <h3 class="stat-label">"New Song Discovery Timeline"</h3>
                 <div style="display: flex; align-items: flex-end; gap: 5px; height: 80px; margin-top: 15px;">
-                    {let max = m.discovery_timeline.iter().map(|x| x.1).max().unwrap_or(1).max(1);
+                    {let max_d = m.discovery_timeline.iter().map(|x| x.1).max().unwrap_or(1).max(1);
                      m.discovery_timeline.iter().map(|(_, count)| {
-                        let h = (*count as f64 / max as f64) * 100.0;
+                        let h = (*count as f64 / max_d as f64) * 100.0;
                         view! { <div style=format!("flex: 1; height: {}%; background: #ebdbb2; border-radius: 2px;", h)></div> }
                     }).collect_view()}
                 </div>
@@ -112,16 +113,20 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
             <section class="card">
                 <h3 class="stat-label">"Most Played Albums"</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px; justify-content: center; align-items: center;">
-                    {let max = m.album_weight.iter().map(|x| x.1).max().unwrap_or(1).max(1);
+                    {let max_w = m.album_weight.iter().map(|x| x.1).max().unwrap_or(1).max(1);
                      m.album_weight.iter().map(|(title, count, art)| {
-                        let size = 40.0 + (*count as f64 / max as f64) * 60.0;
+                        let size = 40.0 + (*count as f64 / max_w as f64) * 60.0;
+                        let title_attr = format!("{}: {} plays", title, count);
                         view! {
-                            <div style="position: relative;" title=format!("{}: {} plays", title, count)>
-                                {art.as_ref().map(|url| view! {
-                                    <img src=url style=format!("width: {}px; height: {}px; border-radius: 4px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.3);", size, size) alt=title.clone()/>
-                                }).or_else(|| Some(view! {
-                                    <div style=format!("width: {}px; height: {}px; background: var(--surface); border-radius: 4px;", size, size)></div>
-                                }.into_view()))}
+                            <div style="position: relative;" title=title_attr>
+                                {match art {
+                                    Some(url) => view! {
+                                        <img src=url style=format!("width: {}px; height: {}px; border-radius: 4px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.3);", size, size) alt=title.clone()/>
+                                    }.into_view(),
+                                    None => view! {
+                                        <div style=format!("width: {}px; height: {}px; background: var(--surface); border-radius: 4px;", size, size)></div>
+                                    }.into_view(),
+                                }}
                             </div>
                         }
                     }).collect_view()}
@@ -132,13 +137,13 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
             <section class="card">
                 <h3 class="stat-label">"Monthly Scrobbles (Last 12)"</h3>
                 <div style="display: flex; align-items: flex-end; gap: 10px; height: 120px; margin-top: 15px; padding: 0 10px;">
-                    {let max = m.monthly_volume.iter().map(|x| x.1).max().unwrap_or(1).max(1);
+                    {let max_mv = m.monthly_volume.iter().map(|x| x.1).max().unwrap_or(1).max(1);
                      m.monthly_volume.iter().map(|(label, count)| {
-                        let h = (*count as f64 / max as f64) * 100.0;
+                        let h = (*count as f64 / max_mv as f64) * 100.0;
                         view! {
                             <div style="flex: 1; display: flex; flex-direction: column; height: 100%; justify-content: flex-end; align-items: center; gap: 5px;">
                                 <div style=format!("width: 100%; height: {}%; background: var(--primary); border-radius: 4px 4px 0 0;", h)></div>
-                                <span style="font-size: 0.5rem; font-weight: bold; color: #a89984;">{label}</span>
+                                <span style="font-size: 0.5rem; font-weight: bold; color: #a89984;">{label.clone()}</span>
                             </div>
                         }
                     }).collect_view()}
@@ -150,14 +155,16 @@ pub fn ListeningHistoryChart(metrics: Memo<DashboardMetrics>) -> impl IntoView {
                 <h3 class="stat-label">"Classics Gathering Dust (>30 days idle)"</h3>
                 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
                     {m.forgotten_classics.iter().map(|(name, idle, total)| {
+                        let total_str = total.to_string();
+                        let idle_str = idle.to_string();
                         view! {
                             <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.1); padding: 8px; border-radius: 4px;">
                                 <div style="flex: 1;">
                                     <div style="font-size: 0.8rem; font-weight: bold;">{name}</div>
-                                    <div style="font-size: 0.6rem; color: var(--accent);">"Total plays: "{total}</div>
+                                    <div style="font-size: 0.6rem; color: var(--accent);">"Total plays: "{total_str}</div>
                                 </div>
                                 <div style="text-align: right;">
-                                    <div style="font-size: 0.7rem; font-weight: 900; color: #a89984;">{idle}" DAYS IDLE"</div>
+                                    <div style="font-size: 0.7rem; font-weight: 900; color: #a89984;">{idle_str}" DAYS IDLE"</div>
                                 </div>
                             </div>
                         }

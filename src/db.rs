@@ -24,7 +24,7 @@
 
 use rexie::{Rexie, TransactionMode, ObjectStore, Index, Direction};
 use std::collections::HashMap;
-use crate::models::{Listen, MbidMapping};
+use crate::models::Listen;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Serialize)]

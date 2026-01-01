@@ -4,9 +4,16 @@ use std::collections::{HashMap, HashSet};
 
 use bowie_tracker::models::{Listen, ListenBrainzResponse, PlayingNowResponse, MBReleaseGroupResponse, BowieDatabase, PlayingNowListen};
 use bowie_tracker::analytics::{calculate_metrics, is_bowie, is_bowie_meta, format_relative_time, MonthlyWrapped, DayStats};
+use bowie_tracker::db::{init_db, add_listens, get_all_listens, get_max_timestamp, get_all_album_metadata, save_album_metadata, AlbumMetadata};
+use bowie_tracker::charts::ListeningHistoryChart;
 
 #[derive(Clone, Copy, PartialEq)]
 enum Page { Dashboard, Rewards, Charts, Settings, DayDetail }
+
+fn main() {
+    console_error_panic_hook::set_once();
+    mount_to_body(|| view! { <App/> })
+}
 
 #[component]
 fn App() -> impl IntoView {

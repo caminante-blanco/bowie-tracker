@@ -1,27 +1,4 @@
 //! Analytics and Bowie-specific filtering logic for Ziggy.
-//! 
-//! MIT License
-//! 
-//! Copyright (c) 2024 RustyNova (Alistral Philosophy)
-//! 
-//! Permission is hereby granted, free of charge, to any person obtaining a copy
-//! of this software and associated documentation files (the "Software"), to deal
-//! in the Software without restriction, including without limitation the rights
-//! to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//! copies of the Software, and to permit persons to whom the Software is
-//! furnished to do so, subject to the following conditions:
-//! 
-//! The above copyright notice and this permission notice shall be included in all
-//! copies or substantial portions of the Software.
-//! 
-//! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//! OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//! SOFTWARE.
-
 use chrono::{DateTime, Utc, TimeZone, Datelike, Timelike, Duration};
 use std::collections::{HashMap, HashSet};
 use crate::models::{Listen, BowieDatabase};
@@ -41,16 +18,16 @@ pub struct DashboardMetrics {
     pub insights: Vec<Insight>,
     
     // Chart Data
-    pub yearly_distribution: Vec<(i32, usize)>, // Year -> Scrobble Count
-    pub album_completion: Vec<(String, f64, Option<String>)>, // Title, %, Image
-    pub monthly_volume: Vec<(String, usize)>, // Label -> Count
-    pub track_time_leaderboard: Vec<(String, i64)>, // Track -> Minutes
-    pub hourly_activity: Vec<(u32, usize)>, // Hour (0-23) -> Count
-    pub type_distribution: Vec<(String, usize)>, // Type -> Count
-    pub discovery_timeline: Vec<(i64, usize)>, // TS -> Cumulative Unique MBIDs
-    pub consistency_grid: Vec<(i64, usize)>, // Last 30 days TS -> Count
-    pub album_weight: Vec<(String, usize, Option<String>)>, // Title, Count, Image
-    pub forgotten_classics: Vec<(String, i64, usize)>, // Title, Days Idle, Total Count
+    pub yearly_distribution: Vec<(i32, usize)>,
+    pub album_completion: Vec<(String, f64, Option<String>)>,
+    pub monthly_volume: Vec<(String, usize)>,
+    pub track_time_leaderboard: Vec<(String, i64)>,
+    pub hourly_activity: Vec<(u32, usize)>,
+    pub type_distribution: Vec<(String, usize)>,
+    pub discovery_timeline: Vec<(i64, usize)>,
+    pub consistency_grid: Vec<(i64, usize)>,
+    pub album_weight: Vec<(String, usize, Option<String>)>,
+    pub forgotten_classics: Vec<(String, i64, usize)>,
 }
 
 #[derive(Clone, PartialEq, Default)]
@@ -108,8 +85,13 @@ struct DayWork {
     track_ms: HashMap<String, i64>,
 }
 
-pub fn calculate_metrics(listens: &[Listen], now: DateTime<Utc>, basis: &str, external_counts: &HashMap<String, usize>, bowie_db: Option<&BowieDatabase>) -> DashboardMetrics {
-    // Pre-calculate bowie MBID, Title, and Duration maps for fast lookup
+pub fn calculate_metrics(
+    listens: &[Listen], 
+    now: DateTime<Utc>, 
+    _basis: &str, 
+    external_counts: &HashMap<String, usize>,
+    bowie_db: Option<&BowieDatabase>
+) -> DashboardMetrics {
     let mut bowie_mbids = HashSet::new();
     let mut bowie_durations = HashMap::new();
     let mut bowie_title_durations = HashMap::new();
@@ -118,43 +100,67 @@ pub fn calculate_metrics(listens: &[Listen], now: DateTime<Utc>, basis: &str, ex
         for rg in db.release_groups.values() {
             for track in &rg.tracks {
                 bowie_mbids.insert(track.id.clone());
-                
-                // Index by MBID
                 let m_entry = bowie_durations.entry(track.id.clone()).or_insert(0);
                 if track.duration_ms > *m_entry { *m_entry = track.duration_ms; }
-                
-                // Index by Literal Title
                 let t_entry = bowie_title_durations.entry(track.title.clone()).or_insert(0);
                 if track.duration_ms > *t_entry { *t_entry = track.duration_ms; }
             }
         }
     }
 
-    // ... filtering ...
+    let bowie_listens: Vec<&Listen> = listens.iter()
+        .filter(|l| is_bowie(l, &bowie_mbids))
+        .collect();
 
-    for listen in &bowie_listens {
-        // ... aggregation ...
+    if bowie_listens.is_empty() {
+        return DashboardMetrics::default();
+    }
+
+    let now_ts = now.timestamp();
+    let (today_start_ts, _) = get_listening_day_range(now);
+    let week_start_ts = now_ts - (7 * 86400);
+    let month_start_ts = now_ts - (30 * 86400);
+    let year_start_ts = now_ts - (365 * 86400);
+
+    let mut metrics = DashboardMetrics::default();
+    let mut day_aggregates: HashMap<i64, DayWork> = HashMap::new();
+    let mut monthly_wrapped_map: HashMap<(i32, u32), DayWork> = HashMap::new();
+
+    // Chart aggregators
+    let mut year_map = HashMap::new();
+    let mut album_unique_tracks: HashMap<String, HashSet<String>> = HashMap::new();
+    let mut track_minutes: HashMap<String, i64> = HashMap::new();
+    let mut hour_map = HashMap::new();
+    let mut type_map = HashMap::new();
+    let mut unique_mbids_seen = HashSet::new();
+    let mut discovery_points = Vec::new();
+    let mut album_scrobbles = HashMap::new();
+    let mut last_seen_map: HashMap<String, i64> = HashMap::new();
+    let mut total_count_map: HashMap<String, usize> = HashMap::new();
+
+    let mut sorted_listens = bowie_listens.clone();
+    sorted_listens.sort_by_key(|l| l.listened_at);
+
+    for listen in &sorted_listens {
+        let ts = listen.listened_at;
+        let dt = Utc.timestamp_opt(ts, 0).unwrap();
+        let day_ts = get_listening_day_start(ts);
+        let d_work = day_aggregates.entry(day_ts).or_insert_with(DayWork::default);
+        let m_work = monthly_wrapped_map.entry((dt.year(), dt.month())).or_insert_with(DayWork::default);
 
         let mbid = listen.track_metadata.mbid_mapping.as_ref()
             .and_then(|m| m.recording_mbid.as_ref())
             .or_else(|| listen.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
 
-        let track_name = listen.track_metadata.mbid_mapping.as_ref()
-            .and_then(|m| m.recording_name.clone())
-            .unwrap_or_else(|| listen.track_metadata.track_name.clone());
-
-        let duration_ms = mbid.and_then(|id| bowie_durations.get(id).cloned())
-            .or_else(|| bowie_title_durations.get(&track_name).cloned())
-            .unwrap_or(0); 
-        
+        let track_name = listen.track_metadata.track_name.clone();
         let album_name = listen.track_metadata.mbid_mapping.as_ref()
             .and_then(|m| m.release_name.clone())
             .or_else(|| listen.track_metadata.release_name.clone())
-            .unwrap_or_else(|| "Unknown Album".to_string());
-        
-        let track_name = listen.track_metadata.mbid_mapping.as_ref()
-            .and_then(|m| m.recording_name.clone())
-            .unwrap_or_else(|| listen.track_metadata.track_name.clone());
+            .unwrap_or_else(|| "Unknown".to_string());
+
+        let duration_ms = mbid.and_then(|id| bowie_durations.get(id).cloned())
+            .or_else(|| bowie_title_durations.get(&track_name).cloned())
+            .unwrap_or(0);
 
         let min = duration_ms / 60000;
 
@@ -174,6 +180,33 @@ pub fn calculate_metrics(listens: &[Listen], now: DateTime<Utc>, basis: &str, ex
         if ts >= year_start_ts { metrics.counts.year += 1; metrics.minutes.year += min; }
         metrics.counts.total += 1;
         metrics.minutes.total += min;
+
+        // Discovery
+        if let Some(id) = mbid {
+            if unique_mbids_seen.insert(id.clone()) {
+                discovery_points.push((ts, unique_mbids_seen.len()));
+            }
+            album_unique_tracks.entry(album_name.clone()).or_insert_with(HashSet::new).insert(id.clone());
+        }
+
+        *track_minutes.entry(track_name.clone()).or_insert(0) += min;
+        *hour_map.entry(dt.hour()).or_insert(0) += 1;
+        *album_scrobbles.entry(album_name.clone()).or_insert(0) += 1;
+        *year_map.entry(dt.year()).or_insert(0) += 1;
+        *total_count_map.entry(track_name.clone()).or_insert(0) += 1;
+        let ls = last_seen_map.entry(track_name.clone()).or_insert(0);
+        if ts > *ls { *ls = ts; }
+
+        if let Some(db) = bowie_db {
+            for rg in db.release_groups.values() {
+                if rg.title == album_name || (mbid.is_some() && rg.tracks.iter().any(|t| Some(&t.id) == mbid)) {
+                    if let Some(t) = &rg.release_type {
+                        *type_map.entry(t.clone()).or_insert(0) += 1;
+                    }
+                    break;
+                }
+            }
+        }
     }
 
     let mut day_stats_map: HashMap<i64, DayStats> = HashMap::new();
@@ -203,7 +236,29 @@ pub fn calculate_metrics(listens: &[Listen], now: DateTime<Utc>, basis: &str, ex
     }
 
     for ((year, month), work) in &monthly_wrapped_map {
-        // ... (wrapped calc)
+        let mut wrapped = MonthlyWrapped {
+            year: *year,
+            month: *month,
+            month_name: format_month(*month).to_string(),
+            total_scrobbles: work.scrobbles,
+            total_minutes: work.ms / 60000,
+            ..Default::default()
+        };
+        wrapped.top_albums = get_top_albums(&work.album_counts, &work.album_ms, 10, external_counts, bowie_db);
+        wrapped.top_tracks = get_top_items(&work.track_counts, &work.track_ms, 10);
+        wrapped.top_album = wrapped.top_albums.first().map(|a| a.0.clone()).unwrap_or_default();
+        wrapped.top_track = wrapped.top_tracks.first().map(|a| a.0.clone()).unwrap_or_default();
+        
+        let mut month_days: Vec<_> = day_stats_map.values()
+            .filter(|d| {
+                let dt = Utc.timestamp_opt(d.timestamp, 0).unwrap();
+                dt.year() == *year && dt.month() == *month
+            })
+            .cloned()
+            .collect();
+        month_days.sort_by(|a, b| b.timestamp.cmp(&a.timestamp));
+        wrapped.days = month_days;
+        metrics.rewards.push(wrapped);
     }
     metrics.rewards.sort_by(|a, b| b.year.cmp(&a.year).then(b.month.cmp(&a.month)));
 
@@ -234,235 +289,163 @@ pub fn calculate_metrics(listens: &[Listen], now: DateTime<Utc>, basis: &str, ex
     metrics.albums.year = metrics.history.iter().filter(|d| d.timestamp >= year_start_ts).map(|d| d.albums_completed).sum();
 
     if metrics.rewards.len() > 1 {
-        let mut sorted_wrapped = metrics.rewards.clone();
-        sorted_wrapped.sort_by(|a, b| b.total_minutes.cmp(&a.total_minutes));
+        let mut s_w = metrics.rewards.clone();
+        s_w.sort_by(|a, b| b.total_minutes.cmp(&a.total_minutes));
         metrics.insights.push(Insight {
-            title: "2nd Most Active Month".to_string(),
-            value: format!("{} {}", sorted_wrapped[1].month_name, sorted_wrapped[1].year),
-            description: format!("Time: {}h", sorted_wrapped[1].total_minutes / 60),
+            title: "Top Period".to_string(),
+            value: format!("{} {}", s_w[0].month_name, s_w[0].year),
+            description: format!("Total: {}h", s_w[0].total_minutes / 60),
         });
     }
 
-    let day_elapsed = (now_ts - today_start_ts).max(1) as f64;
-    let total_day_secs = 21.0 * 3600.0;
-    let day_prog = (day_elapsed / total_day_secs).clamp(0.01, 1.0);
+    let velocity = (metrics.minutes.week as f64) / (7.0 * 86400.0);
+    metrics.projections.insert("DAY".to_string(), (velocity * 86400.0) as i64);
+    metrics.projections.insert("WEEK".to_string(), (velocity * 7.0 * 86400.0) as i64);
+    metrics.projections.insert("MONTH".to_string(), (velocity * 30.0 * 86400.0) as i64);
+    metrics.projections.insert("YEAR".to_string(), (velocity * 365.0 * 86400.0) as i64);
 
-    let velocity = match basis {
-        "DAY" => (metrics.minutes.today as f64 / day_prog) / total_day_secs,
-        "WEEK" => (metrics.minutes.week as f64) / (7.0 * 86400.0),
-        "MONTH" => (metrics.minutes.month as f64) / (30.0 * 86400.0),
-        "YEAR" => (metrics.minutes.year as f64) / (365.0 * 86400.0),
-        _ => 0.0
-    };
+    // Finalize charts
+    let mut yearly: Vec<_> = year_map.into_iter().collect();
+    yearly.sort_by_key(|x| x.0);
+    metrics.yearly_distribution = yearly;
 
-    // --- START CHART CALCULATIONS ---
-    
-    // 1. Yearly Distribution
-    let mut year_map = HashMap::new();
-    // 2. Album Completion
-    let mut album_unique_tracks: HashMap<String, HashSet<String>> = HashMap::new();
-    // 4. Track Time Leaderboard
-    let mut track_minutes: HashMap<String, i64> = HashMap::new();
-    // 5. Hourly Activity
-    let mut hour_map = HashMap::new();
-    // 6. Type Distribution
-    let mut type_map = HashMap::new();
-    // 7. Discovery Timeline
-    let mut unique_mbids_seen = HashSet::new();
-    let mut discovery_points = Vec::new();
-    // 9. Album Weight
-    let mut album_scrobbles = HashMap::new();
-    // 10. Forgotten Classics
-    let mut last_seen_map: HashMap<String, i64> = HashMap::new();
-    let mut total_count_map: HashMap<String, usize> = HashMap::new();
-
-    // Iterate oldest to newest for Discovery Timeline
-    let mut chron_listens = bowie_listens.clone();
-    chron_listens.sort_by(|a, b| a.listened_at.cmp(&b.listened_at));
-
-    for listen in &chron_listens {
-        let ts = listen.listened_at;
-        let dt = Utc.timestamp_opt(ts, 0).unwrap();
-        let track_name = listen.track_metadata.track_name.clone();
-        let album_name = listen.track_metadata.mbid_mapping.as_ref()
-            .and_then(|m| m.release_name.clone())
-            .or_else(|| listen.track_metadata.release_name.clone())
-            .unwrap_or_else(|| "Unknown".to_string());
-
-        let mbid = listen.track_metadata.mbid_mapping.as_ref()
-            .and_then(|m| m.recording_mbid.as_ref())
-            .or_else(|| listen.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
-
-        // Discovery
-        if let Some(id) = mbid {
-            if unique_mbids_seen.insert(id.clone()) {
-                discovery_points.push((ts, unique_mbids_seen.len()));
-            }
-        }
-
-        // Duration for leaderboard
-        let dur = mbid.and_then(|id| bowie_durations.get(id).cloned()).unwrap_or(0);
-        *track_minutes.entry(track_name.clone()).or_insert(0) += dur / 60000;
-
-        // Hourly
-        *hour_map.entry(dt.hour()).or_insert(0) += 1;
-
-        // Album stats
-        *album_scrobbles.entry(album_name.clone()).or_insert(0) += 1;
-        if let Some(id) = mbid {
-            album_unique_tracks.entry(album_name.clone()).or_insert_with(HashSet::new).insert(id.clone());
-        }
-
-        // Year/Type via bowie_db
-        if let Some(db) = bowie_db {
-            // Find which RG this track/album belongs to
-            let mut found_year = None;
-            let mut found_type = None;
-            for rg in db.release_groups.values() {
-                if rg.title == album_name || rg.tracks.iter().any(|t| Some(&t.id) == mbid) {
-                    // Try to extract year from first-release-date if we had it, 
-                    // but for now we only have RG title/type.
-                    // Let's assume we'll use the scrobble year as a proxy for "affinity year" 
-                    // unless we improve the metadata later.
-                    found_type = rg.release_type.clone();
-                    break;
-                }
-            }
-            if let Some(t) = found_type { *type_map.entry(t).or_insert(0) += 1; }
-        }
-        *year_map.entry(dt.year()).or_insert(0) += 1;
-
-        // Forgotten Classics
-        *total_count_map.entry(track_name.clone()).or_insert(0) += 1;
-        let entry = last_seen_map.entry(track_name.clone()).or_insert(0);
-        if ts > *entry { *entry = ts; }
-
-fn get_bowie_album_tracks(name: &str, external_counts: &HashMap<String, usize>, bowie_db: Option<&BowieDatabase>) -> f64 {
-    // 1. Check MusicBrainz metadata
     if let Some(db) = bowie_db {
-        let name_low = name.to_lowercase();
+        let mut completion = Vec::new();
         for rg in db.release_groups.values() {
-            if rg.title.to_lowercase() == name_low {
-                return rg.track_count as f64;
+            let heard = album_unique_tracks.get(&rg.title).map(|s| s.len()).unwrap_or(0);
+            if heard > 0 {
+                let pct = (heard as f64 / rg.track_count as f64).min(1.0);
+                completion.push((rg.title.clone(), pct, rg.image_url.clone()));
+            }
+        }
+        completion.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
+        metrics.album_completion = completion.into_iter().take(10).collect();
+    }
+
+    metrics.hourly_activity = (0..24).map(|h| (h, *hour_map.get(&h).unwrap_or(&0))).collect();
+    let mut types: Vec<_> = type_map.into_iter().collect();
+    types.sort_by(|a, b| b.1.cmp(&a.1));
+    metrics.type_distribution = types;
+    let mut lead: Vec<_> = track_minutes.into_iter().collect();
+    lead.sort_by(|a, b| b.1.cmp(&a.1));
+    metrics.track_time_leaderboard = lead.into_iter().take(10).collect();
+    metrics.discovery_timeline = discovery_points.into_iter().rev().take(20).rev().collect();
+
+    let mut weights = Vec::new();
+    for (title, count) in album_scrobbles {
+        let art = bowie_db.and_then(|db| db.release_groups.values().find(|rg| rg.title == title).and_then(|rg| rg.image_url.clone()));
+        weights.push((title, count, art));
+    }
+    weights.sort_by(|a, b| b.1.cmp(&a.1));
+    metrics.album_weight = weights.into_iter().take(15).collect();
+
+    // Finalize Forgotten
+    let mut forgotten = Vec::new();
+    for (name, ls) in &last_seen_map {
+        let idle = (now_ts - ls) / 86400;
+        let tot = *total_count_map.get(name).unwrap_or(&0);
+        if idle >= 30 && tot > 2 { forgotten.push((name.clone(), idle, tot)); }
+    }
+    forgotten.sort_by(|a, b| b.2.cmp(&a.2));
+    metrics.forgotten_classics = forgotten.into_iter().take(10).collect();
+
+    let mut consistency = Vec::new();
+    for i in (0..30).rev() {
+        let ts = today_start_ts - (i * 86400);
+        consistency.push((ts, day_aggregates.get(&ts).map(|w| w.scrobbles).unwrap_or(0)));
+    }
+    metrics.consistency_grid = consistency;
+
+    let mut monthly_v = Vec::new();
+    for i in (0..12).rev() {
+        let m_dt = now - Duration::days(i * 30);
+        let k = (m_dt.year(), m_dt.month());
+        monthly_v.push((format_month(k.1).chars().take(3).collect(), monthly_wrapped_map.get(&k).map(|w| w.scrobbles).unwrap_or(0)));
+    }
+    metrics.monthly_volume = monthly_v;
+
+    // Song of the day
+    let mut s_stats: Vec<_> = total_count_map.into_iter().filter(|(n, _)| {
+        let ls = last_seen_map.get(n).unwrap_or(&0);
+        *ls < now_ts - (30 * 86400)
+    }).collect();
+    s_stats.sort_by(|a, b| b.1.cmp(&a.1));
+    if let Some((n, _)) = s_stats.first() {
+        let alb = bowie_db.and_then(|db| db.release_groups.values().find(|rg| rg.tracks.iter().any(|t| &t.title == n)).map(|rg| rg.title.clone())).unwrap_or_default();
+        metrics.song_of_the_day = Some((n.clone(), alb));
+    } else if let Some(db) = bowie_db {
+        let rgs: Vec<_> = db.release_groups.values().collect();
+        if !rgs.is_empty() {
+            let s = now.format("%Y%m%d").to_string().parse::<usize>().unwrap_or(0);
+            let rg = &rgs[s % rgs.len()];
+            if !rg.tracks.is_empty() {
+                metrics.song_of_the_day = Some((rg.tracks[s % rg.tracks.len()].title.clone(), rg.title.clone()));
             }
         }
     }
 
-    let n = name.to_lowercase();
-    
-    // 2. Check external counts (from IndexedDB/MB API)
-    if let Some(count) = external_counts.get(name) {
-        return *count as f64;
-    }
-
-    // 3. Comprehensive Hardcoded List
-    if n.contains("david bowie") || n.contains("space oddity") { 10.0 }
-    else if n.contains("man who sold the world") { 9.0 }
-    else if n.contains("hunky dory") { 11.0 }
-    else if n.contains("ziggy stardust") { 11.0 }
-    else if n.contains("aladdin sane") { 10.0 }
-    else if n.contains("pin ups") { 12.0 }
-    else if n.contains("diamond dogs") { 11.0 }
-    else if n.contains("young americans") { 8.0 }
-    else if n.contains("station to station") { 6.0 }
-    else if n.contains("low") { 11.0 }
-    else if n.contains("heroes") { 10.0 }
-    else if n.contains("lodger") { 10.0 }
-    else if n.contains("scary monsters") { 10.0 }
-    else if n.contains("let's dance") { 8.0 }
-    else if n.contains("tonight") { 9.0 }
-    else if n.contains("never let me down") { 10.0 }
-    else if n.contains("black tie white noise") { 12.0 }
-    else if n.contains("the buddha of suburbia") { 10.0 }
-    else if n.contains("outside") { 19.0 }
-    else if n.contains("earthling") { 9.0 }
-    else if n.contains("hours") { 10.0 }
-    else if n.contains("heathen") { 12.0 }
-    else if n.contains("reality") { 11.0 }
-    else if n.contains("the next day") { 14.0 }
-    else if n.contains("blackstar") { 7.0 }
-    else if n.contains("toy") { 12.0 }
-    else if n.contains("david live") { 17.0 }
-    else if n.contains("stage") { 17.0 }
-    else if n.contains("the motion picture") { 15.0 }
-    else { 11.0 } // Safe fallback
+    metrics.last_listen_display = if let Some(l) = sorted_listens.last() { format_relative_time(l.listened_at, now_ts) } else { "Never".to_string() };
+    metrics
 }
 
-fn calculate_total_completion(work: &DayWork, external_counts: &HashMap<String, usize>, bowie_db: Option<&BowieDatabase>) -> f64 {
-    let mut total = 0.0;
-    for (name, count) in &work.album_counts {
-        total += *count as f64 / get_bowie_album_tracks(name, external_counts, bowie_db);
+fn get_bowie_album_tracks(name: &str, ex: &HashMap<String, usize>, db: Option<&BowieDatabase>) -> f64 {
+    if let Some(d) = db {
+        let n_l = name.to_lowercase();
+        if let Some(rg) = d.release_groups.values().find(|r| r.title.to_lowercase() == n_l) { return rg.track_count as f64; }
     }
-    total
+    if let Some(c) = ex.get(name) { return *c as f64; }
+    11.0
 }
 
-fn get_top_albums(counts: &HashMap<String, usize>, mins: &HashMap<String, i64>, n: usize, external_counts: &HashMap<String, usize>, bowie_db: Option<&BowieDatabase>) -> Vec<(String, f64, i64)> {
-    let mut items: Vec<_> = counts.iter().map(|(name, &c)| {
-        let completion = c as f64 / get_bowie_album_tracks(name, external_counts, bowie_db);
-        (name.clone(), completion, *mins.get(name).unwrap_or(&0))
-    }).collect();
+fn calculate_total_completion(work: &DayWork, ex: &HashMap<String, usize>, db: Option<&BowieDatabase>) -> f64 {
+    work.album_counts.iter().map(|(n, &c)| c as f64 / get_bowie_album_tracks(n, ex, db)).sum()
+}
+
+fn get_top_albums(counts: &HashMap<String, usize>, ms: &HashMap<String, i64>, n: usize, ex: &HashMap<String, usize>, db: Option<&BowieDatabase>) -> Vec<(String, f64, i64)> {
+    let mut items: Vec<_> = counts.iter().map(|(name, &c)| (name.clone(), c as f64 / get_bowie_album_tracks(name, ex, db), *ms.get(name).unwrap_or(&0))).collect();
     items.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
     items.into_iter().take(n).collect()
 }
 
-fn get_top_items(counts: &HashMap<String, usize>, mins: &HashMap<String, i64>, n: usize) -> Vec<(String, usize, i64)> {
-    let mut items: Vec<_> = counts.iter().map(|(name, &c)| (name.clone(), c, *mins.get(name).unwrap_or(&0))).collect();
-    items.sort_by(|a, b| b.1.cmp(&a.1).then(b.2.cmp(&a.2)));
+fn get_top_items(counts: &HashMap<String, usize>, ms: &HashMap<String, i64>, n: usize) -> Vec<(String, usize, i64)> {
+    let mut items: Vec<_> = counts.iter().map(|(name, &c)| (name.clone(), c, *ms.get(name).unwrap_or(&0))).collect();
+    items.sort_by(|a, b| b.1.cmp(&a.1));
     items.into_iter().take(n).collect()
 }
 
-pub fn is_bowie(listen: &Listen, bowie_mbids: &HashSet<String>) -> bool {
-    is_bowie_meta(&listen.track_metadata, bowie_mbids)
+pub fn is_bowie(l: &Listen, mbids: &HashSet<String>) -> bool {
+    is_bowie_meta(&l.track_metadata, mbids)
 }
 
-pub fn is_bowie_meta(meta: &crate::models::TrackMetadata, bowie_mbids: &HashSet<String>) -> bool {
-    // 1. Check MBIDs if available
-    if !bowie_mbids.is_empty() {
-        let mbid = meta.mbid_mapping.as_ref()
-            .and_then(|m| m.recording_mbid.as_ref())
-            .or_else(|| meta.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
-        
-        if let Some(id) = mbid {
-            if bowie_mbids.contains(id) {
-                return true;
-            }
-        }
+pub fn is_bowie_meta(m: &crate::models::TrackMetadata, mbids: &HashSet<String>) -> bool {
+    if !mbids.is_empty() {
+        let id = m.mbid_mapping.as_ref().and_then(|x| x.recording_mbid.as_ref()).or_else(|| m.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
+        if let Some(i) = id { if mbids.contains(i) { return true; } }
     }
-
-    // 2. Fallback to string matching
-    let mapped_artist = meta.mbid_mapping
-        .as_ref()
-        .and_then(|m| m.artists.as_ref())
-        .and_then(|a| a.first())
-        .map(|a| a.artist_credit_name.as_str());
-
-    if let Some(artist) = mapped_artist {
-        if artist.to_lowercase().contains("bowie") { return true; }
-    }
-    meta.artist_name.to_lowercase().contains("bowie")
+    let a_m = m.mbid_mapping.as_ref().and_then(|x| x.artists.as_ref()).and_then(|a| a.first()).map(|a| a.artist_credit_name.as_str());
+    if let Some(a) = a_m { if a.to_lowercase().contains("bowie") { return true; } }
+    m.artist_name.to_lowercase().contains("bowie")
 }
 
 pub fn format_relative_time(ts: i64, now: i64) -> String {
-    let diff = now - ts;
-    if diff < 60 { return "Just now".to_string(); }
-    if diff < 3600 { return format!("{}m ago", diff / 60); }
-    if diff < 86400 { return format!("{}h ago", diff / 3600); }
-    let dt = Utc.timestamp_opt(ts, 0).unwrap();
-    dt.format("%b %d").to_string()
+    let d = now - ts;
+    if d < 60 { return "Just now".to_string(); }
+    if d < 3600 { return format!("{}m ago", d / 60); }
+    if d < 86400 { return format!("{}h ago", d / 3600); }
+    Utc.timestamp_opt(ts, 0).unwrap().format("%b %d").to_string()
 }
 
 fn get_listening_day_range(now: DateTime<Utc>) -> (i64, i64) {
-    let mut start = Utc.with_ymd_and_hms(now.year(), now.month(), now.day(), 5, 0, 0).unwrap();
-    if now.hour() < 5 { start = start - Duration::days(1); }
-    let end = start + Duration::hours(21);
-    (start.timestamp(), end.timestamp())
+    let mut s = Utc.with_ymd_and_hms(now.year(), now.month(), now.day(), 5, 0, 0).unwrap();
+    if now.hour() < 5 { s = s - Duration::days(1); }
+    (s.timestamp(), (s + Duration::hours(21)).timestamp())
 }
 
 fn get_listening_day_start(ts: i64) -> i64 {
     let dt = Utc.timestamp_opt(ts, 0).unwrap();
-    let mut start = Utc.with_ymd_and_hms(dt.year(), dt.month(), dt.day(), 5, 0, 0).unwrap();
-    if dt.hour() < 5 { start = start - Duration::days(1); }
-    start.timestamp()
+    let mut s = Utc.with_ymd_and_hms(dt.year(), dt.month(), dt.day(), 5, 0, 0).unwrap();
+    if dt.hour() < 5 { s = s - Duration::days(1); }
+    s.timestamp()
 }
 
 fn format_month(m: u32) -> &'static str {
