@@ -1,10 +1,14 @@
 #!/bin/bash
 set -e
 
-# 1. Install Trunk binary (avoiding slow cargo install)
-TRUNK_VERSION="v0.21.14"
-# Force update to the newer version
-curl -L "https://github.com/trunk-rs/trunk/releases/download/${TRUNK_VERSION}/trunk-x86_64-unknown-linux-gnu.tar.gz" | tar -xzf-
+# Ensure .cargo/bin is in PATH for both the script and sub-processes
+export PATH="$HOME/.cargo/bin:$PATH"
 
-# 2. Build the project
+# Install Trunk if missing
+TRUNK_VERSION="v0.21.14"
+if [ ! -f ./trunk ]; then
+    curl -L "https://github.com/trunk-rs/trunk/releases/download/${TRUNK_VERSION}/trunk-x86_64-unknown-linux-gnu.tar.gz" | tar -xzf-
+fi
+
+# Build project with Trunk
 ./trunk build --release

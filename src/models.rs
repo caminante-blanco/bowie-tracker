@@ -82,6 +82,12 @@ pub struct AdditionalInfo {
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
+pub struct BowieLookup {
+    pub recordings: std::collections::HashMap<String, String>, // RecID -> RG_ID
+    pub release_groups: std::collections::HashMap<String, (String, Option<String>, usize, Option<String>)>, // RG_ID -> (Title, Art, Count, Type)
+}
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct BowieDatabase {
     #[serde(flatten)]
     pub release_groups: std::collections::HashMap<String, BowieReleaseGroup>,

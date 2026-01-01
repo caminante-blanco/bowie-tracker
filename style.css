@@ -10,13 +10,15 @@
     --surface: #504945;
 }
 
-body {
+html, body {
+    background-color: #282828; /* Fallback for variable */
     background-color: var(--bg-color);
     color: var(--fg-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100%;
 }
 
 .app-container {
