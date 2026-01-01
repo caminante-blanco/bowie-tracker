@@ -95,66 +95,37 @@ pub fn calculate_metrics(
     let mut bowie_mbids = HashSet::new();
     let mut bowie_durations = HashMap::new();
     let mut bowie_title_durations = HashMap::new();
+    let mut recording_to_rg_title = HashMap::new();
 
     if let Some(db) = bowie_db {
         for rg in db.release_groups.values() {
             for track in &rg.tracks {
                 bowie_mbids.insert(track.id.clone());
+                recording_to_rg_title.insert(track.id.clone(), rg.title.clone());
+                
                 let m_entry = bowie_durations.entry(track.id.clone()).or_insert(0);
                 if track.duration_ms > *m_entry { *m_entry = track.duration_ms; }
+                
                 let t_entry = bowie_title_durations.entry(track.title.clone()).or_insert(0);
                 if track.duration_ms > *t_entry { *t_entry = track.duration_ms; }
             }
         }
     }
 
-    let bowie_listens: Vec<&Listen> = listens.iter()
-        .filter(|l| is_bowie(l, &bowie_mbids))
-        .collect();
-
-    if bowie_listens.is_empty() {
-        return DashboardMetrics::default();
-    }
-
-    let now_ts = now.timestamp();
-    let (today_start_ts, _) = get_listening_day_range(now);
-    let week_start_ts = now_ts - (7 * 86400);
-    let month_start_ts = now_ts - (30 * 86400);
-    let year_start_ts = now_ts - (365 * 86400);
-
-    let mut metrics = DashboardMetrics::default();
-    let mut day_aggregates: HashMap<i64, DayWork> = HashMap::new();
-    let mut monthly_wrapped_map: HashMap<(i32, u32), DayWork> = HashMap::new();
-
-    // Chart aggregators
-    let mut year_map = HashMap::new();
-    let mut album_unique_tracks: HashMap<String, HashSet<String>> = HashMap::new();
-    let mut track_minutes: HashMap<String, i64> = HashMap::new();
-    let mut hour_map = HashMap::new();
-    let mut type_map = HashMap::new();
-    let mut unique_mbids_seen = HashSet::new();
-    let mut discovery_points = Vec::new();
-    let mut album_scrobbles = HashMap::new();
-    let mut last_seen_map: HashMap<String, i64> = HashMap::new();
-    let mut total_count_map: HashMap<String, usize> = HashMap::new();
-
-    let mut sorted_listens = bowie_listens.clone();
-    sorted_listens.sort_by_key(|l| l.listened_at);
+    // ... (filtering)
 
     for listen in &sorted_listens {
-        let ts = listen.listened_at;
-        let dt = Utc.timestamp_opt(ts, 0).unwrap();
-        let day_ts = get_listening_day_start(ts);
-        let d_work = day_aggregates.entry(day_ts).or_insert_with(DayWork::default);
-        let m_work = monthly_wrapped_map.entry((dt.year(), dt.month())).or_insert_with(DayWork::default);
+        // ... (aggregation)
 
         let mbid = listen.track_metadata.mbid_mapping.as_ref()
             .and_then(|m| m.recording_mbid.as_ref())
             .or_else(|| listen.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
 
         let track_name = listen.track_metadata.track_name.clone();
-        let album_name = listen.track_metadata.mbid_mapping.as_ref()
-            .and_then(|m| m.release_name.clone())
+        
+        // Unify album name using Release Group if MBID matches
+        let album_name = mbid.and_then(|id| recording_to_rg_title.get(id).cloned())
+            .or_else(|| listen.track_metadata.mbid_mapping.as_ref().and_then(|m| m.release_name.clone()))
             .or_else(|| listen.track_metadata.release_name.clone())
             .unwrap_or_else(|| "Unknown".to_string());
 
