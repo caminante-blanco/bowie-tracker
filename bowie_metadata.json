@@ -1239,6 +1239,11 @@
         "id": "efe40bc6-5a24-4983-8310-a70767bf0dce",
         "title": "Oh! You Pretty Things",
         "duration_ms": 195893
+      },
+      {
+        "id": "c44a8cda-65fb-4d39-94c5-971c1bed8f4c",
+        "title": "The Supermen",
+        "duration_ms": 199000
       }
     ],
     "image_url": "https://coverartarchive.org/release/13b5e2f6-69c7-4822-8556-92ac716f702d/front-250"
@@ -1836,7 +1841,8 @@
         "title": "\u201cWell You Know What, This Has Been an Incredible Pleasure\u2026\u201d",
         "duration_ms": 24798
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/6b3fef6c-a6c0-41c9-ab70-a9ff6c890a9a/front-250"
   },
   "0dc4835d-b21a-3612-bac6-ab1e782a1396": {
     "title": "Diamond Dogs",
@@ -2228,6 +2234,61 @@
         "id": "c5ad7e1b-d921-4439-8488-686acbf50191",
         "title": "Rebel Never Gets Old (7th Heaven mix)",
         "duration_ms": 442000
+      },
+      {
+        "id": "bb67b7e5-5d30-4da4-84e7-acca51ad7aa4",
+        "title": "New Killer Star",
+        "duration_ms": 280600
+      },
+      {
+        "id": "7e89b4bc-09c2-4114-8cc9-df5fb4f74d52",
+        "title": "Pablo Picasso",
+        "duration_ms": 245000
+      },
+      {
+        "id": "4ab2c79a-d71b-485c-99d8-85590f788b39",
+        "title": "Never Get Old",
+        "duration_ms": 264933
+      },
+      {
+        "id": "dce2f614-da79-45c0-bdd8-52f92898fb88",
+        "title": "The Loneliest Guy",
+        "duration_ms": 251840
+      },
+      {
+        "id": "92cf55bd-e4fa-45d9-9ec2-cef1b015cad9",
+        "title": "Looking for Water",
+        "duration_ms": 208493
+      },
+      {
+        "id": "760fb22d-e15e-44f6-88da-6e84ef207d29",
+        "title": "She\u2019ll Drive the Big Car",
+        "duration_ms": 275106
+      },
+      {
+        "id": "cbfe47ef-4276-4d19-ab3e-6b93d55adc75",
+        "title": "Days",
+        "duration_ms": 198933
+      },
+      {
+        "id": "b1f7319f-8098-4bd2-981c-70d2a1de17b8",
+        "title": "Fall Dog Bombs the Moon",
+        "duration_ms": 242000
+      },
+      {
+        "id": "f39f41f9-02e6-47cf-b174-9d338b193117",
+        "title": "Try Some, Buy Some",
+        "duration_ms": 264840
+      },
+      {
+        "id": "adab24a7-b2a3-4059-b36d-0958ba846e5f",
+        "title": "Reality",
+        "duration_ms": 261000
+      },
+      {
+        "id": "929c94ee-ba09-439d-b735-17064a9d514c",
+        "title": "Bring Me the Disco King",
+        "duration_ms": 465106
       }
     ],
     "image_url": "https://coverartarchive.org/release/0d21c0f9-4fdb-31e1-b358-6a0cf3997230/front-250"
@@ -2751,8 +2812,239 @@
         "id": "b783529d-a7e0-4928-8a04-e5efc9321115",
         "title": "Andy Warhol (Sounds of the 70s: Bob Harris)",
         "duration_ms": 175000
+      },
+      {
+        "id": "5a7c9966-70dd-4f1d-bfeb-36468f3fc647",
+        "title": "Looking for a Friend (demo)",
+        "duration_ms": 251575
+      },
+      {
+        "id": "277bfbcd-d0eb-49e2-aca2-2e743e96c4f0",
+        "title": "Waiting for the Man (San Francisco hotel recording)",
+        "duration_ms": 133020
+      },
+      {
+        "id": "2209bf5f-7457-47e5-ab95-f58cfe565b96",
+        "title": "Quicksand (San Francisco hotel recording)",
+        "duration_ms": 388853
+      },
+      {
+        "id": "e3d6cd97-3502-4272-87f6-95e6c1c567bd",
+        "title": "Queen Bitch (In Concert: John Peel, mono)",
+        "duration_ms": 281000
+      },
+      {
+        "id": "b3bebd65-26a7-4c7c-b7d8-c1bb12bbe2b8",
+        "title": "Bombers (In Concert: John Peel, mono)",
+        "duration_ms": 195000
+      },
+      {
+        "id": "5e856918-a97a-43b4-8e46-2ef524dc83eb",
+        "title": "The Supermen (In Concert: John Peel, mono)",
+        "duration_ms": 189000
+      },
+      {
+        "id": "114af1ec-8072-423b-b86e-5d0ba1c9c476",
+        "title": "Looking for a Friend (In Concert: John Peel, mono)",
+        "duration_ms": 208000
+      },
+      {
+        "id": "fd610e0e-7ac8-4c37-b097-f18c6e6a810b",
+        "title": "Almost Grown (In Concert: John Peel, mono)",
+        "duration_ms": 170000
+      },
+      {
+        "id": "7ff48c6a-4cb1-4618-ba53-4e80a0210215",
+        "title": "Kooks (In Concert: John Peel, mono)",
+        "duration_ms": 226000
+      },
+      {
+        "id": "3c6d4e8f-4eab-4662-bd81-0316363613aa",
+        "title": "Song for Bob Dylan (In Concert: John Peel, mono)",
+        "duration_ms": 298000
+      },
+      {
+        "id": "603331ac-dc41-4e20-b05f-3a8f1b491753",
+        "title": "Andy Warhol (In Concert: John Peel, mono)",
+        "duration_ms": 261000
+      },
+      {
+        "id": "5f68bc04-1b59-4892-b2d6-8d19ded06e57",
+        "title": "It Ain\u2019t Easy (In Concert: John Peel, mono)",
+        "duration_ms": 183000
+      },
+      {
+        "id": "bbbbfb40-3b36-48f9-9640-328927ee16f6",
+        "title": "Queen Bitch (In Concert: John Peel, stereo)",
+        "duration_ms": 279000
+      },
+      {
+        "id": "5d471897-eb38-4419-ade0-838bf0c42c2c",
+        "title": "The Supermen (In Concert: John Peel, stereo)",
+        "duration_ms": 180000
+      },
+      {
+        "id": "f42c5db2-2e0f-4ec6-97d7-27996be8f6af",
+        "title": "Looking for a Friend (In Concert: John Peel, stereo)",
+        "duration_ms": 209000
+      },
+      {
+        "id": "b3c51889-23fd-4e3c-9bc9-d7e56e624dc0",
+        "title": "Kooks (In Concert: John Peel, stereo)",
+        "duration_ms": 224000
+      },
+      {
+        "id": "bf74a540-f9c4-44b5-b958-957c1c8e68ad",
+        "title": "Song for Bob Dylan (In Concert: John Peel, stereo)",
+        "duration_ms": 207000
+      },
+      {
+        "id": "6438dab9-4526-4071-bde6-b84b793ad26f",
+        "title": "Andy Warhol (In Concert: John Peel, stereo)",
+        "duration_ms": 247000
+      },
+      {
+        "id": "b75e1a1f-4745-4ae7-845a-d7117813375f",
+        "title": "It Ain\u2019t Easy (In Concert: John Peel, stereo)",
+        "duration_ms": 178000
+      },
+      {
+        "id": "19224dfb-d31a-4f6d-81a6-ba50244879ee",
+        "title": "The Supermen (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 175000
+      },
+      {
+        "id": "12520bc9-4292-4b1b-9131-462e0e2e11f9",
+        "title": "Oh! You Pretty Things (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 196000
+      },
+      {
+        "id": "eb4b7202-7e8e-4603-b260-ba3a7869456d",
+        "title": "Eight Line Poem (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 175000
+      },
+      {
+        "id": "bb2714b4-ccbd-4ab5-a09b-0857e5bfa753",
+        "title": "Kooks (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 206000
+      },
+      {
+        "id": "2fff532c-4a31-457b-8c54-7e48f7e1e38e",
+        "title": "Fill Your Heart (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 181000
+      },
+      {
+        "id": "faad3733-58ce-47b9-8aa1-edcf1d78eb94",
+        "title": "Amsterdam (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 190000
+      },
+      {
+        "id": "318ec47d-8dea-4944-be45-499717ab8c10",
+        "title": "Andy Warhol (Sounds of the 70s: Bob Harris)",
+        "duration_ms": 176000
+      },
+      {
+        "id": "b571bbbe-2442-44db-8afd-ff6826fe54a2",
+        "title": "Introduction (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 51000
+      },
+      {
+        "id": "1bde0d5e-7a78-4c34-925a-18d311354184",
+        "title": "Fill Your Heart (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 219000
+      },
+      {
+        "id": "6e153488-11c6-4862-a064-6bb8a7cbc3fe",
+        "title": "Space Oddity (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 282000
+      },
+      {
+        "id": "0fca9e53-c33e-4775-8ec1-8f61e7e2a74d",
+        "title": "Amsterdam (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 260000
+      },
+      {
+        "id": "c8369ed1-6ae3-46d6-978c-337ee39cfbfa",
+        "title": "The Supermen (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 230000
+      },
+      {
+        "id": "edc952d6-58b8-4c16-81bf-9ce2726a1cd2",
+        "title": "Oh! You Pretty Things (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 204000
+      },
+      {
+        "id": "834f011b-6627-42d6-830d-097bb8ad55de",
+        "title": "Eight Line Poem (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 188000
+      },
+      {
+        "id": "2103bd8b-9150-4fed-b79c-c130dc0dffed",
+        "title": "Changes (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 248000
+      },
+      {
+        "id": "cfc105aa-943f-42a4-bb69-dfdf156f7b67",
+        "title": "Andy Warhol (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 189000
+      },
+      {
+        "id": "9680cdc1-4843-436d-afd5-d8e6626197a5",
+        "title": "Round and Round (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 235000
+      },
+      {
+        "id": "e465abbd-0e1c-4f8c-aec0-e6fd893f4409",
+        "title": "Waiting for the Man (live Friars, Aylesbury, 25th September, 1971)",
+        "duration_ms": 347000
+      },
+      {
+        "id": "f166dff7-0c05-40af-b0e8-66964dc93809",
+        "title": "Oh! You Pretty Things (Bowpromo mix)",
+        "duration_ms": 193000
+      },
+      {
+        "id": "9c897584-80e0-4f56-9124-754eb39fb4a8",
+        "title": "Eight Line Poem (Bowpromo mix)",
+        "duration_ms": 173000
+      },
+      {
+        "id": "7dc666a0-7a56-4bed-b33d-b0f46874ac6f",
+        "title": "Kooks (Bowpromo mix)",
+        "duration_ms": 174000
+      },
+      {
+        "id": "fc92d6b3-2f95-485f-80d6-8700285f5ce7",
+        "title": "Queen Bitch (Bowpromo mix)",
+        "duration_ms": 196000
+      },
+      {
+        "id": "cad40eec-e9f7-4fd3-bfc8-541b8c145a64",
+        "title": "Quicksand (Bowpromo mix)",
+        "duration_ms": 305000
+      },
+      {
+        "id": "2b7b535b-c99d-4149-8ac6-0f50f7092eb2",
+        "title": "Bombers (Bowpromo mix)",
+        "duration_ms": 210000
+      },
+      {
+        "id": "fae31dd5-3a08-4588-83b4-d14a3a6b3351",
+        "title": "Amsterdam (early mix)",
+        "duration_ms": 204000
+      },
+      {
+        "id": "52db35b8-dbd1-4752-b8e8-5c23672a1beb",
+        "title": "Amsterdam",
+        "duration_ms": 207000
+      },
+      {
+        "id": "5e9ef4e0-c3f4-49ed-b29a-809072a8a121",
+        "title": "Quicksand (2021 mix \u2013 early version)",
+        "duration_ms": 302000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/0712d335-d1b9-4da5-8e7d-ad0e2911a2bd/front-250"
   },
   "11a4d0a9-ce67-4cd5-8eee-9aae87e99353": {
     "title": "Zeit! 77\u201379",
@@ -3395,13 +3687,73 @@
         "id": "b5d219bb-c001-4e7f-a1f9-fd78825b7914",
         "title": "Joe the Lion (remixed version, 1991)",
         "duration_ms": 187626
+      },
+      {
+        "id": "2738a78a-4d6b-4640-be9f-7d91c167cc39",
+        "title": "Heroes , H\u00e9ros (French album version)",
+        "duration_ms": 365000
+      },
+      {
+        "id": "c1a001d8-5149-458d-ad45-63fb5c63b3ed",
+        "title": "H\u00e9ros (French single version)",
+        "duration_ms": 214000
+      },
+      {
+        "id": "e44eeba1-3376-470f-9894-e76aa1945c16",
+        "title": "Beauty and the Beast",
+        "duration_ms": 217000
+      },
+      {
+        "id": "38e65c17-ad27-435c-9e31-4cb080e37a81",
+        "title": "Joe the Lion",
+        "duration_ms": 188000
+      },
+      {
+        "id": "24e428ae-e8dd-458a-a5a6-f9ab1d43b51c",
+        "title": "\u201cHeroes\u201d",
+        "duration_ms": 371000
+      },
+      {
+        "id": "6f7df23f-9c76-442f-819b-84c7281ea9be",
+        "title": "Sons of the Silent Age",
+        "duration_ms": 200000
+      },
+      {
+        "id": "48787292-ffb6-421b-9570-1baf169f4361",
+        "title": "Blackout",
+        "duration_ms": 230000
+      },
+      {
+        "id": "81ad0d3c-ad4a-4022-b7f0-fbb10df2f17a",
+        "title": "V\u20102 Schneider",
+        "duration_ms": 191133
+      },
+      {
+        "id": "d7e38a21-bd2f-44e2-871d-bd3b796cc802",
+        "title": "Sense of Doubt",
+        "duration_ms": 240000
+      },
+      {
+        "id": "92b872f5-ec69-4990-926e-1c784684403b",
+        "title": "Moss Garden",
+        "duration_ms": 306000
+      },
+      {
+        "id": "2d34ef43-c9a3-4b1f-bb00-8b47dff1a352",
+        "title": "Neuk\u00f6ln",
+        "duration_ms": 275000
+      },
+      {
+        "id": "b9134e3d-2f0b-4aa4-afd2-24d55170ee74",
+        "title": "The Secret Life of Arabia",
+        "duration_ms": 227000
       }
     ],
     "image_url": "https://coverartarchive.org/release/c3404da8-e123-3f0c-a830-880c65026110/front-250"
   },
   "1fd18f5b-9a92-41fd-a590-da6b5cc60d85": {
     "title": "\u2605",
-    "track_count": 8,
+    "track_count": 12,
     "total_duration_ms": 2477357,
     "tracks": [
       {
@@ -3443,6 +3795,66 @@
         "id": "abd54c8c-42e8-4e26-96e0-b8a7c3b00e23",
         "title": "Blackstar",
         "duration_ms": 599892
+      },
+      {
+        "id": "28f1dd2c-1dfe-4159-b32a-f85a15fcae78",
+        "title": "No Plan",
+        "duration_ms": 221800
+      },
+      {
+        "id": "28a19b66-1560-45c4-a9af-c830c5733455",
+        "title": "Killing a Little Time",
+        "duration_ms": 228906
+      },
+      {
+        "id": "21081163-88cf-462f-9d26-9dea082dbac8",
+        "title": "When I Met You",
+        "duration_ms": 248853
+      },
+      {
+        "id": "b6df2d68-a101-4c9e-9972-0602084f8a5f",
+        "title": "Sue (or In a Season of Crime) 2014",
+        "duration_ms": 0
+      },
+      {
+        "id": "22c3c0f8-5d48-42ba-8839-019da5c477f9",
+        "title": "Sue (reprise)",
+        "duration_ms": 0
+      },
+      {
+        "id": "723f75e3-8bf6-4a1b-9f5f-a7ad05720b12",
+        "title": "\u2605",
+        "duration_ms": 597933
+      },
+      {
+        "id": "b3c8353f-d147-4540-b29e-b5a3b0e5d171",
+        "title": "\u2019Tis a Pity She Was a Whore",
+        "duration_ms": 292627
+      },
+      {
+        "id": "39ac7d01-7760-48ed-8837-1a158c7e3d55",
+        "title": "Lazarus",
+        "duration_ms": 382387
+      },
+      {
+        "id": "3584f5c2-7c35-47a2-a492-1b4870f6cb22",
+        "title": "Sue (or in a Season of Crime)",
+        "duration_ms": 280373
+      },
+      {
+        "id": "9b04860b-d896-4782-9dca-651773e54d47",
+        "title": "Girl Loves Me",
+        "duration_ms": 291947
+      },
+      {
+        "id": "64afab46-a30c-4293-aacc-98861d6a3f8b",
+        "title": "Dollar Days",
+        "duration_ms": 284813
+      },
+      {
+        "id": "f4f65a8b-cd16-40d4-aca6-ce5d0ccfc8af",
+        "title": "I Can\u2019t Give Everything Away",
+        "duration_ms": 347279
       }
     ],
     "image_url": "https://coverartarchive.org/release/0018b304-f497-4807-8f4a-043dac4e86f6/front-250"
@@ -3573,7 +3985,8 @@
         "title": "\u201cHelden\u201d (Filburt 91189 instrumental club mix)",
         "duration_ms": 362000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/efe1990c-ca29-4b70-99b8-5ac6138c945e/front-250"
   },
   "048bbe20-3293-4232-b995-0b98ec9a9a21": {
     "title": "\u2019Tis a Pity She Was a Whore",
@@ -3735,7 +4148,8 @@
         "title": "Space Oddity (demo, alternative lyrics)",
         "duration_ms": 245000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/548e4a1a-e0a5-4b03-a6cd-b8cf09d4f851/front-250"
   },
   "07755da1-dd38-4866-a3c3-683ce9b08ed7": {
     "title": "I\u2019ve Been Waiting for You",
@@ -3821,8 +4235,14 @@
         "id": "01ac8179-eb8b-4627-a5e8-892460d93310",
         "title": "The Man Who Sold the World (Eno \u2018live\u2019 mix) (2020 remaster)",
         "duration_ms": 215000
+      },
+      {
+        "id": "56720500-307e-4afc-a897-e410ba96776c",
+        "title": "Fun (Clownboy mix)",
+        "duration_ms": 191000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/37545000-d29d-4118-9de6-ce33a232f1c8/front-250"
   },
   "09bb331c-2024-4581-85ae-9ab2911a1069": {
     "title": "Little Wonder Mix E.P. (Danny Saber mixes)",
@@ -3849,7 +4269,8 @@
         "title": "Little Wonder (Danny Saber dance mix instrumental)",
         "duration_ms": 336597
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/2600923d-7cf2-4ca1-96ec-6a02ddeb711e/front-250"
   },
   "0a115d82-789f-4471-96c2-dcd4ea4b1667": {
     "title": "Ready, Set, Go! (live, Riverside Studios \u201903)",
@@ -3926,7 +4347,8 @@
         "title": "Afraid",
         "duration_ms": 218600
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/3b103d47-513a-4b18-9949-be344d199f39/front-250"
   },
   "0a1e3556-1739-4e41-9ba9-304391e9daa4": {
     "title": "Sorrow / Amsterdam",
@@ -3997,8 +4419,29 @@
         "id": "21fccb87-b52c-42f9-98b9-c74663128286",
         "title": "My Death",
         "duration_ms": 430000
+      },
+      {
+        "id": "f64b58f9-862c-4b5f-83b6-90e50e399be0",
+        "title": "Johnny Downloader (aka I\u2019m Afraid of Americans, early version)",
+        "duration_ms": 303000
+      },
+      {
+        "id": "bbaf43e7-33ec-4792-b34a-0f95a7a34440",
+        "title": "I Have Not Been to Oxford Town (alternative single mix)",
+        "duration_ms": 235000
+      },
+      {
+        "id": "32c60862-f8c0-4c8b-b79a-ff7718cfbdbf",
+        "title": "A Small Plot of Land",
+        "duration_ms": 391000
+      },
+      {
+        "id": "475e503c-54e3-4398-980f-743f51a741ce",
+        "title": "My Death",
+        "duration_ms": 429000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/2ed705ba-7382-4279-abd7-22f9157f8743/front-250"
   },
   "0fdd6fac-f730-4f1e-a6b2-618f0623c9c3": {
     "title": "Let\u2019s Dance (Nile Rodgers\u2019 string version)",
@@ -4015,7 +4458,8 @@
         "title": "Let\u2019s Dance (demo, radio edit)",
         "duration_ms": 270000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/aea3474a-7130-4b37-a67d-247a2fec0691/front-250"
   },
   "14902a82-cc7d-4f34-889d-fc2ab9325dda": {
     "title": "China Girl",
@@ -4051,6 +4495,11 @@
         "id": "56818c41-62d7-4abe-9bd5-d5ceb6232f08",
         "title": "Shake It (1999 remaster)",
         "duration_ms": 230093
+      },
+      {
+        "id": "be5808f4-c95f-459c-9dfd-95d5911705e2",
+        "title": "China Girl (riff & vox club mix)",
+        "duration_ms": 428000
       }
     ],
     "image_url": "https://coverartarchive.org/release/002aab37-33db-41a6-bb46-22bee84049d3/front-250"
@@ -4117,7 +4566,7 @@
   },
   "1b898405-7527-437c-bf11-ca74410c0b8c": {
     "title": "Space Oddity",
-    "track_count": 2,
+    "track_count": 4,
     "total_duration_ms": 406000,
     "tracks": [
       {
@@ -4139,8 +4588,29 @@
         "id": "1c47e695-5048-446a-a8f3-cfe6b444302f",
         "title": "Wild Eyed Boy From Freecloud",
         "duration_ms": 285000
+      },
+      {
+        "id": "f6d7f935-54d3-4196-8b57-649ddb952364",
+        "title": "Space Oddity (mono single edit)",
+        "duration_ms": 282000
+      },
+      {
+        "id": "bff8da85-7e10-475a-9c99-0b5b826e49e4",
+        "title": "Space Oddity (US mono single edit)",
+        "duration_ms": 209000
+      },
+      {
+        "id": "0100adb9-2620-49a6-a7ed-f50fbeb94b62",
+        "title": "Space Oddity (US stereo single edit)",
+        "duration_ms": 238000
+      },
+      {
+        "id": "697c67d1-9279-4486-b467-5593b5d1e56a",
+        "title": "Space Oddity (1979 re\u2010record)",
+        "duration_ms": 297000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/7a6dc676-c12b-4278-8a4d-886836d637df/front-250"
   },
   "1d2c03b3-19bb-38fb-b44a-35266602e6d3": {
     "title": "Live Santa Monica \u201972",
@@ -4616,7 +5086,8 @@
         "title": "Rebel Rebel",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d55c6222-3e7f-4312-ab6e-c4f0f0c176bf/front-250"
   },
   "25042ba4-198e-463d-a4a2-8bca21a4e447": {
     "title": "Legacy",
@@ -5086,11 +5557,12 @@
         "title": "Beat of Your Drum (2018)",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/fd97c304-d725-418c-8b09-62709649a3e1/front-250"
   },
   "28f8a0f8-0eb9-35a2-b6cd-d5be21e4428c": {
     "title": "Never Let Me Down",
-    "track_count": 13,
+    "track_count": 14,
     "total_duration_ms": 2886133,
     "tracks": [
       {
@@ -5172,6 +5644,26 @@
         "id": "c9f9adc8-e1df-45b9-a536-879f2d6ed525",
         "title": "When the Wind Blows",
         "duration_ms": 213000
+      },
+      {
+        "id": "7a3ae937-4405-474b-8542-88758e7c6530",
+        "title": "Never Let Me Down",
+        "duration_ms": 266000
+      },
+      {
+        "id": "61bcef3b-a2f3-4ba4-98a1-1f9b021a3128",
+        "title": "Zeroes",
+        "duration_ms": 254000
+      },
+      {
+        "id": "65b692a0-0ee8-48e7-94d4-0804982afd10",
+        "title": "Girls (Japanese version)",
+        "duration_ms": 331000
+      },
+      {
+        "id": "7e829521-9434-4b26-a156-a81cf1df9c16",
+        "title": "When the Wind Blows",
+        "duration_ms": 336000
       }
     ],
     "image_url": "https://coverartarchive.org/release/41a1a190-2bc0-4044-94bc-8efb7816a349/front-250"
@@ -5261,7 +5753,8 @@
         "title": "Let\u2019s Dance (Club Bolly extended mix)",
         "duration_ms": 479000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/bb1007bc-480a-47dc-b7b7-cd6311f4232c/front-250"
   },
   "2bcbe4c2-8c2a-4404-ae1d-1c18363b150d": {
     "title": "David Bowie",
@@ -5497,6 +5990,106 @@
         "id": "210cda66-b1ec-41c9-8c58-1a58c0bfaf6f",
         "title": "Ragazzo Solo, Ragazza Sola (full length stereo version)",
         "duration_ms": 316000
+      },
+      {
+        "id": "1432c6db-12eb-4738-97f6-6a8ec98bc02f",
+        "title": "Space Oddity",
+        "duration_ms": 320944
+      },
+      {
+        "id": "0910d9ad-0a2d-4f92-b04f-a2a5376699aa",
+        "title": "Unwashed and Somewhat Slightly Dazed",
+        "duration_ms": 379200
+      },
+      {
+        "id": "5f22f664-5659-49c2-b188-99d009a11d70",
+        "title": "Letter to Hermione",
+        "duration_ms": 153720
+      },
+      {
+        "id": "09b2269c-5cbc-4334-b4f1-89b473d576c4",
+        "title": "Cygnet Committee",
+        "duration_ms": 577804
+      },
+      {
+        "id": "ca9defdd-d78d-4a26-b52e-2c5b1651c418",
+        "title": "Janine",
+        "duration_ms": 201055
+      },
+      {
+        "id": "3671a5de-c997-4e93-b06d-42177b58b8b9",
+        "title": "An Occasional Dream",
+        "duration_ms": 177380
+      },
+      {
+        "id": "b6f7e5fa-5853-499a-ac6b-62aa8caadc0d",
+        "title": "Wild Eyed Boy From Freecloud",
+        "duration_ms": 290539
+      },
+      {
+        "id": "095263de-5484-4047-9a70-758b1dc4f030",
+        "title": "Conversation Piece",
+        "duration_ms": 191236
+      },
+      {
+        "id": "81381678-5b25-4eca-bd08-a1fe99b725fa",
+        "title": "God Knows I\u2019m Good",
+        "duration_ms": 197221
+      },
+      {
+        "id": "ce6ab45e-3212-4553-8979-ce51c16668e0",
+        "title": "Memory of a Free Festival",
+        "duration_ms": 440773
+      },
+      {
+        "id": "16a808a6-2dbb-4269-be86-96c0afd9cd47",
+        "title": "Space Oddity",
+        "duration_ms": 320000
+      },
+      {
+        "id": "cc425018-b6a1-43ab-a827-d333d2873bf0",
+        "title": "Unwashed and Somewhat Slightly Dazed",
+        "duration_ms": 379200
+      },
+      {
+        "id": "3a657d8a-9a9b-45ac-8136-05a5f7a33c17",
+        "title": "Letter to Hermione",
+        "duration_ms": 150000
+      },
+      {
+        "id": "de933c9a-79c5-4d33-8dbf-8624cb8d4b81",
+        "title": "Cygnet Committee",
+        "duration_ms": 200000
+      },
+      {
+        "id": "4aa67b91-9a9c-45fa-a0ed-bac997a1b5b4",
+        "title": "Janine",
+        "duration_ms": 577000
+      },
+      {
+        "id": "47007bdf-f1bc-4cfb-8284-4c4a7cf9bd27",
+        "title": "An Occasional Dream",
+        "duration_ms": 175000
+      },
+      {
+        "id": "618f1f71-faf0-44e2-bbb1-88c54c783c41",
+        "title": "Wild Eyed Boy From Freecloud",
+        "duration_ms": 289000
+      },
+      {
+        "id": "9f880060-84f1-4c40-874d-69c6a3253a6d",
+        "title": "Conversation Piece",
+        "duration_ms": 191000
+      },
+      {
+        "id": "4f000a98-43b0-47b9-b603-f9026066cd98",
+        "title": "God Knows I\u2019m Good",
+        "duration_ms": 197221
+      },
+      {
+        "id": "cb81dd24-6a28-4c72-8945-8a9da1f83817",
+        "title": "Memory of a Free Festival",
+        "duration_ms": 434000
       }
     ],
     "image_url": "https://coverartarchive.org/release/21fe130b-77c4-4948-8bbc-3e7496f8c066/front-250"
@@ -5825,6 +6418,61 @@
         "id": "15264012-41fd-4ab5-9116-167c6cd851f8",
         "title": "Rock \u2019n\u2019 Roll Suicide (5.1 mix)",
         "duration_ms": 287000
+      },
+      {
+        "id": "87f1756c-ff91-4a42-855b-e07afcfd2383",
+        "title": "1984",
+        "duration_ms": 202040
+      },
+      {
+        "id": "858fb5ca-7317-4c28-b352-ed68d114e1af",
+        "title": "Rebel Rebel",
+        "duration_ms": 161266
+      },
+      {
+        "id": "6cc6cf38-d60e-4c14-a2ec-a8946e427947",
+        "title": "Moonage Daydream",
+        "duration_ms": 315826
+      },
+      {
+        "id": "c08b4a0a-0aad-489b-b39e-2aacc3c6c2c6",
+        "title": "Sweet Thing",
+        "duration_ms": 518333
+      },
+      {
+        "id": "32c7f784-c66e-4653-9225-94c2d2d03666",
+        "title": "Changes",
+        "duration_ms": 200600
+      },
+      {
+        "id": "440a290d-a644-4c79-8e84-a95e64ac5c40",
+        "title": "Suffragette City",
+        "duration_ms": 224400
+      },
+      {
+        "id": "0774e622-c602-455d-87a2-4a43244eccdb",
+        "title": "Aladdin Sane",
+        "duration_ms": 298040
+      },
+      {
+        "id": "0df61c53-273d-418b-830d-35b2e45b5d58",
+        "title": "All the Young Dudes",
+        "duration_ms": 257826
+      },
+      {
+        "id": "a2a892e6-bf34-42c0-a9fb-a0b58040e674",
+        "title": "Cracked Actor",
+        "duration_ms": 204706
+      },
+      {
+        "id": "4402b7d3-ecfb-4f51-9542-fb110da5cf31",
+        "title": "Rock \u2019n\u2019 Roll With Me",
+        "duration_ms": 255333
+      },
+      {
+        "id": "f78173ff-91ef-409c-8a50-06d0a04a8499",
+        "title": "Watch That Man",
+        "duration_ms": 307200
       }
     ],
     "image_url": "https://coverartarchive.org/release/1352a8a5-2494-3f02-bfa5-496d10e04c52/front-250"
@@ -5867,7 +6515,8 @@
         "title": "Get Real (Sounds Right mix)",
         "duration_ms": 257000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/188e41d7-8b31-4485-95e3-93e6d4c737c6/front-250"
   },
   "31134fab-053d-4baf-a752-4463242a6916": {
     "title": "Wild Is the Wind",
@@ -5980,7 +6629,8 @@
         "title": "Mother",
         "duration_ms": 307000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/bca8e935-5d86-48f2-a92a-a1a4d8e15672/front-250"
   },
   "335d6dc9-326b-4330-a054-4ad8d37f8c87": {
     "title": "Love Is Lost",
@@ -6060,7 +6710,7 @@
   },
   "33f6e7ae-91ed-37ff-aca7-04b2016661b7": {
     "title": "Cracked Actor (Live Los Angeles \u201974)",
-    "track_count": 20,
+    "track_count": 29,
     "total_duration_ms": 5837859,
     "tracks": [
       {
@@ -6432,6 +7082,151 @@
         "id": "a1bd210c-115b-42ce-ba6c-4a07d3871160",
         "title": "John I\u2019m Only Dancing (Again)",
         "duration_ms": 557360
+      },
+      {
+        "id": "31e5257d-2963-4d9e-8411-5becbe95fe56",
+        "title": "Imagine (Hong Kong)",
+        "duration_ms": 287666
+      },
+      {
+        "id": "69d45583-390b-4ad6-8afa-1d9ef509c95c",
+        "title": "Aladdin Sane (New York)",
+        "duration_ms": 0
+      },
+      {
+        "id": "478434e9-ae5a-465a-9939-9121c5d0fc1a",
+        "title": "Introduction",
+        "duration_ms": 0
+      },
+      {
+        "id": "afc71e34-cecc-4c71-8d55-1d60e0357f04",
+        "title": "1984",
+        "duration_ms": 0
+      },
+      {
+        "id": "0d993458-3a3c-4d66-9ab7-3fb3203a9344",
+        "title": "Rebel Rebel",
+        "duration_ms": 0
+      },
+      {
+        "id": "e6462eab-a8eb-49a9-b08d-bdc7abf9275c",
+        "title": "Moonage Daydream",
+        "duration_ms": 0
+      },
+      {
+        "id": "73ad3494-3458-4959-96af-6b1638b8a68f",
+        "title": "Sweet Thing",
+        "duration_ms": 0
+      },
+      {
+        "id": "8dd2a9b1-3aba-4f36-8434-1f1e4530ff12",
+        "title": "Changes",
+        "duration_ms": 0
+      },
+      {
+        "id": "6900d24c-72e7-4cd3-bcb5-60eb0d3ac6e3",
+        "title": "Suffragette City",
+        "duration_ms": 0
+      },
+      {
+        "id": "9e9b2617-0a8c-47fd-a6b9-0a9d12ced0c7",
+        "title": "Aladdin Sane",
+        "duration_ms": 0
+      },
+      {
+        "id": "2ff4045a-849f-4ff2-83fa-1d1e7169d8c2",
+        "title": "All the Young Dudes",
+        "duration_ms": 0
+      },
+      {
+        "id": "2ddb7dcf-0594-481c-9697-5d17379c94e5",
+        "title": "Cracked Actor",
+        "duration_ms": 0
+      },
+      {
+        "id": "95bc852c-d798-4cf4-a041-66de35c8d7a0",
+        "title": "Rock and Roll With Me",
+        "duration_ms": 0
+      },
+      {
+        "id": "cee61316-fb8b-4758-9fe7-0ed84433700e",
+        "title": "Knock on Wood",
+        "duration_ms": 0
+      },
+      {
+        "id": "a583719b-fdfa-41d7-9e5a-ab5c0f84ed2e",
+        "title": "It\u2019s Gonna Be Me",
+        "duration_ms": 0
+      },
+      {
+        "id": "d61605aa-89c5-4678-94c4-7ab7a5dad213",
+        "title": "Space Oddity",
+        "duration_ms": 0
+      },
+      {
+        "id": "20adc2e5-ea1a-45bd-800a-942f78a090ff",
+        "title": "Future Legend",
+        "duration_ms": 0
+      },
+      {
+        "id": "81725758-d1c2-4703-86e6-f50c6bc20d1a",
+        "title": "Diamond Dogs",
+        "duration_ms": 0
+      },
+      {
+        "id": "93b9d227-f79e-4e99-a952-20bb6691b359",
+        "title": "Big Brother",
+        "duration_ms": 0
+      },
+      {
+        "id": "341689a7-b1db-4661-8e6c-a0561d488a28",
+        "title": "Time",
+        "duration_ms": 0
+      },
+      {
+        "id": "dc68727a-7ca8-4c51-bf41-b43e074f9b00",
+        "title": "The Jean Genie",
+        "duration_ms": 0
+      },
+      {
+        "id": "02c3461c-087e-4f87-bb4b-6118ab856486",
+        "title": "Rock \u2019n\u2019 Roll Suicide",
+        "duration_ms": 0
+      },
+      {
+        "id": "2e047844-df4d-4798-9f69-d965f04a17de",
+        "title": "John, I\u2019m Only Dancing (Again)",
+        "duration_ms": 0
+      },
+      {
+        "id": "491e5f8f-1341-465a-a210-a2bc7927f53e",
+        "title": "Panic in Detroit (Philadelphia)",
+        "duration_ms": 0
+      },
+      {
+        "id": "5812a11c-b9f5-4424-b481-6a599b51cbfe",
+        "title": "Sorrow (New York)",
+        "duration_ms": 0
+      },
+      {
+        "id": "b9edcfea-935b-4ce3-a7d8-eb7956ce51c2",
+        "title": "Young Americans (New York)",
+        "duration_ms": 0
+      },
+      {
+        "id": "b4c9a2d9-7e52-420e-8131-81c99e634680",
+        "title": "Can You Hear Me (New York)",
+        "duration_ms": 0
+      },
+      {
+        "id": "b6776bbd-4643-47eb-9a7d-cd4cac21acfb",
+        "title": "Somebody Up There Likes Me (New York)",
+        "duration_ms": 0
+      },
+      {
+        "id": "15559ac8-147a-4d06-9333-47c5a52331aa",
+        "title": "Drive\u2010In Saturday (Toronto)",
+        "duration_ms": 0
       }
     ],
     "image_url": "https://coverartarchive.org/release/40ba9028-9bcb-45ea-82dc-a271a2e66eaf/front-250"
@@ -6515,8 +7310,79 @@
         "id": "3dba8815-5866-467a-8d76-a931492ed157",
         "title": "Rebel Rebel",
         "duration_ms": 253440
+      },
+      {
+        "id": "f99c39a0-5e7e-4be5-bc7b-78646c4474db",
+        "title": "Life on Mars",
+        "duration_ms": 353000
+      },
+      {
+        "id": "f1e5163f-da03-47c3-81b8-bd2271b2a932",
+        "title": "Thursday\u2019s Child",
+        "duration_ms": 406000
+      },
+      {
+        "id": "8d894f4c-c5d4-42fd-a53b-be7f82a6f44b",
+        "title": "Something in the Air",
+        "duration_ms": 359000
+      },
+      {
+        "id": "e1be5fac-4ede-46d6-ba67-cc740451cca0",
+        "title": "World on a Wing",
+        "duration_ms": 395000
+      },
+      {
+        "id": "975e4d16-51e5-4363-bd4b-44c42c07868f",
+        "title": "Can\u2019t Help Thinking About Me",
+        "duration_ms": 233000
+      },
+      {
+        "id": "45f19302-5f63-4166-b900-9c59a3800672",
+        "title": "China Girl",
+        "duration_ms": 324000
+      },
+      {
+        "id": "6bcd5b3f-96bc-47b4-b1fa-0ec914b8630c",
+        "title": "Always Crashing in the Same Car",
+        "duration_ms": 264000
+      },
+      {
+        "id": "b6e18f4f-a3a4-425b-8abe-18586bd10cb3",
+        "title": "Survive",
+        "duration_ms": 267000
+      },
+      {
+        "id": "b31074da-6bdd-4415-8bcb-e5db959b1a69",
+        "title": "Drive in Saturday",
+        "duration_ms": 297000
+      },
+      {
+        "id": "c7edae63-0b09-4a04-ad8c-7559115cd7ab",
+        "title": "Changes",
+        "duration_ms": 270000
+      },
+      {
+        "id": "99984b68-0cb9-44e0-8a8f-e82c7f9083eb",
+        "title": "Seven",
+        "duration_ms": 289000
+      },
+      {
+        "id": "c48389be-2c8c-42d4-b767-87edc6ed1db4",
+        "title": "I Can\u2019t Read",
+        "duration_ms": 376000
+      },
+      {
+        "id": "00335720-8300-4b7b-aabe-ab99860dc9a6",
+        "title": "The Pretty Things Are Going to Hell",
+        "duration_ms": 260000
+      },
+      {
+        "id": "6dcd493c-0fb3-4a57-9c57-55087f0741ab",
+        "title": "Rebel Rebel",
+        "duration_ms": 258000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a78f2d19-663a-4740-bcb0-83e533b66500/front-250"
   },
   "3622bad8-f534-4502-95f3-329b1832f260": {
     "title": "Queen & David Bowie Goes Classical (symphony orchestra version)",
@@ -6528,7 +7394,8 @@
         "title": "Under Pressure (symphony orchestra version)",
         "duration_ms": 200346
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/de6cec52-a7f4-4d94-b666-6d46d4d4635e/front-250"
   },
   "36db5e80-af7d-4477-8ff2-b7f6ae23e0c5": {
     "title": "China Girl (Riff & Vox Mixes)",
@@ -6550,7 +7417,8 @@
         "title": "China Girl (Cinemix)",
         "duration_ms": 450000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/e20454d1-8c82-4b93-bbd7-fe0becdbfa17/front-250"
   },
   "374ca8fd-1528-3536-8adf-205d8bb38f95": {
     "title": "ChangesTwoBowie",
@@ -6620,7 +7488,8 @@
         "title": "David Bowie Monsterjam",
         "duration_ms": 3306000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a819a922-6a9d-4d10-9cae-4a3e34cb9b3d/front-250"
   },
   "3a5f94d1-5af4-369c-869a-9d2e4cec540c": {
     "title": "Thursday\u2019s Child",
@@ -7240,6 +8109,11 @@
         "id": "8dc0b838-1c98-44c3-b9f6-a51c286d4acd",
         "title": "Rebel Rebel (U.S. single version)",
         "duration_ms": 180226
+      },
+      {
+        "id": "5ab80b43-be8b-4636-8ef1-e5049be304ba",
+        "title": "Rebel Rebel (original single mix)",
+        "duration_ms": 262000
       }
     ]
   },
@@ -10094,6 +10968,146 @@
         "id": "222ced89-f0c4-4ee8-a951-36b40ff2320d",
         "title": "Modern Love",
         "duration_ms": 220506
+      },
+      {
+        "id": "6ef64f2c-cef2-4c3b-8d0e-d4f95150d850",
+        "title": "Look Back in Anger",
+        "duration_ms": 194146
+      },
+      {
+        "id": "4bfa6e91-aae9-4362-80a8-ba98b5c884c0",
+        "title": "Breaking Glass",
+        "duration_ms": 174960
+      },
+      {
+        "id": "7cca340a-01c5-4732-bae1-9df9221174eb",
+        "title": "Scary Monsters (and Super Creeps)",
+        "duration_ms": 209573
+      },
+      {
+        "id": "053d2a8a-75b9-4fba-b4d9-69540f516b51",
+        "title": "Rebel Rebel",
+        "duration_ms": 135466
+      },
+      {
+        "id": "9638958c-9cc8-44b9-9222-fa8606a77780",
+        "title": "\u201cHeroes\u201d",
+        "duration_ms": 302800
+      },
+      {
+        "id": "efccb9bc-c8c1-417b-bc42-d7aef940080a",
+        "title": "What in the World",
+        "duration_ms": 226720
+      },
+      {
+        "id": "ad864e53-f788-4bbd-98eb-44be248de1e8",
+        "title": "Life on Mars?",
+        "duration_ms": 247800
+      },
+      {
+        "id": "7d588236-e4e2-4b89-ab12-267a8813b880",
+        "title": "Sorrow",
+        "duration_ms": 166133
+      },
+      {
+        "id": "47e3f8cf-e887-4bbf-9c1c-ee15f87b454e",
+        "title": "Golden Years",
+        "duration_ms": 205400
+      },
+      {
+        "id": "0d974e54-bcbd-4f98-9d3e-009b744122fb",
+        "title": "Fashion",
+        "duration_ms": 157240
+      },
+      {
+        "id": "560a321d-b8b5-44bf-a28c-c96209eb3f1f",
+        "title": "Let\u2019s Dance",
+        "duration_ms": 284466
+      },
+      {
+        "id": "02219853-a044-4823-b1a0-a9e9f45f39b7",
+        "title": "Red Sails",
+        "duration_ms": 218146
+      },
+      {
+        "id": "dd97df0f-ac06-4b50-a2f0-d2d1ba76cb6f",
+        "title": "China Girl",
+        "duration_ms": 311960
+      },
+      {
+        "id": "4ae61578-3edf-4bfb-bf33-ef7bcf02e6d9",
+        "title": "White Light/White Heat",
+        "duration_ms": 285640
+      },
+      {
+        "id": "34434faf-1c6f-4f34-afce-2ec1e5e42629",
+        "title": "Station to Station",
+        "duration_ms": 535000
+      },
+      {
+        "id": "fa24ca9e-5a70-468c-bff6-cb938e3c2353",
+        "title": "Cracked Actor",
+        "duration_ms": 200000
+      },
+      {
+        "id": "23364bf9-017b-4e9f-ae57-a7fb0317238a",
+        "title": "Ashes to Ashes",
+        "duration_ms": 230000
+      },
+      {
+        "id": "757291f9-7ca6-4228-b68b-31ed86998f51",
+        "title": "Space Oddity",
+        "duration_ms": 324000
+      },
+      {
+        "id": "33f127bf-7bb5-4adb-a8cd-aaf4b10b81b8",
+        "title": "Band Introductions",
+        "duration_ms": 80000
+      },
+      {
+        "id": "27b79d52-4a75-4758-8600-0aea8467c408",
+        "title": "Young Americans",
+        "duration_ms": 321000
+      },
+      {
+        "id": "619be5fe-91e7-4abc-97db-0876f83805cd",
+        "title": "Cat People (Putting Out Fire)",
+        "duration_ms": 251000
+      },
+      {
+        "id": "29548abe-f1db-4257-9e5f-291fa45d8f68",
+        "title": "TVC 15",
+        "duration_ms": 225000
+      },
+      {
+        "id": "684867a0-8b12-4678-bf49-2daa48667cbf",
+        "title": "Fame",
+        "duration_ms": 273000
+      },
+      {
+        "id": "76a9bb17-f2b8-40fe-95c5-285b6de885b0",
+        "title": "Star",
+        "duration_ms": 159000
+      },
+      {
+        "id": "bfcf0b77-12b3-45dd-991d-9b92126a2abd",
+        "title": "Stay",
+        "duration_ms": 500000
+      },
+      {
+        "id": "728cfaca-e0b0-47b0-9420-a68e5e46c186",
+        "title": "The Jean Genie",
+        "duration_ms": 378000
+      },
+      {
+        "id": "e3c66549-babf-435f-8c3a-6a164c50e879",
+        "title": "I Can\u2019t Explain",
+        "duration_ms": 173000
+      },
+      {
+        "id": "ca20f10f-b8ea-4397-aab3-d61448306fc5",
+        "title": "Modern Love",
+        "duration_ms": 223000
       }
     ],
     "image_url": "https://coverartarchive.org/release/366bca3b-d7ac-4f05-8ef7-f2c8d26007dc/front-250"
@@ -10563,7 +11577,8 @@
         "title": "Modern Love",
         "duration_ms": 261000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/b0aef9a9-079a-42d7-acb5-fa2555bade33/front-250"
   },
   "14e9d794-85be-4a41-8d6f-697baf567d56": {
     "title": "1995\u201010\u201019: Thomas & Mack Arena, Las Vegas, NV, USA",
@@ -10962,7 +11977,8 @@
         "title": "Station to Station (live)",
         "duration_ms": 720000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/8620ea5d-176a-49fb-a717-f46c30aacfb9/front-250"
   },
   "157bccff-a559-4623-83c2-cb580e5d269a": {
     "title": "1996\u201007\u201018: Phoenix Festival, Stratford\u2010upon\u2010Avon, UK",
@@ -11521,7 +12537,8 @@
         "title": "Heroes",
         "duration_ms": 299040
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/36b5c677-e07c-4017-910d-ecb8731059a0/front-250"
   },
   "1b197a10-58bf-4266-8b0a-8d4d5933ea6a": {
     "title": "1996\u201009\u201007: Capitol Ballroom, Washington, DC, USA",
@@ -11837,7 +12854,8 @@
         "title": "Andy Warhol",
         "duration_ms": 190000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/4fb60ab1-f59d-4b6e-8e74-b691f4dd1ebc/front-250"
   },
   "1ce00512-57d9-41d0-9c73-3522ef330df6": {
     "title": "Unplugged & Slightly Phased",
@@ -11920,7 +12938,8 @@
         "title": "White Light/White Heat",
         "duration_ms": 198000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d6a3a7dd-3a22-4d49-a3ab-1860a81a7393/front-250"
   },
   "1e52f747-8f88-4424-8e24-c8b43b00c74c": {
     "title": "2002-07-01: Olympia, Paris, France",
@@ -12397,6 +13416,181 @@
       {
         "id": "5c295ef1-34f9-48a3-baa6-a898d18b6339",
         "title": "Repetition (dressing room recording)",
+        "duration_ms": 174000
+      },
+      {
+        "id": "21c057c5-f55d-4e2c-b9b7-164044b60241",
+        "title": "Intro / Little Wonder",
+        "duration_ms": 277000
+      },
+      {
+        "id": "fa7134fb-36c4-411d-8a65-40de80cb7e70",
+        "title": "The Hearts Filthy Lesson",
+        "duration_ms": 306000
+      },
+      {
+        "id": "7d56f119-fc42-467e-8bdd-fc9b7956370c",
+        "title": "Scary Monsters (and Super Creeps)",
+        "duration_ms": 336000
+      },
+      {
+        "id": "988a9cd8-5ed1-4283-9317-d182b8df8d7b",
+        "title": "Fashion",
+        "duration_ms": 230000
+      },
+      {
+        "id": "44628c2e-a10f-48cd-80f2-9a6ae91dd9b9",
+        "title": "Telling Lies",
+        "duration_ms": 316000
+      },
+      {
+        "id": "15ad07f0-b36c-4218-b31c-3803e44f3736",
+        "title": "Hallo Spaceboy",
+        "duration_ms": 333000
+      },
+      {
+        "id": "9300f96d-d09e-4d22-aa6c-77fbb8a5ff86",
+        "title": "Seven Years in Tibet",
+        "duration_ms": 390000
+      },
+      {
+        "id": "1a79daef-92cb-429b-ac79-da1ecb03e6da",
+        "title": "The Man Who Sold the World",
+        "duration_ms": 218000
+      },
+      {
+        "id": "c3dacb42-ca56-44ac-8846-702a9e14a2f0",
+        "title": "The Last Thing You Should Do",
+        "duration_ms": 350000
+      },
+      {
+        "id": "540fa8ae-6b5c-4d2a-b510-ef0c735dfbe3",
+        "title": "Quicksand",
+        "duration_ms": 300000
+      },
+      {
+        "id": "3d9722f2-b94a-4da5-8ccd-e008cbc24768",
+        "title": "Battle for Britain (The Letter)",
+        "duration_ms": 280000
+      },
+      {
+        "id": "f4b39c1d-a74d-4632-9603-efdbca1f4a76",
+        "title": "The Voyeur of Utter Destruction (As Beauty)",
+        "duration_ms": 344000
+      },
+      {
+        "id": "ed44d4e0-8e73-4cf8-95c2-7e6815bea7d0",
+        "title": "I\u2019m Afraid of Americans",
+        "duration_ms": 330000
+      },
+      {
+        "id": "6e590d15-cb07-441f-a425-40fd89266703",
+        "title": "Looking for Satellites",
+        "duration_ms": 323000
+      },
+      {
+        "id": "7c51da2e-5e45-4c53-b46f-319be8714af9",
+        "title": "Under Pressure",
+        "duration_ms": 243000
+      },
+      {
+        "id": "fd44c556-dd6c-4d8c-8371-947f22141d15",
+        "title": "\u201cHeroes\u201d",
+        "duration_ms": 364000
+      },
+      {
+        "id": "7b2944f0-6f95-4ffa-b323-7067ba6c8b75",
+        "title": "Queen Bitch",
+        "duration_ms": 234000
+      },
+      {
+        "id": "94f21f13-21c9-415e-942f-87cfa15c1799",
+        "title": "Waiting for the Man",
+        "duration_ms": 277000
+      },
+      {
+        "id": "a11dd542-e84f-40ba-86f6-5d351b314df4",
+        "title": "Dirty Boulevard",
+        "duration_ms": 274000
+      },
+      {
+        "id": "01617157-6510-4996-8f3b-cb605bba89df",
+        "title": "White Light/White Heat",
+        "duration_ms": 251000
+      },
+      {
+        "id": "478031d0-fd1d-4cd5-8f63-f71eb13b5d91",
+        "title": "Moonage Daydream",
+        "duration_ms": 344000
+      },
+      {
+        "id": "247dcaeb-e180-41fd-9f4f-d39c69068308",
+        "title": "Happy Birthday",
+        "duration_ms": 93000
+      },
+      {
+        "id": "fbb0657a-7068-45b1-924d-7c2c9626cf20",
+        "title": "All the Young Dudes",
+        "duration_ms": 216000
+      },
+      {
+        "id": "a585a038-2db5-4336-9540-880a5f9e673a",
+        "title": "The Jean Genie",
+        "duration_ms": 312000
+      },
+      {
+        "id": "08e8cfd8-508b-4871-a575-c84e0efebb86",
+        "title": "Space Oddity",
+        "duration_ms": 314000
+      },
+      {
+        "id": "9559c90e-06a5-4f90-967c-3d4729291cf7",
+        "title": "I Can\u2019t Read",
+        "duration_ms": 231000
+      },
+      {
+        "id": "f058d011-3f2c-42e4-a39a-f81404c21bff",
+        "title": "Repitition",
+        "duration_ms": 376000
+      },
+      {
+        "id": "46f26880-4506-454c-b26f-319c505b8451",
+        "title": "Under Pressure",
+        "duration_ms": 244000
+      },
+      {
+        "id": "735cf357-f1c0-4971-8ba8-581672e1b32b",
+        "title": "\u201cHeroes\u201d",
+        "duration_ms": 318000
+      },
+      {
+        "id": "d584ef7e-3752-4626-886b-c94c0b590c41",
+        "title": "Queen Bitch",
+        "duration_ms": 275000
+      },
+      {
+        "id": "cbf4fa73-5192-4861-afd2-13697f8e2f60",
+        "title": "Moonage Daydream",
+        "duration_ms": 350000
+      },
+      {
+        "id": "57d63c27-38bc-427b-a8b6-1f87d8e224bb",
+        "title": "Happy Birthday / All the Young Dudes",
+        "duration_ms": 307000
+      },
+      {
+        "id": "5818523c-61cc-44a6-b2c5-d71d754b76bb",
+        "title": "Space Oddity",
+        "duration_ms": 314000
+      },
+      {
+        "id": "91c52c7f-36a9-48a2-8eb7-bd8ca5f0494f",
+        "title": "I Can\u2019t Read (acoustic)",
+        "duration_ms": 309000
+      },
+      {
+        "id": "dcb8becc-00dc-4357-a6f4-8eea3fd8dcfd",
+        "title": "Repetition (acoustic)",
         "duration_ms": 174000
       }
     ]
@@ -12976,7 +14170,8 @@
         "title": "Breaking Glass",
         "duration_ms": 234000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a3bd8c74-65c0-42f4-8806-caa379b2ed5d/front-250"
   },
   "225c47f8-2c7c-4e1c-bddd-5117cbbca819": {
     "title": "The Outside Sampler",
@@ -14459,7 +15654,8 @@
         "title": "Little Wonder",
         "duration_ms": 395000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/2880fc88-422c-4c12-b1ab-a521cadbb01c/front-250"
   },
   "2a4219f2-5f3b-4faf-b1d2-c2eae0f48232": {
     "title": "2004-03-30: The Fleet Center, Boston, MA, USA",
@@ -15674,7 +16870,8 @@
         "title": "Let\u2019s Dance",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/33930f85-52db-4387-8277-2faf7b20ad17/front-250"
   },
   "35406ec0-54e7-40bd-8db2-23007870e27a": {
     "title": "Feed Me No Lies",
@@ -16053,7 +17250,8 @@
         "title": "Lazarus",
         "duration_ms": 381692
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/0ea2fabf-bf9d-4d21-a8ad-3ae2aaea646f/front-250"
   },
   "39708342-3361-4086-9f08-95bfd5c2e3c8": {
     "title": "Kit Kat Klub New York 11/19/99",
@@ -17993,7 +19191,7 @@
   "43eee2fc-8187-4217-a58d-d3360b4f33cf": {
     "title": "Live in Chile 1990",
     "type": "Album",
-    "track_count": 18,
+    "track_count": 21,
     "total_duration_ms": 4765960,
     "tracks": [
       {
@@ -18085,8 +19283,24 @@
         "id": "83920edc-6a3e-41f2-94ff-efc68cd5756b",
         "title": "White Light/White Heat",
         "duration_ms": 274416
+      },
+      {
+        "id": "63dfaf7a-ddf6-4644-86e9-d6fd8dd31c97",
+        "title": "The Jean Genie / Gloria",
+        "duration_ms": 495984
+      },
+      {
+        "id": "da8c039a-8da9-431c-90f5-3281475b0218",
+        "title": "Fashion",
+        "duration_ms": 278776
+      },
+      {
+        "id": "e2fe23ad-9f0d-4ac5-8494-6dd9c035adfc",
+        "title": "Modern Love",
+        "duration_ms": 258253
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/64c484a0-38a5-40e6-82b3-57b4d8c8c1ae/front-250"
   },
   "441d01c7-80d6-41b7-8c32-2b855abb3a87": {
     "title": "Life on Mars",
@@ -18503,7 +19717,8 @@
         "title": "Stay",
         "duration_ms": 461000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/ca0e0d7d-246c-4fae-8349-7aa4dd799026/front-250"
   },
   "44a6f2bb-4918-4793-96f1-71f2aa4bfb23": {
     "title": "A Reality Tour",
@@ -19094,6 +20309,21 @@
         "id": "80ec28c5-e9fa-4063-8bf2-245f23179b1d",
         "title": "Pallas Athena (live)",
         "duration_ms": 499466
+      },
+      {
+        "id": "3d8fd41d-e577-4f68-b740-a612cf8fe70b",
+        "title": "John I\u2019m Only Dancing",
+        "duration_ms": 160240
+      },
+      {
+        "id": "37f0403f-df46-47d6-b217-fc47aa065fae",
+        "title": "Changes",
+        "duration_ms": 200026
+      },
+      {
+        "id": "56d3ed65-505c-4a15-acfd-dac887f18862",
+        "title": "The Supermen",
+        "duration_ms": 163973
       }
     ],
     "image_url": "https://coverartarchive.org/release/3110bd68-da15-476b-a77c-1c931a4fd21d/front-250"
@@ -19259,7 +20489,7 @@
   "466cfb08-9617-3d78-8d00-31a6482cbaee": {
     "title": "Telling Lies",
     "type": "Single",
-    "track_count": 3,
+    "track_count": 4,
     "total_duration_ms": 862039,
     "tracks": [
       {
@@ -19276,6 +20506,26 @@
         "id": "1208e244-4068-4ffe-9443-2a55c0b3c131",
         "title": "Telling Lies (Adam F mix)",
         "duration_ms": 237933
+      },
+      {
+        "id": "95cb07a9-fb6d-4ba8-a775-4a2d88ecafbc",
+        "title": "Telling Lies (Adam F mix)",
+        "duration_ms": 241231
+      },
+      {
+        "id": "48f488ab-785e-430f-80a9-9ddf07f17080",
+        "title": "Telling Lies (Feelgood mix)",
+        "duration_ms": 309514
+      },
+      {
+        "id": "44b910b7-cb92-428d-b541-d39141c8c98a",
+        "title": "Telling Lies (Paradox mix)",
+        "duration_ms": 308594
+      },
+      {
+        "id": "b76f481d-2ac7-41f5-84a3-c8dedcb840e8",
+        "title": "Nuts (Drum n Bass mix)",
+        "duration_ms": 309057
       }
     ],
     "image_url": "https://coverartarchive.org/release/d072d5ae-64d0-42c9-b49f-cdc0423d5998/front-250"
@@ -19404,20 +20654,32 @@
         "title": "Let\u2019s Dance",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/71a42d3d-e070-4b78-95de-465f1c71b215/front-250"
   },
   "46f67ce8-391d-4c75-9e25-b02ca320e48a": {
     "title": "Let\u2019s Dance (demo)",
     "type": "Single",
-    "track_count": 1,
+    "track_count": 2,
     "total_duration_ms": 318000,
     "tracks": [
       {
         "id": "f78fe2bb-846e-468d-a65e-1ddb25ae1800",
         "title": "Let\u2019s Dance (demo)",
         "duration_ms": 318000
+      },
+      {
+        "id": "be147c1b-476c-4de1-880b-940c84a87a6a",
+        "title": "Let\u2019s Dance (full length demo)",
+        "duration_ms": 454000
+      },
+      {
+        "id": "7093c3d9-3ce8-412b-953a-7d0972668e36",
+        "title": "Let\u2019s Dance (live)",
+        "duration_ms": 274000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/5ff832b0-9e75-4b8c-a1f0-2fd1d9bec487/front-250"
   },
   "4769376f-6d51-46bb-8d73-5da6cf397c9e": {
     "title": "Eternal Life",
@@ -19909,7 +21171,8 @@
         "title": "John, I\u2019m Only Dancing / Outro",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/50055d41-9b4e-436b-9415-a27cba2a16f5/front-250"
   },
   "4a9dff45-8483-49e5-8e51-9abc48ac1275": {
     "title": "Fun Mix",
@@ -19942,7 +21205,8 @@
         "title": "Fun (Dillinja mix)",
         "duration_ms": 350878
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/82295d75-ac94-431b-a089-ac9dd08e4468/front-250"
   },
   "4ad2e473-95f1-4b33-ad6c-eca5f667d1bb": {
     "title": "1997\u201007\u201005: Werchter Festival, Werchter, Belgium",
@@ -21627,7 +22891,8 @@
         "title": "The Lord\u2019s Prayer",
         "duration_ms": 87000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/3f33c0bf-1c0b-4856-8b18-96461f5fbed7/front-250"
   },
   "4e3d3638-f4ec-4e9e-9511-ea6b5384c490": {
     "title": "Beat of Your Drum (2018)",
@@ -21640,7 +22905,8 @@
         "title": "Beat of Your Drum (2018)",
         "duration_ms": 266000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/49429166-4354-4099-894f-002a3b2940f9/front-250"
   },
   "4efb453e-830b-405a-ab38-185d162ec0d1": {
     "title": "1983\u201008\u201019: Reunion Arena, Dallas, TX, USA",
@@ -22094,7 +23360,8 @@
         "title": "Under Pressure",
         "duration_ms": 242000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/9e64861c-02a0-45cb-9066-eb9b9c0f716e/front-250"
   },
   "50f8710f-3ae6-319b-85a7-afe783f13449": {
     "title": "Aladdin Sane",
@@ -22201,6 +23468,26 @@
         "id": "01b2d945-f09d-4351-96a7-5622c64dead2",
         "title": "Drive\u2010In Saturday (recorded live at the Public Hall, Cleveland 25/11/72)",
         "duration_ms": 293693
+      },
+      {
+        "id": "02abf1b4-6647-40bc-b9b8-344cc16e9858",
+        "title": "Round and Round",
+        "duration_ms": 162000
+      },
+      {
+        "id": "bb9d4bcf-2ce5-4902-9599-ae8e3b2c9eed",
+        "title": "A Lad in Vain (unreleased outtake)",
+        "duration_ms": 361000
+      },
+      {
+        "id": "9b494459-6448-4add-9093-8f371592b86f",
+        "title": "Holy Holy",
+        "duration_ms": 143000
+      },
+      {
+        "id": "6ee94cfe-42fb-4edc-82a5-01d97796d645",
+        "title": "John, I\u2019m Only Dancing",
+        "duration_ms": 168000
       }
     ],
     "image_url": "https://coverartarchive.org/release/75ad6087-eb43-42e9-b001-d581729c98ef/front-250"
@@ -22685,7 +23972,8 @@
         "title": "Under Pressure",
         "duration_ms": 247000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/9df3c887-6c08-4468-83d0-6e91ae0c606b/front-250"
   },
   "53e5bb87-e0c0-45c5-bbe5-9f959c0f4c3a": {
     "title": "Single Hits 5",
@@ -23823,7 +25111,8 @@
         "title": "I Got You Babe",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a1f77441-4332-4f4a-a8c7-9b5fa2b28215/front-250"
   },
   "58fe8d10-04ff-45a9-9667-68dd000e5e63": {
     "title": "Fashions",
@@ -24099,6 +25388,376 @@
         "id": "846cf41f-2a91-458b-b281-3ebfd4873451",
         "title": "Teenage Wildlife",
         "duration_ms": 448080
+      },
+      {
+        "id": "c701b9ba-c1fc-440c-9830-fbff85f12750",
+        "title": "Terrible Lie",
+        "duration_ms": 281913
+      },
+      {
+        "id": "87b22bd4-32cd-47a5-aa2e-57a29a5c638c",
+        "title": "March of the Pigs",
+        "duration_ms": 234736
+      },
+      {
+        "id": "831d0fff-00fe-4608-b353-99fd17d03149",
+        "title": "The Becoming",
+        "duration_ms": 300173
+      },
+      {
+        "id": "64c0aaae-1741-4dd5-9163-7adefc7b6204",
+        "title": "Sanctfied",
+        "duration_ms": 428826
+      },
+      {
+        "id": "c73bf9d4-cb5e-4dc7-a248-2a8f790d8d91",
+        "title": "Piggy",
+        "duration_ms": 266579
+      },
+      {
+        "id": "21fcf69f-f679-4284-a058-118e8c2a0467",
+        "title": "Burn",
+        "duration_ms": 299859
+      },
+      {
+        "id": "9560ab93-70d8-4919-ac7c-8424d158e0a8",
+        "title": "Closer",
+        "duration_ms": 354795
+      },
+      {
+        "id": "e90db9bc-fa3b-4c6e-aa1c-17974117f736",
+        "title": "Wish",
+        "duration_ms": 220081
+      },
+      {
+        "id": "3b19ddd7-5391-46eb-8cd5-d8000a0cc70f",
+        "title": "Gave Up",
+        "duration_ms": 277733
+      },
+      {
+        "id": "cf0f6f63-b851-433b-9ed8-0d94cc56432e",
+        "title": "Down in It",
+        "duration_ms": 252682
+      },
+      {
+        "id": "55e0fa84-0a4e-4531-97e5-b8b96fe0df56",
+        "title": "A Warm Place",
+        "duration_ms": 228284
+      },
+      {
+        "id": "0dd2133e-675d-4f7f-83f3-6eb92fdfff71",
+        "title": "Subterraneans",
+        "duration_ms": 257358
+      },
+      {
+        "id": "09097d5a-dcf3-4e73-b2e9-606ee5f59b88",
+        "title": "Scary Monsters",
+        "duration_ms": 319451
+      },
+      {
+        "id": "f9095e98-32ea-42ac-a6a3-34f3817d0989",
+        "title": "Reptile",
+        "duration_ms": 365322
+      },
+      {
+        "id": "47e61768-5775-42fb-8200-eb9a48764ac3",
+        "title": "Hallo Spaceboy",
+        "duration_ms": 315010
+      },
+      {
+        "id": "ae030aa7-84d5-406b-9fee-e53a69ac1500",
+        "title": "Hurt",
+        "duration_ms": 333035
+      },
+      {
+        "id": "9a67357b-df52-4b42-8d83-61502b4df319",
+        "title": "Look Back in Anger",
+        "duration_ms": 304796
+      },
+      {
+        "id": "91582809-3947-402b-bbad-b4318d8ad972",
+        "title": "I\u2019m Derranged",
+        "duration_ms": 340323
+      },
+      {
+        "id": "7b6eb121-031d-49fa-b7fc-cebf66590808",
+        "title": "The Heart\u2019s Filthy Lesson",
+        "duration_ms": 295575
+      },
+      {
+        "id": "51dbfaa3-3a5e-4bba-9148-4ee546afad00",
+        "title": "The Voyeur of Utter Destruction",
+        "duration_ms": 317727
+      },
+      {
+        "id": "1702e858-4f76-4579-9e98-25666f94a820",
+        "title": "I Have Not Been to Oxford Town",
+        "duration_ms": 261407
+      },
+      {
+        "id": "c3ffd78a-e986-4d3f-9467-d5063e27cdd6",
+        "title": "Outside",
+        "duration_ms": 274259
+      },
+      {
+        "id": "b4539996-c31a-42d4-a36f-d690b8abbacd",
+        "title": "Andy Warhol",
+        "duration_ms": 220316
+      },
+      {
+        "id": "3f89cabc-1e03-4af1-b146-e4d8a64c7717",
+        "title": "Breaking Glass",
+        "duration_ms": 228519
+      },
+      {
+        "id": "2705e13e-2453-4f62-8a1c-016c484aec73",
+        "title": "The Man Who Sold the World",
+        "duration_ms": 221701
+      },
+      {
+        "id": "31ff30b2-de77-483f-8a93-10595cb84db9",
+        "title": "We Prick You",
+        "duration_ms": 263000
+      },
+      {
+        "id": "79be41f3-4eb3-4530-b313-c0b98e4f39e8",
+        "title": "Joe the Lion",
+        "duration_ms": 242233
+      },
+      {
+        "id": "170fa3c4-dd5d-4094-b190-16a9e42b3fee",
+        "title": "A Small Plot of Land",
+        "duration_ms": 411794
+      },
+      {
+        "id": "488f98fb-cbb5-4015-932d-388fdccec32c",
+        "title": "Nite Flights",
+        "duration_ms": 315376
+      },
+      {
+        "id": "f3d1c93a-cf1e-4a1d-98d8-5e0881d6a640",
+        "title": "Under Pressure",
+        "duration_ms": 273684
+      },
+      {
+        "id": "69450362-1866-482f-94fa-f9403bf56249",
+        "title": "Teenage Wildlife",
+        "duration_ms": 448130
+      },
+      {
+        "id": "0daf45bf-2dc3-495c-a6bc-1d3dde6f1c56",
+        "title": "Hallo Spaceboy",
+        "duration_ms": 315000
+      },
+      {
+        "id": "0be5fe16-a3c1-43d6-bee1-cd46c8c92b7f",
+        "title": "March of the Pigs",
+        "duration_ms": 234000
+      },
+      {
+        "id": "da02843f-fdae-41a7-849f-8c4bcfcafa95",
+        "title": "Wish",
+        "duration_ms": 220000
+      },
+      {
+        "id": "8c7a37cc-beb8-4325-8658-1b3320906dfc",
+        "title": "Piggy",
+        "duration_ms": 266000
+      },
+      {
+        "id": "4e82a1f6-da6a-4e66-8bd6-e247d15f38f9",
+        "title": "Burn",
+        "duration_ms": 299000
+      },
+      {
+        "id": "fa76a126-2256-4c12-a5b8-d37f5310de28",
+        "title": "Gave Up",
+        "duration_ms": 277000
+      },
+      {
+        "id": "03d22d2c-3d78-4f3f-9bcb-d74bb242f373",
+        "title": "Down in It",
+        "duration_ms": 252000
+      },
+      {
+        "id": "8f67f8bc-953a-4478-ba49-abdac6c60386",
+        "title": "The Voyeur of Utter Destruction",
+        "duration_ms": 317000
+      },
+      {
+        "id": "ccf3b8ed-fb3f-4dfb-8db4-2267be8812b1",
+        "title": "Breaking Glass",
+        "duration_ms": 228000
+      },
+      {
+        "id": "4bc4acf2-6b8e-40cc-988e-f9dd340d2cc2",
+        "title": "Andy Warhol",
+        "duration_ms": 220000
+      },
+      {
+        "id": "9d8ba5d7-a0ae-433d-bab5-cc65f1ff0f27",
+        "title": "Scary Monsters",
+        "duration_ms": 319000
+      },
+      {
+        "id": "0731c4e9-0f59-4d5c-82b6-f93055c9ec25",
+        "title": "Reptile",
+        "duration_ms": 365000
+      },
+      {
+        "id": "57ebb7ec-2ca0-4c3d-9730-37b63d4719c7",
+        "title": "I Have Not Been to Oxford Town",
+        "duration_ms": 261000
+      },
+      {
+        "id": "4f2ef982-f851-4d59-90b5-bd88b4c3ab5d",
+        "title": "Outside",
+        "duration_ms": 274000
+      },
+      {
+        "id": "2f3a1673-2f3a-4e2c-85a5-c424036d042b",
+        "title": "The Man Who Sold the World",
+        "duration_ms": 221000
+      },
+      {
+        "id": "954ca860-f953-46fc-b6f0-14464f76b7a0",
+        "title": "Look Back in Anger",
+        "duration_ms": 304000
+      },
+      {
+        "id": "9e413e2d-eee5-440f-bf25-191ac5e43ae8",
+        "title": "Subterraneans",
+        "duration_ms": 257000
+      },
+      {
+        "id": "a630a6ee-c1b4-4bf9-a2c6-c9dfa83994c1",
+        "title": "Joe the Lion",
+        "duration_ms": 242000
+      },
+      {
+        "id": "d19a619b-bb48-4f65-b436-b8d4f7012aa8",
+        "title": "We Prick You",
+        "duration_ms": 262946
+      },
+      {
+        "id": "8f093d09-baf7-4b80-80d3-af9289dce435",
+        "title": "Terrible Lie",
+        "duration_ms": 0
+      },
+      {
+        "id": "4804d272-180f-4b8a-a469-014f5e43c0bb",
+        "title": "Sanctified",
+        "duration_ms": 428000
+      },
+      {
+        "id": "7a75fecb-2061-453b-96a1-e19c4a72f2b6",
+        "title": "Piggy",
+        "duration_ms": 0
+      },
+      {
+        "id": "9dcfdd68-874b-46d3-8ff1-e3c372791960",
+        "title": "Closer",
+        "duration_ms": 384000
+      },
+      {
+        "id": "eab3d30e-990f-4291-a608-1819c5ba1642",
+        "title": "Gave Up",
+        "duration_ms": 0
+      },
+      {
+        "id": "6eeb82f0-fbb9-4a7c-a23a-1d166f948cfd",
+        "title": "Eraser (instrumental)",
+        "duration_ms": 0
+      },
+      {
+        "id": "928a2e0f-8946-4971-a40a-3bed9d55b17a",
+        "title": "Subterraneans",
+        "duration_ms": 0
+      },
+      {
+        "id": "a1406341-b8ef-4f27-a8f1-eeaa5ea2c6f1",
+        "title": "Reptile",
+        "duration_ms": 379000
+      },
+      {
+        "id": "80aca9e3-a40a-4743-b21c-d75ec9f6b617",
+        "title": "Hurt",
+        "duration_ms": 369000
+      },
+      {
+        "id": "a46858ca-fe01-4882-a589-658b05c1db08",
+        "title": "The Hearts Filthy Lesson",
+        "duration_ms": 0
+      },
+      {
+        "id": "3c9ea220-a357-48ad-97d0-dafe9756c01e",
+        "title": "Andy Warhol",
+        "duration_ms": 0
+      },
+      {
+        "id": "dbeee912-a429-482e-8aab-cbf89d888779",
+        "title": "We Prick You",
+        "duration_ms": 0
+      },
+      {
+        "id": "125dc46c-d01e-44af-8d85-6efa936b39a0",
+        "title": "A Small Plot of Land",
+        "duration_ms": 402000
+      },
+      {
+        "id": "6a6550f6-9197-434e-a136-79c20f03bb04",
+        "title": "Nite Flights",
+        "duration_ms": 395000
+      },
+      {
+        "id": "fb77ae16-dc0c-4b82-a911-8b692c5dbd1d",
+        "title": "Under Pressure",
+        "duration_ms": 0
+      },
+      {
+        "id": "4b280a04-3a40-48b4-8ef1-05b05126a69b",
+        "title": "Teenage Wildlife",
+        "duration_ms": 445000
+      },
+      {
+        "id": "16b63fa4-01b4-48a4-a385-3baaf2b575cd",
+        "title": "Terrible Lie",
+        "duration_ms": 281000
+      },
+      {
+        "id": "a75cab38-2eaa-45c5-8297-a1514506ca27",
+        "title": "Sanctified",
+        "duration_ms": 428000
+      },
+      {
+        "id": "6e30dcfc-53e9-4c37-be05-cbd9b90f7d52",
+        "title": "Eraser (instrumental)",
+        "duration_ms": 228000
+      },
+      {
+        "id": "f27e24a9-46fd-4b11-ac5a-9c5d7683a6d9",
+        "title": "Hurt",
+        "duration_ms": 332000
+      },
+      {
+        "id": "5a9d2892-76d4-4acd-b029-c324eb051799",
+        "title": "The Hearts Filthy Lesson",
+        "duration_ms": 295000
+      },
+      {
+        "id": "bcdf13aa-9e56-40e3-99a3-f6d377861c76",
+        "title": "A Small Plot of Land",
+        "duration_ms": 411000
+      },
+      {
+        "id": "3f2be5f3-e2f5-46ab-9081-6673809a64cd",
+        "title": "Nite Flights",
+        "duration_ms": 395000
+      },
+      {
+        "id": "dea07ad7-e5e1-412e-adf2-c374c6468ca2",
+        "title": "Under Pressure",
+        "duration_ms": 273000
       }
     ],
     "image_url": "https://coverartarchive.org/release/35f8f5df-95f9-4f30-b250-f26d350fd1bf/front-250"
@@ -24791,7 +26450,8 @@
         "title": "Fuck You All Night",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/64d859d1-2a2d-4b1d-8062-466fda43e8d8/front-250"
   },
   "5db40351-97ed-36a8-88e2-a21a2603cae1": {
     "title": "David Bowie",
@@ -25063,6 +26723,21 @@
         "id": "a5b29c4e-70b1-459d-9d79-270fe4315dc3",
         "title": "In the Heat of the Morning (recorded for BBC Radio One\u2019s Top Gear)",
         "duration_ms": 258373
+      },
+      {
+        "id": "42d6de1a-bfe5-48f3-8a7c-69c95abb8f77",
+        "title": "Ching\u2010A\u2010Ling (full\u2010length version)",
+        "duration_ms": 172373
+      },
+      {
+        "id": "7d343963-7ecf-41e8-af5f-f6bb9c0f744b",
+        "title": "The Laughing Gnome (vocal take one / mix one, mono)",
+        "duration_ms": 207493
+      },
+      {
+        "id": "c89e3c1e-65b0-4ce6-981b-6847f79ef2d1",
+        "title": "Space Oddity (\u2018Love You Till Tuesday\u2019 full length version, mono)",
+        "duration_ms": 273346
       }
     ],
     "image_url": "https://coverartarchive.org/release/a15d1908-70ac-4f97-80e1-eab791ebaf3a/front-250"
@@ -25508,7 +27183,8 @@
         "title": "1984 / Dodo (alt. versions 1 & 2)",
         "duration_ms": 283000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d8be0e52-d2d0-43dc-9420-07d2bd1d4a06/front-250"
   },
   "5f99037b-a150-448c-8e6c-f99a7be21654": {
     "title": "Space Oddity / Moonage Daydream / Life on Mars / It Ain\u2019t Easy",
@@ -25628,7 +27304,8 @@
         "title": "Little Wonder (Junior\u2019s club instrumental)",
         "duration_ms": 499798
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/af02190f-e8f5-4995-8a94-3713c48ddc72/front-250"
   },
   "60a6158e-9047-41cd-9a00-e6cfecb21407": {
     "title": "Bowie Now",
@@ -26542,7 +28219,8 @@
         "title": "Let\u2019s Dance (RQntz remix)",
         "duration_ms": 263000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/39d31d6e-8de7-441f-9b02-9614302336ed/front-250"
   },
   "639bfe73-9aac-3c28-9ecd-1bd1fc850660": {
     "title": "Live EP (live at Fashion Rocks)",
@@ -26604,7 +28282,8 @@
         "title": "The London Boys (live)",
         "duration_ms": 227000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/25bb0ffc-0b9a-4dd1-839b-012b928f5e41/front-250"
   },
   "63d74718-6b6e-4061-8355-1941adb12460": {
     "title": "1995\u201010\u201011: Riverport Amphitheatre, Maryland Heights, MO, USA",
@@ -28057,7 +29736,7 @@
   "6832817f-f7f3-3bd8-b902-105b203b7d29": {
     "title": "Little Wonder",
     "type": "Single",
-    "track_count": 5,
+    "track_count": 6,
     "total_duration_ms": 1110666,
     "tracks": [
       {
@@ -28144,6 +29823,36 @@
         "id": "2810f581-584c-48f6-ae88-c2eb90d33820",
         "title": "Telling Lies (Adam F mix)",
         "duration_ms": 238000
+      },
+      {
+        "id": "a989ec6e-19d5-4fae-a2d5-a60dd857dad9",
+        "title": "Little Wonder (Junior\u2019s 7\u2033 mix)",
+        "duration_ms": 245221
+      },
+      {
+        "id": "4063a805-3e6e-416c-8426-33afc3b11bc4",
+        "title": "Little Wonder (Junior\u2019s club mix)",
+        "duration_ms": 498764
+      },
+      {
+        "id": "2e82dea7-9efb-4875-91cb-e068e41e3def",
+        "title": "Little Wonder (Ambient Junior mix)",
+        "duration_ms": 599410
+      },
+      {
+        "id": "5e820bcf-3ff1-4e9f-9614-9ef1a2198730",
+        "title": "Little Wonder (Club Dub Junior mix)",
+        "duration_ms": 498968
+      },
+      {
+        "id": "99455d07-c0b3-45c3-9f3d-062392fdc476",
+        "title": "Little Wonder (4/4 Junior mix)",
+        "duration_ms": 498167
+      },
+      {
+        "id": "2c377356-11e6-42ca-8e2a-f9eded3aef52",
+        "title": "Little Wonder (Junior\u2019s club instrumental)",
+        "duration_ms": 499797
       }
     ],
     "image_url": "https://coverartarchive.org/release/845c8c8a-6259-4e95-9156-45bd27289c85/front-250"
@@ -29466,7 +31175,8 @@
         "title": "Modern Love",
         "duration_ms": 249000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a6be47aa-2950-49ae-bce6-739bb4bbf002/front-250"
   },
   "6c4a66e5-e6f3-492b-a110-db3d4681593a": {
     "title": "Brilliant Adventure (1992\u20132001)",
@@ -30128,8 +31838,19 @@
         "id": "bd224c5e-b2fb-40f7-a4a5-617cbd98a895",
         "title": "Pictures of Lily",
         "duration_ms": 301958
+      },
+      {
+        "id": "0f91591e-0718-49ff-966e-a2591c33e0d3",
+        "title": "Strangers When We Meet",
+        "duration_ms": 310733
+      },
+      {
+        "id": "f6ed1b75-39bd-4837-9e59-8ef2ac2a9a0b",
+        "title": "Survive (Marius de Vries mix)",
+        "duration_ms": 257706
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/5e68d183-2c07-4e98-b1d9-318f0e72eff3/front-250"
   },
   "6c9ae3dd-32ad-472c-96be-69d0a3536261": {
     "title": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
@@ -30541,6 +32262,161 @@
         "id": "57ccf9da-3ec2-4425-bf53-c07115bcc022",
         "title": "Starman",
         "duration_ms": 250000
+      },
+      {
+        "id": "b74d2ace-7d73-4c0e-ba73-7c57b0498385",
+        "title": "Five Years",
+        "duration_ms": 280000
+      },
+      {
+        "id": "74d8d3eb-1014-4d14-b910-76257c038ad6",
+        "title": "Soul Love",
+        "duration_ms": 213000
+      },
+      {
+        "id": "02abf1b4-6647-40bc-b9b8-344cc16e9858",
+        "title": "Round and Round",
+        "duration_ms": 160000
+      },
+      {
+        "id": "e7cee422-b2a8-438c-80ab-d39f5780fe29",
+        "title": "Amsterdam",
+        "duration_ms": 200000
+      },
+      {
+        "id": "214deccd-bdd0-4d82-80d1-52d1e2a2b577",
+        "title": "Hang On to Yourself",
+        "duration_ms": 157000
+      },
+      {
+        "id": "0318ab41-d393-442e-a941-d76e6195d350",
+        "title": "Star",
+        "duration_ms": 170000
+      },
+      {
+        "id": "07066c9d-248a-4938-80d4-a3fb7f28868a",
+        "title": "Lady Stardust",
+        "duration_ms": 201000
+      },
+      {
+        "id": "058958b0-72b5-43ad-8144-4c6a61722035",
+        "title": "Five Years (2024 Dolby Atmos mix)",
+        "duration_ms": 282560
+      },
+      {
+        "id": "f1afd0e4-fbbe-4088-bcdf-e0d352b2bc7c",
+        "title": "Soul Love (2024 Dolby Atmos mix)",
+        "duration_ms": 213533
+      },
+      {
+        "id": "f2beac75-155c-4704-ad47-54df5052d27f",
+        "title": "Moonage Daydream (2024 Dolby Atmos mix)",
+        "duration_ms": 280000
+      },
+      {
+        "id": "3bb35b34-f264-45dd-8eec-3574da93c65f",
+        "title": "Starman (2024 Dolby Atmos mix)",
+        "duration_ms": 252000
+      },
+      {
+        "id": "ac7e92aa-6871-432f-b674-d308b61baf45",
+        "title": "It Ain\u2019t Easy (2024 Dolby Atmos mix)",
+        "duration_ms": 178000
+      },
+      {
+        "id": "abd5363c-11d3-4b21-9ad0-781ac1e8599a",
+        "title": "Lady Stardust (2024 Dolby Atmos mix)",
+        "duration_ms": 201000
+      },
+      {
+        "id": "4a195048-c0d7-4f0d-a34f-1ff02425fc97",
+        "title": "Star (2024 Dolby Atmos mix)",
+        "duration_ms": 166666
+      },
+      {
+        "id": "b97a36e9-bc85-44bf-a428-ee309411db14",
+        "title": "Hang On to Yourself (2024 Dolby Atmos mix)",
+        "duration_ms": 160000
+      },
+      {
+        "id": "2479c3ec-bc0c-4b83-99f0-6639370127fe",
+        "title": "Ziggy Stardust (2024 Dolby Atmos mix)",
+        "duration_ms": 192866
+      },
+      {
+        "id": "7aa38669-d2e7-43a3-a4e7-8559150df2ed",
+        "title": "Suffragette City (2024 Dolby Atmos mix)",
+        "duration_ms": 205000
+      },
+      {
+        "id": "7e80033f-2ba8-48e6-9c71-be13fc85c61d",
+        "title": "Rock \u2019n\u2019 Roll Suicide (2024 Dolby Atmos mix)",
+        "duration_ms": 180733
+      },
+      {
+        "id": "302740b1-3ca8-44ab-aa08-155c4a0298c2",
+        "title": "Five Years (2024 stereo mix)",
+        "duration_ms": 289000
+      },
+      {
+        "id": "a8333834-4dcb-415a-ba5e-0ae543bee326",
+        "title": "Soul Love (2024 stereo mix)",
+        "duration_ms": 214000
+      },
+      {
+        "id": "9413b1e9-e095-41bb-a549-950151ba988b",
+        "title": "Moonage Daydream (2024 stereo mix)",
+        "duration_ms": 275000
+      },
+      {
+        "id": "e0b68a1e-3f8a-4098-9f47-deb2433effc5",
+        "title": "Starman (2024 stereo mix)",
+        "duration_ms": 252000
+      },
+      {
+        "id": "59199c20-a16d-4c8d-89cc-5750b48ad0ad",
+        "title": "It Ain\u2019t Easy (2024 stereo mix)",
+        "duration_ms": 175000
+      },
+      {
+        "id": "1fdbe4ae-3482-4616-a020-5d96aa31642e",
+        "title": "Lady Stardust (2024 stereo mix)",
+        "duration_ms": 201000
+      },
+      {
+        "id": "78fbe290-d187-47f6-a457-f9fbe4af861b",
+        "title": "Star (2024 stereo mix)",
+        "duration_ms": 167000
+      },
+      {
+        "id": "944d7277-6154-4d14-a336-70d723f91a46",
+        "title": "Hang On to Yourself (2024 stereo mix)",
+        "duration_ms": 148000
+      },
+      {
+        "id": "95079129-b986-4a70-883b-fa1f3385c630",
+        "title": "Ziggy Stardust (2024 stereo mix)",
+        "duration_ms": 193000
+      },
+      {
+        "id": "9c9c8338-a31a-4f18-b84d-ae53a7555eae",
+        "title": "Suffragette City (2024 stereo mix)",
+        "duration_ms": 205000
+      },
+      {
+        "id": "ecce85d8-c6c0-4f30-bc93-c9745b6c290c",
+        "title": "Rock \u2019n\u2019 Roll Suicide (2024 stereo mix)",
+        "duration_ms": 181000
+      },
+      {
+        "id": "299eb998-b3f7-485a-9c63-996f5c6bc586",
+        "title": "Starman (instrumental)",
+        "duration_ms": 255760
+      },
+      {
+        "id": "ffcdd97c-b949-41d0-866c-e5a150228eac",
+        "title": "Hang On to Yourself (demo)",
+        "duration_ms": 172600
       }
     ],
     "image_url": "https://coverartarchive.org/release/2311ff39-96ae-42c4-b399-c68f547d530a/front-250"
@@ -30620,15 +32496,21 @@
   "6db1e155-d34a-40b2-b0a4-eca698040d92": {
     "title": "Cosmic Dancer (live)",
     "type": "Single",
-    "track_count": 1,
+    "track_count": 2,
     "total_duration_ms": 224491,
     "tracks": [
       {
         "id": "7e4a30aa-3c5c-4357-8e40-0ed8d9af759b",
         "title": "Cosmic Dancer (live)",
         "duration_ms": 224491
+      },
+      {
+        "id": "07883f4a-0c59-4124-ab81-d36ac26660dd",
+        "title": "That\u2019s Entertainment",
+        "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/20f85edc-5ba6-4c0d-898c-bb6c020b8eb6/front-250"
   },
   "6e0ef3f6-3170-4cef-bd21-68027eb316e4": {
     "title": "Ashes to Ashes",
@@ -31007,7 +32889,8 @@
         "title": "Heroes (Live Aid 1985)",
         "duration_ms": 416000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/5d895e21-2df0-4807-b6cb-e98f3a853c83/front-250"
   },
   "6fab5b26-db6b-4990-8f1f-67d32a2cfc8b": {
     "title": "Ouvrez le chien",
@@ -32274,7 +34157,8 @@
         "title": "Moonage Daydream (2003 Instrumental Mix) (96khz/24bit PCM Stereo)",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/33d7209d-7d35-42ba-b32b-e37ca90f664e/front-250"
   },
   "7286b30c-31e2-4c3b-a7cc-5b70fe704944": {
     "title": "Just for One Day (Heroes)",
@@ -32908,7 +34792,7 @@
   "743b0b2e-a23a-3182-950e-232f8cb0dfb7": {
     "title": "Hunky Dory",
     "type": "Album",
-    "track_count": 15,
+    "track_count": 17,
     "total_duration_ms": 2499597,
     "tracks": [
       {
@@ -32995,6 +34879,21 @@
         "id": "a97a2742-b719-4fe3-8f3a-5c7d39573b02",
         "title": "The Bewlay Brothers (alternate mix)",
         "duration_ms": 320426
+      },
+      {
+        "id": "6c815d8a-5d60-4a4f-9e1e-b4985e8ffe53",
+        "title": "Changes",
+        "duration_ms": 152000
+      },
+      {
+        "id": "ba8c2bdf-ce0f-4ec7-9801-8d18b8b888f8",
+        "title": "The Shadowman",
+        "duration_ms": 225000
+      },
+      {
+        "id": "8c329cb4-2d63-4e6f-a278-b2eb14709b86",
+        "title": "How Lucky You Are",
+        "duration_ms": 214000
       }
     ],
     "image_url": "https://coverartarchive.org/release/925e4115-febf-4eb4-a442-e4ee8aecdbc2/front-250"
@@ -33015,7 +34914,8 @@
         "title": "Shadow Man (early version)",
         "duration_ms": 228000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/aa44b028-2356-419a-9eae-7f5c9cb664c8/front-250"
   },
   "745aadff-42cf-4f93-8ae8-3cde84aa5888": {
     "title": "Man in the Middle",
@@ -33763,7 +35663,8 @@
         "title": "I\u2019m Afraid of Americans",
         "duration_ms": 306982
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/e750a677-d14a-4811-bef6-8a1453b0a377/front-250"
   },
   "779645b4-6526-4bc7-a302-3a35f624c11e": {
     "title": "1983-04-26: Las Colinas Soundstage, Dallas, TX, USA",
@@ -34708,8 +36609,19 @@
         "id": "5a996d27-0950-417a-812b-866ca68eaf90",
         "title": "I Can\u2019t Give Everything Away (radio edit)",
         "duration_ms": 264739
+      },
+      {
+        "id": "c59f4caa-54b8-46c7-ab64-fa59d0c6feee",
+        "title": "Plan",
+        "duration_ms": 120986
+      },
+      {
+        "id": "287763f1-5672-45a3-a05e-d777c00ebb6f",
+        "title": "So She",
+        "duration_ms": 151800
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/3162c486-13df-44b4-a935-a12aaf983d41/front-250"
   },
   "783fdcc6-b18e-341b-911c-a9fa1438d47b": {
     "title": "God Knows I\u2019m Good: The BBC\u2010Sessions 1967\u20131971",
@@ -34955,7 +36867,8 @@
         "title": "Moonage Daydream",
         "duration_ms": 226000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/85d632ea-8e57-4e23-a2d9-9c70c0d78524/front-250"
   },
   "786b8f5f-986f-4adc-ad6e-88be0013e049": {
     "title": "1990\u201009\u201029: Derby Rock Festival, Buenos Aires, Argentina",
@@ -35195,7 +37108,8 @@
         "title": "\u201cHeroes\u201d",
         "duration_ms": 368093
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d5bea119-063e-4682-a180-16389a8c54b6/front-250"
   },
   "79ca9dd1-084e-486c-9c26-8d6b6f7f7e62": {
     "title": "The Classic Collaborations",
@@ -35268,7 +37182,8 @@
         "title": "David Bowie and Trent Reznor Interview 1995",
         "duration_ms": 636347
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/ff7baff9-99c5-4710-b766-6740c05c059d/front-250"
   },
   "7a0a81fb-1d58-3bfa-872c-2afd614ad8e7": {
     "title": "Jump They Say",
@@ -35375,12 +37290,13 @@
         "title": "The Man Who Sold the World (2020 mix)",
         "duration_ms": 244044
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/2f18ceed-02ab-4236-9ca2-f2a4a89c630d/front-250"
   },
   "7ae8fb67-6607-35ec-8076-dd93a695e42e": {
     "title": "Dead Man Walking",
     "type": "Single",
-    "track_count": 4,
+    "track_count": 5,
     "total_duration_ms": 1059000,
     "tracks": [
       {
@@ -35447,6 +37363,31 @@
         "id": "08427bb4-bb36-4401-83e4-a5c3b4af18ff",
         "title": "The Hearts Filthy Lesson (Good Karma mix)",
         "duration_ms": 298133
+      },
+      {
+        "id": "82028d7c-e0ad-499c-bb64-4c4e3e27cdf7",
+        "title": "Dead Man Walking (Moby mix 1)",
+        "duration_ms": 451476
+      },
+      {
+        "id": "e67f271f-d013-41f4-8bf3-a8cf5028f843",
+        "title": "Dead Man Walking (Moby mix 2)",
+        "duration_ms": 327119
+      },
+      {
+        "id": "94638b38-4519-4baa-81d5-8646304dbf89",
+        "title": "Dead Man Walking (Moby House mix)",
+        "duration_ms": 362017
+      },
+      {
+        "id": "5a7f2b5c-9ec4-43dc-a6b2-9b5d60052c77",
+        "title": "Dead Man Walking (This One\u2019s Not Dead Yet remix)",
+        "duration_ms": 389385
+      },
+      {
+        "id": "07c3c7b8-fa3f-46f4-af82-f4ab09b58d6a",
+        "title": "Dead Man Walking (Vigor Mortis remix)",
+        "duration_ms": 393717
       }
     ],
     "image_url": "https://coverartarchive.org/release/6c9c3d9b-503c-4e1b-baa8-e7ab5fc626c1/front-250"
@@ -36145,7 +38086,8 @@
         "title": "I Got You Babe",
         "duration_ms": 208000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/5e39d59c-f600-4c27-bc14-a365fc77f633/front-250"
   },
   "7f30fcb5-25ce-46cf-b0e9-cfb042d9aae6": {
     "title": "1974-07-02: Curtis Hixon Hall, Tampa, FL, USA",
@@ -36306,7 +38248,8 @@
         "title": "Away From the Center",
         "duration_ms": 106020
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/850ea0ec-d34f-43d7-a371-32d789ae32aa/front-250"
   },
   "7f60f1c5-26ed-4678-ab8c-c12b11335bde": {
     "title": "Starting Point",
@@ -36639,7 +38582,8 @@
         "title": "Rock 'n' Roll Suicide",
         "duration_ms": 235000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/318ae17c-b432-440b-89a7-21697c052b5f/front-250"
   },
   "82684339-e306-44b0-b1f7-3deaa3e60b90": {
     "title": "Greatest Hits, Part 1",
@@ -36974,7 +38918,8 @@
         "title": "Quicksand (ChangesNowBowie version)",
         "duration_ms": 286960
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/712f5539-574b-4293-98c1-b0eb307bc6b2/front-250"
   },
   "82f9ea90-a00a-4645-9ad8-09a2c9a2ff17": {
     "title": "Lady Stardust / Crystal Japan",
@@ -37507,6 +39452,71 @@
         "id": "fc7ea2f8-0a68-412f-9b05-10faf689f3f8",
         "title": "You\u2019ve Got a Habit of Leaving",
         "duration_ms": 290000
+      },
+      {
+        "id": "d2f1cf36-0615-4d3f-8102-046c3d389edb",
+        "title": "Uncle Floyd",
+        "duration_ms": 359000
+      },
+      {
+        "id": "cd5b43df-ee12-46d6-8ff8-a9aa6820848a",
+        "title": "Baby Loves That Way",
+        "duration_ms": 265000
+      },
+      {
+        "id": "7bc448b8-0059-4fcb-9add-621d292e76cc",
+        "title": "Conversation Piece",
+        "duration_ms": 231000
+      },
+      {
+        "id": "64688b67-a33c-461c-851b-c514cb81ee91",
+        "title": "Liza Jane",
+        "duration_ms": 219000
+      },
+      {
+        "id": "b49794ed-ebfc-413e-a2fa-43d9de1ba5df",
+        "title": "Toy (Your Turn to Drive)",
+        "duration_ms": 278000
+      },
+      {
+        "id": "a175bf10-9b26-450d-bec6-97cbe46175e1",
+        "title": "Shadow Man",
+        "duration_ms": 270000
+      },
+      {
+        "id": "d6bd4bef-c784-4828-9de6-7a12783ab539",
+        "title": "In the Heat of the Morning",
+        "duration_ms": 226000
+      },
+      {
+        "id": "bb26fdbd-1ad2-4440-b676-8b6ea650d699",
+        "title": "Let Me Sleep Beside You",
+        "duration_ms": 192000
+      },
+      {
+        "id": "0ca1d354-00c4-48c7-bd82-60f1b1a2ddb3",
+        "title": "Karma Man",
+        "duration_ms": 228000
+      },
+      {
+        "id": "4911407d-a304-4698-8e95-1278a1670255",
+        "title": "Can\u2019t Help Thinking About Me",
+        "duration_ms": 207000
+      },
+      {
+        "id": "7c384b34-7c30-40a5-950e-8b1942fa611f",
+        "title": "Toy (Your Turn to Drive)",
+        "duration_ms": 258000
+      },
+      {
+        "id": "81335b0a-6663-4abd-8b50-06663d362cb0",
+        "title": "Liza Jane (alternative mix)",
+        "duration_ms": 286576
+      },
+      {
+        "id": "daf70169-d5e6-40f0-9144-daedea107d70",
+        "title": "In the Heat of the Morning (alternative mix)",
+        "duration_ms": 233056
       }
     ],
     "image_url": "https://coverartarchive.org/release/4abd7ceb-7bde-4914-8d06-e446321304ad/front-250"
@@ -37750,7 +39760,8 @@
         "title": "Diamond Dogs / It\u2019s Only Rock \u2019n\u2019 Roll (but I Like It) / Diamond Dogs",
         "duration_ms": 416000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/13ebcffa-83c8-4505-b3b6-052ff919fdfb/front-250"
   },
   "877660bd-5719-4aa3-be8d-4c367f5df0c6": {
     "title": "Tonight Live",
@@ -37787,7 +39798,8 @@
         "title": "You\u2019ve Got a Habit of Leaving",
         "duration_ms": 206000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/c1e9bce9-3649-4168-ad35-94d24499d0a0/front-250"
   },
   "8858e856-2416-4b2b-9d47-9589d530ea1d": {
     "title": "The Width of a Circle",
@@ -37965,7 +39977,8 @@
         "title": "Holy Holy (2020 mix)",
         "duration_ms": 208907
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/179e3389-b0d0-4c1a-bc5b-ea070427867b/front-250"
   },
   "88704038-369a-32cf-aff2-82d3eeeb01e5": {
     "title": "Labyrinth: From the Original Soundtrack of the Jim Henson Film",
@@ -38198,7 +40211,7 @@
   "889a8553-b9ac-4f06-940e-716e08229be0": {
     "title": "Glastonbury 2000",
     "type": "Album",
-    "track_count": 22,
+    "track_count": 44,
     "total_duration_ms": 6868472,
     "tracks": [
       {
@@ -38450,8 +40463,124 @@
         "id": "b5946016-d440-413c-85de-8d6ad252328a",
         "title": "I\u2019m Afraid of Americans",
         "duration_ms": 336201
+      },
+      {
+        "id": "2e13cfa5-a5e8-4dba-9c7f-48b9af2f9316",
+        "title": "Introduction (Greensleeves)",
+        "duration_ms": 89000
+      },
+      {
+        "id": "24001bf5-30e5-4cf1-912a-fa423f004393",
+        "title": "Wild Is the Wind",
+        "duration_ms": 411000
+      },
+      {
+        "id": "25f76be6-ae7e-4686-8860-635c7c9edbbd",
+        "title": "China Girl",
+        "duration_ms": 264000
+      },
+      {
+        "id": "8d46fea1-2e16-4037-9d06-d067325e9deb",
+        "title": "Changes",
+        "duration_ms": 219000
+      },
+      {
+        "id": "2ba1e1a5-e2e8-4b00-8bb3-c87b5cadd351",
+        "title": "Stay",
+        "duration_ms": 433000
+      },
+      {
+        "id": "dda6a5d1-b0ac-43e5-8395-59b76088fc95",
+        "title": "Life on Mars?",
+        "duration_ms": 283000
+      },
+      {
+        "id": "bc19d9c7-b6e5-460b-82fb-bb1dc2cbeefa",
+        "title": "Absolute Beginners",
+        "duration_ms": 471000
+      },
+      {
+        "id": "81c3cf13-e05f-4262-91b9-7a1f8e3aa924",
+        "title": "Ashes to Ashes",
+        "duration_ms": 321000
+      },
+      {
+        "id": "f2ffe455-0766-4b30-b77f-f016460db138",
+        "title": "Rebel Rebel",
+        "duration_ms": 253000
+      },
+      {
+        "id": "ffc5ae97-6b1c-4001-b8cd-963d14a8b547",
+        "title": "Little Wonder",
+        "duration_ms": 240000
+      },
+      {
+        "id": "88ba0a2e-bb0e-4d77-abe7-d2e7aa0e3ea4",
+        "title": "Golden Years",
+        "duration_ms": 237000
+      },
+      {
+        "id": "f61ee749-9c5e-4592-a96b-716604788368",
+        "title": "Fame",
+        "duration_ms": 296000
+      },
+      {
+        "id": "457cf801-aac2-48a8-a631-1317573e7f78",
+        "title": "All the Young Dudes",
+        "duration_ms": 222000
+      },
+      {
+        "id": "b4422f66-3d69-4a74-831a-216035464634",
+        "title": "The Man Who Sold the World",
+        "duration_ms": 233000
+      },
+      {
+        "id": "16bdfd59-e3e5-46e2-a681-c252a7ce033d",
+        "title": "Station to Station",
+        "duration_ms": 589000
+      },
+      {
+        "id": "545ef3e8-3d2a-488b-bef7-6a70daab9dfd",
+        "title": "Starman",
+        "duration_ms": 291000
+      },
+      {
+        "id": "b425dab4-f338-40c1-93a2-e0665ba04caf",
+        "title": "Hallo Spaceboy",
+        "duration_ms": 331000
+      },
+      {
+        "id": "a1b32105-c63d-43e5-a784-b3a7f9ca517b",
+        "title": "Under Pressure",
+        "duration_ms": 366000
+      },
+      {
+        "id": "72847529-6a27-4fbe-8028-c40bc42f94c2",
+        "title": "Ziggy Stardust",
+        "duration_ms": 233000
+      },
+      {
+        "id": "13277957-5c6f-4302-bc01-7357c63338ea",
+        "title": "\u201cHeroes\u201d",
+        "duration_ms": 359000
+      },
+      {
+        "id": "83f02f80-8815-4f08-8cbd-85e5383d8c1e",
+        "title": "Let\u2019s Dance",
+        "duration_ms": 427000
+      },
+      {
+        "id": "0ab75570-de36-40d1-b2d0-4c967bcc4f01",
+        "title": "I\u2019m Afraid of Americans",
+        "duration_ms": 362000
+      },
+      {
+        "id": "3c70f671-db4e-4321-a919-28a6e9b8dc58",
+        "title": "Glastonbury 2000: Pyramid Stage",
+        "duration_ms": 6919786
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/19352f51-bacb-42e5-a6b3-5253be8abc2d/front-250"
   },
   "88ae09fb-400f-4e88-8e00-82db817ed02e": {
     "title": "Do Anything You Say / Good Morning Girl",
@@ -38819,7 +40948,8 @@
         "title": "Is It Any Wonder? (2/6/97 first time live)",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/8244b41d-8c86-42c4-b0a4-f485074e3786/front-250"
   },
   "8a632aed-c5d4-3fc1-bb31-350bd1a54f3d": {
     "title": "Scary Monsters (and Super Creeps)",
@@ -38923,7 +41053,8 @@
         "title": "\u201cHeroes\u201d (Klax extended mix)",
         "duration_ms": 369000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/2c93934b-fdb2-46e7-b6fb-49498e4679b0/front-250"
   },
   "8b7bd1c2-be07-3083-989a-714f219f1ff8": {
     "title": "Pin Ups",
@@ -39515,7 +41646,8 @@
         "title": "Life Is a Circus",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/2ae3e7d5-f08f-483f-8c37-6229c6ed091b/front-250"
   },
   "8ec2c59a-cdf7-4fbc-ab29-c261ecb06321": {
     "title": "Time Will Crawl",
@@ -39697,7 +41829,8 @@
         "title": "Rebel Rebel",
         "duration_ms": 231120
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/5bc45025-0150-4038-a947-c04a806949ae/front-250"
   },
   "8f365270-5499-4b4a-a634-e270327b9d1c": {
     "title": "Dutch Courage (Rotterdam broadcast 1976)",
@@ -39775,12 +41908,13 @@
         "title": "The Jean Genie",
         "duration_ms": 411841
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d9e48913-7569-4681-a946-ad747938a9f4/front-250"
   },
   "8f828d75-c7c9-40cb-9067-237c1825d06d": {
     "title": "I\u2019m Deranged",
     "type": "EP",
-    "track_count": 3,
+    "track_count": 4,
     "total_duration_ms": 814007,
     "tracks": [
       {
@@ -39797,8 +41931,14 @@
         "id": "090070c6-8731-4f88-aa3d-f79ef68b3a4a",
         "title": "I\u2019m Deranged (Jungle mix)",
         "duration_ms": 425087
+      },
+      {
+        "id": "8df0c4bc-f223-48fc-9a4b-7bc396e909ba",
+        "title": "I\u2019m Deranged (Jungle Ambient dub mix)",
+        "duration_ms": 432564
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/268fefdf-12a7-4b4e-bdcb-830b18cd1085/front-250"
   },
   "8fc9614c-b92c-4274-8256-938a59d9015b": {
     "title": "\u2018hours\u2026\u2019 Remix E.P.",
@@ -39836,7 +41976,8 @@
         "title": "Seven (Marius de Vries mix \u2013 original speed)",
         "duration_ms": 276000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a60c2978-38ba-4e24-9933-c86ed83a3e4b/front-250"
   },
   "902e4653-a038-4666-b608-b31b2feeb15e": {
     "title": "\u2605",
@@ -40014,7 +42155,8 @@
         "title": "The Pretty Things Are Going to Hell",
         "duration_ms": 250309
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a88e7a3d-2913-49ee-9c25-be2dd8de586b/front-250"
   },
   "91c356f1-f584-41da-b7fd-3ae83265bb6a": {
     "title": "Heathen in New York",
@@ -40201,7 +42343,8 @@
         "title": "Under Pressure",
         "duration_ms": 243000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/ecfbf594-5e79-427c-a372-371ae70653b2/front-250"
   },
   "92ad94c1-9f30-41ef-9d04-254e1de9bbbb": {
     "title": "Duos",
@@ -40692,6 +42835,21 @@
         "id": "4f2fd64b-b1be-4d75-b96b-9431873935b0",
         "title": "Modern Love",
         "duration_ms": 236000
+      },
+      {
+        "id": "5cfa5c2b-8f05-405c-8d89-1da4e9b1de1f",
+        "title": "Glass Spider",
+        "duration_ms": 355000
+      },
+      {
+        "id": "e055216e-f50b-4822-b44e-a0b8ea741588",
+        "title": "Day\u2010In Day\u2010Out",
+        "duration_ms": 274000
+      },
+      {
+        "id": "f618ea62-e329-42ed-869a-0dfc15710af9",
+        "title": "Modern Love",
+        "duration_ms": 293000
       }
     ],
     "image_url": "https://coverartarchive.org/release/746d26ed-3b35-41b4-aa49-16c62175c2b0/front-250"
@@ -41832,7 +43990,8 @@
         "title": "Silly Boy Blue (alternative ending mix)",
         "duration_ms": 333453
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d43cc76f-3325-4673-be1e-8da84218561c/front-250"
   },
   "98284934-b8d3-432b-8cae-d10ed08a2edb": {
     "title": "Clareville Grove Demos",
@@ -41870,7 +44029,8 @@
         "title": "Life Is a Circus",
         "duration_ms": 285000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/d2b5448d-4293-4b78-867d-6b244ca63f27/front-250"
   },
   "98e078fe-37d9-43f7-8bb4-96526727c4e0": {
     "title": "Outside / Earthling / Hours / Heathen / Reality",
@@ -43020,6 +45180,11 @@
         "id": "b515c886-4dc4-4ee9-830e-9bfccfb26e93",
         "title": "Without You I\u2019m Nothing (Brothers in Rhythm club mix)",
         "duration_ms": 651906
+      },
+      {
+        "id": "9df98770-429c-4293-a807-98b5cc4ec5ba",
+        "title": "Without You I\u2019m Nothing (commentary)",
+        "duration_ms": 627804
       }
     ],
     "image_url": "https://coverartarchive.org/release/6bc750eb-a548-414b-9875-146f66c5175c/front-250"
@@ -43267,7 +45432,8 @@
         "title": "Station to Station",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/9821f2d7-3788-4192-989a-f1cdf5f68bf6/front-250"
   },
   "9b7b0bf3-35d8-4211-8fc8-35fbc94c7d3e": {
     "title": "Bowie 1965!",
@@ -43562,7 +45728,8 @@
         "title": "The Man Who Sold the World",
         "duration_ms": 260702
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/cf459141-76c6-4a41-b40e-a8d76dec15ec/front-250"
   },
   "9c339939-5e9b-4b18-835c-19272a7029e7": {
     "title": "London to Paris",
@@ -44164,6 +46331,11 @@
         "id": "8a327138-aeff-4378-abcb-48a3a1ad7b1d",
         "title": "\u201cHeroes\u201d (live)",
         "duration_ms": 371000
+      },
+      {
+        "id": "2f91f0c6-2c45-4aa8-94ca-6d75ab736d4d",
+        "title": "\u201cHeroes\u201d (\u2018Marc\u2019 Show version)",
+        "duration_ms": 0
       }
     ],
     "image_url": "https://coverartarchive.org/release/9ad971db-eafb-495d-95c9-813b555edce2/front-250"
@@ -44633,7 +46805,8 @@
         "title": "I\u2019m Afraid of Americans",
         "duration_ms": 311506
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/004c05cf-f248-4b88-ac41-49d187e395be/front-250"
   },
   "a1c284b4-8cdb-3d1b-b48c-26dca3faed1c": {
     "title": "Divine Symmetry",
@@ -44855,7 +47028,8 @@
         "title": "Modern Love",
         "duration_ms": 260000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/0e634c1b-f32a-4c63-ae97-35ed749ee22b/front-250"
   },
   "a231445a-9b05-45b1-acf9-6344b56a6464": {
     "title": "Yassassin",
@@ -46932,7 +49106,8 @@
         "title": "All the Young Dudes",
         "duration_ms": 229000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/af313811-22a3-4d8d-b631-b54e1841a304/front-250"
   },
   "a584ad5d-3f35-45a4-b4c9-ce9302bd2f28": {
     "title": "Lazarus",
@@ -47639,7 +49814,8 @@
         "title": "Waiting for the Man",
         "duration_ms": 298448
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/7be9c65d-e191-4f7c-9215-570067bede78/front-250"
   },
   "a6b8e11d-90c4-4ce7-9cf9-5a0237ff09f9": {
     "title": "Time / The Prettiest Star",
@@ -47657,7 +49833,8 @@
         "title": "The Prettiest Star",
         "duration_ms": 205000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/7cf014cf-34d1-4c62-96e1-3fafdaeddefc/front-250"
   },
   "a7460613-c91a-410c-85a3-4c4723c3bdb1": {
     "title": "Interview Picture Disc",
@@ -48053,7 +50230,8 @@
         "title": "Ragazzo Solo, Ragazza Sola (2019 mix)",
         "duration_ms": 319000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/0d0ca669-1a98-4a73-9112-c05d0fec1adb/front-250"
   },
   "a88c421e-fffd-4945-b0a9-383350e62339": {
     "title": "Dublin: I\u2019m in Clover",
@@ -48539,7 +50717,7 @@
   "aca6281e-5c64-382b-baca-aaa110516dac": {
     "title": "Dancing in the Street",
     "type": "Single",
-    "track_count": 3,
+    "track_count": 5,
     "total_duration_ms": 384000,
     "tracks": [
       {
@@ -48571,6 +50749,31 @@
         "id": "46427109-3d4c-406f-b124-4e13c63a5e64",
         "title": "Dancing in the Street (edit)",
         "duration_ms": 204000
+      },
+      {
+        "id": "89462e90-95d3-4bf2-863a-e56cd70986c4",
+        "title": "Dancing in the Street (Clearmountain mix)",
+        "duration_ms": 191600
+      },
+      {
+        "id": "404cc94d-ee0c-4e22-9212-8785a639f8fa",
+        "title": "Dancing in the Street (instrumental)",
+        "duration_ms": 201047
+      },
+      {
+        "id": "64abe2ee-18c3-4ca5-b719-95b95162e639",
+        "title": "Dancing in the Street (Steve Thompson mix)",
+        "duration_ms": 280481
+      },
+      {
+        "id": "6b0e5234-6a6d-4ce5-9445-f8a6e2038aa8",
+        "title": "Dancing in the Street (edit)",
+        "duration_ms": 203093
+      },
+      {
+        "id": "b05e9ec0-d03e-4ce7-b11c-c180e567f244",
+        "title": "Dancing in the Street (dub)",
+        "duration_ms": 281935
       }
     ],
     "image_url": "https://coverartarchive.org/release/017e43c3-1fad-43fd-8560-d314931bbbfb/front-250"
@@ -49326,7 +51529,8 @@
         "title": "White Light/White Heat",
         "duration_ms": 207054
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/11149950-24b8-415e-91b8-7b9843f325bd/front-250"
   },
   "afb1e5c1-93f3-4ee1-a754-0fa131063e3c": {
     "title": "1987-10-01: St. Paul Civic Center, St. Paul, MN, USA",
@@ -49686,7 +51890,8 @@
         "title": "Go Now",
         "duration_ms": 271813
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/c3d1160b-8f30-46e1-b021-dfb678b56347/front-250"
   },
   "b067335c-7693-44b1-a46e-65896a1465a5": {
     "title": "1995-09-14: A Hyper Circle: The Meadows Music Arena, Hartford, CT, USA",
@@ -50717,7 +52922,7 @@
   "b56cbd72-4ee1-46e9-a0d7-329f25800840": {
     "title": "Ziggy Stardust and the Spiders From Mars: The Motion Picture",
     "type": "Album",
-    "track_count": 21,
+    "track_count": 44,
     "total_duration_ms": 5191955,
     "tracks": [
       {
@@ -50824,6 +53029,226 @@
         "id": "d5f7d3ac-079b-4352-a69a-a428b45df469",
         "title": "End Credits",
         "duration_ms": 122678
+      },
+      {
+        "id": "6a2f79f6-cfb1-42ba-b231-f5fddb65b68c",
+        "title": "Opening Credits / Introduction",
+        "duration_ms": 0
+      },
+      {
+        "id": "fc330b64-2357-4622-98ff-c7ffee84ef9b",
+        "title": "Hang On to Yourself",
+        "duration_ms": 0
+      },
+      {
+        "id": "d4787631-d83a-435e-aa02-a38ca79c0d6d",
+        "title": "Ziggy Stardust",
+        "duration_ms": 0
+      },
+      {
+        "id": "fc4f7f33-07a6-41f2-a5ed-60aeca9102e0",
+        "title": "Watch That Man",
+        "duration_ms": 0
+      },
+      {
+        "id": "bade750a-d276-4ef4-94a0-6700dc7d920e",
+        "title": "Wild Eyed Boy From Freecloud",
+        "duration_ms": 0
+      },
+      {
+        "id": "b0348fbf-2b0c-44d6-b0b8-989101cdff98",
+        "title": "All the Young Dudes",
+        "duration_ms": 0
+      },
+      {
+        "id": "7affd3eb-9314-46f7-95de-6180114a68dc",
+        "title": "Oh! You Pretty Things",
+        "duration_ms": 0
+      },
+      {
+        "id": "71554fbc-418f-498b-a860-971d19bc9831",
+        "title": "Moonage Daydream",
+        "duration_ms": 0
+      },
+      {
+        "id": "5a74e945-6066-4417-8cce-9d9095dde68d",
+        "title": "Changes",
+        "duration_ms": 0
+      },
+      {
+        "id": "df60c6f7-a59d-4e77-9739-a60a28d93e24",
+        "title": "Space Oddity",
+        "duration_ms": 0
+      },
+      {
+        "id": "240b4088-759a-423d-aa8b-8998c9a79e50",
+        "title": "My Death",
+        "duration_ms": 0
+      },
+      {
+        "id": "fde73775-029f-4384-8752-de2db3962513",
+        "title": "Cracked Actor",
+        "duration_ms": 0
+      },
+      {
+        "id": "2f282ca3-4412-4597-8ddb-1a7336018e37",
+        "title": "Time",
+        "duration_ms": 0
+      },
+      {
+        "id": "30e8587d-33c9-466a-a2f3-9940821da630",
+        "title": "The Width of a Circle",
+        "duration_ms": 0
+      },
+      {
+        "id": "6c78fa6b-90bd-46b8-a0db-a53e0e3cb183",
+        "title": "Let\u2019s Spend the Night Together",
+        "duration_ms": 0
+      },
+      {
+        "id": "97561d13-caf2-403e-872c-be6ce388cf64",
+        "title": "Suffragette City",
+        "duration_ms": 0
+      },
+      {
+        "id": "b90f404f-c713-4e98-bf2c-c6dae928b90b",
+        "title": "White Light/White Heat",
+        "duration_ms": 0
+      },
+      {
+        "id": "00b5144a-319b-4266-ad15-15f17f1fdd87",
+        "title": "Medley: The Jean Genie / Love Me Do / The Jean Genie",
+        "duration_ms": 0
+      },
+      {
+        "id": "ba5924c4-5792-44bb-82d0-3845e0002ed3",
+        "title": "Round and Round",
+        "duration_ms": 0
+      },
+      {
+        "id": "a441c378-4dc6-4817-8602-f208aa847975",
+        "title": "Farewell Speech",
+        "duration_ms": 0
+      },
+      {
+        "id": "08d8b965-3138-420d-8f34-b5b98595e33c",
+        "title": "Rock \u2019n\u2019 Roll Suicide",
+        "duration_ms": 0
+      },
+      {
+        "id": "94602aeb-5ea4-4c72-a73b-e18cfc313602",
+        "title": "Finale / End Credits",
+        "duration_ms": 0
+      },
+      {
+        "id": "1af99bb2-3abd-42b2-b77b-c0480fe54a96",
+        "title": "Introduction, Part 1",
+        "duration_ms": 77053
+      },
+      {
+        "id": "be8c8274-c590-4e26-aeb6-f9ea2617024c",
+        "title": "Hang On to Yourself",
+        "duration_ms": 175506
+      },
+      {
+        "id": "40a1de02-42ef-4568-b04a-4ab40f1bfb0a",
+        "title": "Ziggy Stardust",
+        "duration_ms": 199066
+      },
+      {
+        "id": "a5052acc-64c2-4233-b852-4f0153f95e7b",
+        "title": "Watch That Man",
+        "duration_ms": 253826
+      },
+      {
+        "id": "9ef4fcca-0df6-4933-96d2-dbd6391cb730",
+        "title": "Wild Eyed Boy From Freecloud",
+        "duration_ms": 194746
+      },
+      {
+        "id": "b29b846b-5ec4-41f9-9aaf-867b65feec41",
+        "title": "All the Young Dudes",
+        "duration_ms": 98493
+      },
+      {
+        "id": "4c3f9926-8008-4966-ab66-6efe855afc9a",
+        "title": "Oh! You Pretty Things",
+        "duration_ms": 106840
+      },
+      {
+        "id": "8c852687-81a2-4221-bec8-72a598eb23b7",
+        "title": "Moonage Daydream",
+        "duration_ms": 385106
+      },
+      {
+        "id": "399692ba-ec9f-4b80-9b11-eb68ee340d1f",
+        "title": "Changes",
+        "duration_ms": 216066
+      },
+      {
+        "id": "90783d2d-3742-47d7-bdfd-1b7352185cd9",
+        "title": "Space Oddity",
+        "duration_ms": 306840
+      },
+      {
+        "id": "5c2febdc-ae5f-4c2c-8d46-5c72c0ca6f1c",
+        "title": "My Death",
+        "duration_ms": 424080
+      },
+      {
+        "id": "33d1e63e-6296-4512-8197-125f978559ed",
+        "title": "Introduction, Part 2",
+        "duration_ms": 62973
+      },
+      {
+        "id": "4bf44d19-e9a9-4245-9543-2dff63afc51a",
+        "title": "Cracked Actor",
+        "duration_ms": 178626
+      },
+      {
+        "id": "ac5e34a5-b167-43c2-a89f-08690664169b",
+        "title": "Time",
+        "duration_ms": 331760
+      },
+      {
+        "id": "1da269d3-2b08-4ccb-a9d1-0a0d9a020ae6",
+        "title": "The Width of a Circle",
+        "duration_ms": 944560
+      },
+      {
+        "id": "b9dd7351-907a-4a70-a7f7-16e01770a0bc",
+        "title": "Let\u2019s Spend the Night Together",
+        "duration_ms": 190426
+      },
+      {
+        "id": "125cb9b5-141b-41dd-ab7c-28277e699973",
+        "title": "Suffragette City",
+        "duration_ms": 252986
+      },
+      {
+        "id": "3637b750-105f-49b3-be2e-5b823b1cf773",
+        "title": "White Light/White Heat",
+        "duration_ms": 258306
+      },
+      {
+        "id": "ebd0e14d-c574-4155-a8c4-c69047f5f181",
+        "title": "Medley: The Jean Genie / Love Me Do / The Jean Genie",
+        "duration_ms": 498186
+      },
+      {
+        "id": "cc17862f-dbf8-4aec-8f3c-ce619df17a62",
+        "title": "Round and Round",
+        "duration_ms": 251226
+      },
+      {
+        "id": "b628bcaf-69a1-49d6-ad3a-c7c8d9699559",
+        "title": "Farewell Speech",
+        "duration_ms": 39040
+      },
+      {
+        "id": "7cd18384-371a-4598-af45-6066d31c2e42",
+        "title": "Rock \u2019n\u2019 Roll Suicide / Finale",
+        "duration_ms": 318280
       }
     ],
     "image_url": "https://coverartarchive.org/release/0a5be94f-3429-46bd-9b1d-07dcb0209098/front-250"
@@ -52195,7 +54620,7 @@
   "bb13cb45-254c-3a61-89a5-15d22a97e6d6": {
     "title": "Scary Monsters\u2026 and Super Creeps",
     "type": "Album",
-    "track_count": 20,
+    "track_count": 43,
     "total_duration_ms": 2735838,
     "tracks": [
       {
@@ -52272,6 +54697,151 @@
         "id": "ad31a088-3e6e-4d77-aadf-798df7ed0a4b",
         "title": "Alabama Song",
         "duration_ms": 230373
+      },
+      {
+        "id": "de9e497a-32b5-40de-bbd2-5baf230c24e0",
+        "title": "Scary Monsters Interview, Answers Only (12\u2033 promo)",
+        "duration_ms": 0
+      },
+      {
+        "id": "f8c96ec6-95fc-4941-8e2e-c28daa187ac3",
+        "title": "Ashes to Ashes (ultra\u2010extended version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "770628f8-fd2d-4f93-9f5a-42ea195ce3e5",
+        "title": "Scary Monsters Interview With Tim Rice",
+        "duration_ms": 0
+      },
+      {
+        "id": "b747ccd4-a5b3-4cf9-a36f-670726ec0b55",
+        "title": "Cameras in Brooklyn (early version of \u201cUp the Hill Backwards\u201d)",
+        "duration_ms": 0
+      },
+      {
+        "id": "000bfc97-fce9-4a7d-882d-7353c32917b1",
+        "title": "Scary Monsters & Super Creeps (alternate version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "bcc68ac4-815e-44fa-a006-5f7bd3e98eaa",
+        "title": "Ashes to Ashes (single mix)",
+        "duration_ms": 0
+      },
+      {
+        "id": "db02eac6-b195-4413-9ecc-b3cba762dd09",
+        "title": "Fashion (single mix)",
+        "duration_ms": 0
+      },
+      {
+        "id": "dd9dc196-3481-46a6-bbd7-de6fb5e8f888",
+        "title": "Teenage Wildlife",
+        "duration_ms": 0
+      },
+      {
+        "id": "9ced59eb-f9ed-43dc-b69e-fae0f2d47230",
+        "title": "Scream Like a Baby (early version of Laser)",
+        "duration_ms": 0
+      },
+      {
+        "id": "0a87218e-f4ab-4092-befd-b1f8ee2b3d60",
+        "title": "Kingdom Come (alternate version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "7ee35c7a-bdcf-43cd-bd52-ba8cc81a8040",
+        "title": "Because You\u2019re Young (alternate version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "f120610f-bd29-4520-b886-ed9f6e7c7e0a",
+        "title": "Is There Life After Marriage? (outtake)",
+        "duration_ms": 0
+      },
+      {
+        "id": "42a043fd-569b-4778-a8be-b6d14bf6e8d3",
+        "title": "It\u2019s No Game (No. 2) (alternate version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "b93edf66-9324-4167-9881-0d633fa5ff02",
+        "title": "Up the Hill Backwards (alternate version 2)",
+        "duration_ms": 0
+      },
+      {
+        "id": "6839050c-110d-41a7-bcf5-2ee8f09f850c",
+        "title": "Kingdom Come (alternate version 2)",
+        "duration_ms": 0
+      },
+      {
+        "id": "b6e12d43-93db-4dbd-bd88-9c0dba6b4568",
+        "title": "Scary Monsters Outtakes (from radio show)",
+        "duration_ms": 0
+      },
+      {
+        "id": "c197ce33-a28b-4629-8162-18daf2913c8a",
+        "title": "Scary Monsters & Super Creeps (alternate version 2)",
+        "duration_ms": 0
+      },
+      {
+        "id": "d6a45551-0c2b-4bf0-8dd9-27b97ab89071",
+        "title": "Tired of My Life (early version of \u201cIt\u2019s No Game\u201d)",
+        "duration_ms": 0
+      },
+      {
+        "id": "4e0bf95f-1659-4411-813f-497c3a289223",
+        "title": "I Am a Laser (\"Scream Like a Baby\u201d early version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "9e7d778c-4566-40c3-8473-34b2e2ae5d12",
+        "title": "1980 Japan Interview",
+        "duration_ms": 0
+      },
+      {
+        "id": "a680a784-c477-4d0a-83d5-504e36ac3a2a",
+        "title": "Scary Monsters & Super Creeps (single mix)",
+        "duration_ms": 0
+      },
+      {
+        "id": "11f2fa08-44e8-401f-adc4-e91248b8a1a8",
+        "title": "Ashes to Ashes (a cappella version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "62031f73-b278-4437-b810-8520b58f4a7d",
+        "title": "Ashes to Ashes (Municipal extended edit)",
+        "duration_ms": 0
+      },
+      {
+        "id": "3852b1d2-01b3-4532-9469-ebb6a2770336",
+        "title": "Space Oddity Ashes to Ashes (12\u2033 promo version)",
+        "duration_ms": 0
+      },
+      {
+        "id": "5d5654d6-9641-42f3-a389-2c5219951058",
+        "title": "Life on Mars (live Tonight Show)",
+        "duration_ms": 0
+      },
+      {
+        "id": "4c7a2172-321c-4aff-92a5-f58a3a0db3de",
+        "title": "Ashes to Ashes (live Tonight Show)",
+        "duration_ms": 0
+      },
+      {
+        "id": "949f2ce7-4043-4e1c-8006-a92fda98a392",
+        "title": "Let\u2019s Talk (1980 Interview)",
+        "duration_ms": 0
+      },
+      {
+        "id": "399a0ac6-84dc-4763-a022-5af1aab3f9e5",
+        "title": "Scary Monsters Radio Special",
+        "duration_ms": 0
+      },
+      {
+        "id": "37f0865f-e4ba-4b39-bb6d-c5a4341a8ecf",
+        "title": "Radio Interview",
+        "duration_ms": 0
       }
     ],
     "image_url": "https://coverartarchive.org/release/8303e599-ab1b-367f-8cb7-0148d77927bf/front-250"
@@ -52287,7 +54857,8 @@
         "title": "Space Oddity (2019 mix, single edit)",
         "duration_ms": 282000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/de6055d1-2859-4b67-976c-3f1f915d5b7a/front-250"
   },
   "bc02d917-a52e-3d77-ae5f-75aa3fb754ef": {
     "title": "Club Bowie: Rare and Unreleased 12\u2033 Mixes",
@@ -52881,7 +55452,8 @@
         "title": "Hallo Spaceboy (version 2)",
         "duration_ms": 377666
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/700778c5-c1ba-48ec-984d-39d80103369e/front-250"
   },
   "c0450724-c71d-4040-9f87-0f319fda42c6": {
     "title": "1974\u201010\u201019: Michigan Palace, Detroit, MI, USA",
@@ -53562,7 +56134,8 @@
         "title": "Let\u2019s Dance (live)",
         "duration_ms": 205813
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/4ade995d-8518-48a2-aaea-74a2d7a667af/front-250"
   },
   "c12a77eb-7bbc-372d-88af-0e2ad9057b42": {
     "title": "1971-09-25: Aylesbury 1971: Boroughs Assembly Rooms, Aylesbury Friars Club, Aylesbury, UK",
@@ -53797,6 +56370,76 @@
         "id": "8bf08fb5-8edc-4791-8e33-8cb984d3ae15",
         "title": "I\u2019d Rather Be High (Venetian mix)",
         "duration_ms": 27000
+      },
+      {
+        "id": "5f8a1db0-1a29-4015-98db-765a480d3bf4",
+        "title": "The Next Day",
+        "duration_ms": 207000
+      },
+      {
+        "id": "96c3fce9-6886-4363-be2d-0278bfbe1770",
+        "title": "Dirty Boys",
+        "duration_ms": 178000
+      },
+      {
+        "id": "ff1233e4-bf6b-4dbe-9a40-21405cfa8514",
+        "title": "The Stars (Are Out Tonight)",
+        "duration_ms": 237000
+      },
+      {
+        "id": "2e6d11e8-b16e-4e48-9df6-713205b71111",
+        "title": "Love Is Lost",
+        "duration_ms": 238000
+      },
+      {
+        "id": "2392e559-8eb8-42c7-a836-9043545db0b1",
+        "title": "Where Are We Now?",
+        "duration_ms": 249000
+      },
+      {
+        "id": "88aebde1-e8af-4d76-8475-66a2bf7c909f",
+        "title": "Valentine\u2019s Day",
+        "duration_ms": 182000
+      },
+      {
+        "id": "cc6568a4-327b-4d8a-a626-3fb525b72125",
+        "title": "If You Can See Me",
+        "duration_ms": 192000
+      },
+      {
+        "id": "42071b26-cb08-4448-a72b-6cfce34ae760",
+        "title": "I\u2019d Rather Be High",
+        "duration_ms": 225000
+      },
+      {
+        "id": "60e4a910-9cfb-4691-ad15-f8abb6c83781",
+        "title": "Boss of Me",
+        "duration_ms": 250000
+      },
+      {
+        "id": "95bc8b2a-ce77-45cd-ae50-f7f964d82376",
+        "title": "Dancing Out in Space",
+        "duration_ms": 202000
+      },
+      {
+        "id": "919942f9-ce28-435c-9e74-164b1492fd77",
+        "title": "How Does the Grass Grow?",
+        "duration_ms": 274000
+      },
+      {
+        "id": "6085bb13-2410-446a-b40b-e149bb3a2bee",
+        "title": "(You Will) Set the World on Fire",
+        "duration_ms": 212000
+      },
+      {
+        "id": "9b6479d0-9d5d-4ec8-a575-f65f324e925b",
+        "title": "You Feel So Lonely You Could Die",
+        "duration_ms": 278000
+      },
+      {
+        "id": "a3027adb-f8a1-400e-bf0c-c48de1a3874a",
+        "title": "Heat",
+        "duration_ms": 265000
       }
     ],
     "image_url": "https://coverartarchive.org/release/378576dc-1eb1-48d1-aff6-fdb933b16cbf/front-250"
@@ -54413,6 +57056,51 @@
         "id": "baff9807-be8c-4d4b-a4ce-c7511c3403f2",
         "title": "Fame",
         "duration_ms": 321000
+      },
+      {
+        "id": "3f3729a7-f9b2-47b7-8f94-ecad5509de87",
+        "title": "Fashion",
+        "duration_ms": 163000
+      },
+      {
+        "id": "add0bac8-4a0a-44c6-bb3a-30350c225a0b",
+        "title": "Let\u2019s Dance",
+        "duration_ms": 274000
+      },
+      {
+        "id": "adfc73e9-c1e7-4978-8fac-983e0b736e73",
+        "title": "Breaking Glass",
+        "duration_ms": 180000
+      },
+      {
+        "id": "eae94a5d-94df-432d-a2cc-5522498ff99f",
+        "title": "Cat People (Putting Out Fire)",
+        "duration_ms": 260000
+      },
+      {
+        "id": "38e4f89d-5263-4a1d-b96b-342b20a0f221",
+        "title": "White Light/White Heat",
+        "duration_ms": 336000
+      },
+      {
+        "id": "9dedf1eb-387a-4639-b8f3-ff59dbcb6ffb",
+        "title": "Station to Station",
+        "duration_ms": 538000
+      },
+      {
+        "id": "14859a52-8050-446c-ae1d-757c3794bd61",
+        "title": "Cracked Actor",
+        "duration_ms": 238000
+      },
+      {
+        "id": "8f0b9d2e-6667-46e4-83d6-2456b7f589a4",
+        "title": "Fame",
+        "duration_ms": 336000
+      },
+      {
+        "id": "48d1be01-6014-4fd9-822d-854681fb37b8",
+        "title": "Modern Love",
+        "duration_ms": 234000
       }
     ],
     "image_url": "https://coverartarchive.org/release/f2c3ffa1-a34f-42fb-8c67-dbc28fce273b/front-250"
@@ -54483,7 +57171,8 @@
         "title": "Never Let Me Down (dub / a cappella)",
         "duration_ms": 362000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/463315b0-6c14-471e-9be1-04ad2f238345/front-250"
   },
   "c49a5722-57ee-3c1b-aa0f-955dc21fffe3": {
     "title": "A Crash Course for the Ravers",
@@ -55428,6 +58117,11 @@
         "id": "f6be22b2-31b8-4032-af65-fa90a8b29247",
         "title": "Speed of Life",
         "duration_ms": 165000
+      },
+      {
+        "id": "3d5a7c88-5924-42b0-9200-8e2fa6f3c027",
+        "title": "Art Decade (live)",
+        "duration_ms": 0
       }
     ],
     "image_url": "https://coverartarchive.org/release/b0de1b44-f11a-49dd-a270-3adec28a6602/front-250"
@@ -55544,7 +58238,7 @@
   "ca996ac0-ef3a-30df-b24c-88c3c03e1c4d": {
     "title": "Ziggy Stardust and the Spiders From Mars: The Motion Picture Soundtrack",
     "type": "Album",
-    "track_count": 21,
+    "track_count": 22,
     "total_duration_ms": 4206000,
     "tracks": [
       {
@@ -55921,6 +58615,61 @@
         "id": "a92223b5-2d5c-443b-a5eb-237144f08c87",
         "title": "Rock & Roll Suicide (Pomp and Circumstance by Edward Elgar)",
         "duration_ms": 0
+      },
+      {
+        "id": "c6c9d9d5-640b-4ff1-b7f6-862cd7d487aa",
+        "title": "Hang On to Yourself",
+        "duration_ms": 185000
+      },
+      {
+        "id": "90783d2d-3742-47d7-bdfd-1b7352185cd9",
+        "title": "Space Oddity",
+        "duration_ms": 307000
+      },
+      {
+        "id": "5c2febdc-ae5f-4c2c-8d46-5c72c0ca6f1c",
+        "title": "My Death",
+        "duration_ms": 425000
+      },
+      {
+        "id": "1da269d3-2b08-4ccb-a9d1-0a0d9a020ae6",
+        "title": "The Width of a Circle",
+        "duration_ms": 945000
+      },
+      {
+        "id": "b9dd7351-907a-4a70-a7f7-16e01770a0bc",
+        "title": "Let\u2019s Spend the Night Together",
+        "duration_ms": 190000
+      },
+      {
+        "id": "125cb9b5-141b-41dd-ab7c-28277e699973",
+        "title": "Suffragette City",
+        "duration_ms": 253000
+      },
+      {
+        "id": "3637b750-105f-49b3-be2e-5b823b1cf773",
+        "title": "White Light / White Heat",
+        "duration_ms": 258000
+      },
+      {
+        "id": "ebd0e14d-c574-4155-a8c4-c69047f5f181",
+        "title": "Medley: The Jean Genie / Love Me Do / The Jean Genie",
+        "duration_ms": 498000
+      },
+      {
+        "id": "cc17862f-dbf8-4aec-8f3c-ce619df17a62",
+        "title": "Round and Round",
+        "duration_ms": 251000
+      },
+      {
+        "id": "1af99bb2-3abd-42b2-b77b-c0480fe54a96",
+        "title": "Introduction, Part 1",
+        "duration_ms": 77053
+      },
+      {
+        "id": "33d1e63e-6296-4512-8197-125f978559ed",
+        "title": "Introduction, Part 2",
+        "duration_ms": 62973
       }
     ],
     "image_url": "https://coverartarchive.org/release/3a9016ea-3691-4b86-84be-a8ae56ab62e6/front-250"
@@ -56049,7 +58798,8 @@
         "title": "Holy Holy",
         "duration_ms": 206000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/739b47be-ab6d-4700-a4ce-7d57969c28a5/front-250"
   },
   "cc27bbd6-dead-4c2c-bb9a-505d0aa5e9f6": {
     "title": "Laughing With Liza: The Vocalion and Deram Singles 1964\u20131967 Plus",
@@ -56107,7 +58857,8 @@
         "title": "The Laughing Gnome (vocal take 1 / mix 1)",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/836e0f6f-9997-4d57-a807-3708bdb3646a/front-250"
   },
   "cc392bd1-faee-3d05-a130-9e7c6dffba3c": {
     "title": "1990\u201003\u201013: Olympic Saddledome, Calgary, AB, Canada",
@@ -58507,7 +61258,8 @@
         "title": "The Laughing Gnome",
         "duration_ms": 179520
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/c950ff3d-2c8d-4659-82b2-dfd4cb0d3035/front-250"
   },
   "d132e782-7f27-4ebe-8d2a-2c61a185241d": {
     "title": "Music From the Original Soundtrack Just a Gigolo",
@@ -58525,7 +61277,8 @@
         "title": "Just a Gigolo",
         "duration_ms": 221000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/f7b4f228-d6fc-4578-92e7-2470e70a7c6e/front-250"
   },
   "d13d689d-8a12-4d89-b3cf-00ba7f911d67": {
     "title": "The Next Day",
@@ -58602,7 +61355,8 @@
         "title": "Modern Love",
         "duration_ms": 221000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/c34d4c94-244a-4988-a960-3a6788fc6359/front-250"
   },
   "d1b6c6cc-32c1-4f12-a2a9-4201c65b28c9": {
     "title": "Sound and Vision",
@@ -59136,7 +61890,8 @@
         "title": "Band Introduction",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/e77ac75e-ee35-4548-a1c6-662dca7aa4a2/front-250"
   },
   "d29b1f4f-00b5-48da-9db2-9a5db264a173": {
     "title": "Day in Day Out: Radio Broadcast, Australia 1987",
@@ -59707,7 +62462,8 @@
         "title": "Conversation Piece (2019 mix)",
         "duration_ms": 191000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/29ed17be-d344-417b-9bfe-88d69c40bfb1/front-250"
   },
   "d62cf59f-0e2e-4128-b85b-fa6e252b21b7": {
     "title": "1983\u201007\u201013: Montreal Forum, Montreal, QC, Canada",
@@ -59903,7 +62659,8 @@
         "title": "Rebel Rebel",
         "duration_ms": 211000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/c29f90b5-a51e-4063-9ed8-eb228b018dd8/front-250"
   },
   "d6dd84a2-1a62-378c-b6c9-86a8b2211634": {
     "title": "Lodger",
@@ -60338,7 +63095,7 @@
   "d8762a87-2d91-3cf4-b97c-06b97bd5dca1": {
     "title": "I\u2019m Afraid of Americans",
     "type": "Single",
-    "track_count": 6,
+    "track_count": 8,
     "total_duration_ms": 2375157,
     "tracks": [
       {
@@ -60380,6 +63137,46 @@
         "id": "c4623fac-8365-4009-8c62-f9d2d9d4d677",
         "title": "I\u2019m Afraid of Americans (original edit)",
         "duration_ms": 254733
+      },
+      {
+        "id": "c1249182-b4ee-49e1-aee3-60b085a33e67",
+        "title": "I\u2019m Afraid of Americans V1",
+        "duration_ms": 329831
+      },
+      {
+        "id": "c3ec208e-c430-408c-aaec-e2810cce8239",
+        "title": "I\u2019m Afraid of Americans V2",
+        "duration_ms": 347797
+      },
+      {
+        "id": "cec288f8-297c-4d4f-9cd7-a288eb04be3e",
+        "title": "I\u2019m Afraid of Americans V3",
+        "duration_ms": 313300
+      },
+      {
+        "id": "93d6c927-b8c4-4f6c-9906-3fa2dbba4cf3",
+        "title": "I\u2019m Afraid of Americans V4",
+        "duration_ms": 374177
+      },
+      {
+        "id": "a95347e5-66f8-43bf-a800-3519ce2d1cd4",
+        "title": "I\u2019m Afraid of Americans V5",
+        "duration_ms": 334916
+      },
+      {
+        "id": "d4e647ad-1d12-43b8-94d1-783bc15864b6",
+        "title": "I\u2019m Afraid of Americans V6",
+        "duration_ms": 665131
+      },
+      {
+        "id": "fbd37ba2-272e-4e28-b6b1-dde73a2f5221",
+        "title": "I\u2019m Afraid of Americans V1 (radio edit)",
+        "duration_ms": 265704
+      },
+      {
+        "id": "523fac4e-3f3b-41ea-b681-456e4b948346",
+        "title": "I\u2019m Afraid of Americans (original radio edit)",
+        "duration_ms": 253347
       }
     ],
     "image_url": "https://coverartarchive.org/release/257d4051-1dd8-47f0-91b1-0fc63b704aaf/front-250"
@@ -60809,8 +63606,14 @@
         "id": "a2b4933f-9b7b-4f03-94f7-213086ddbe76",
         "title": "Golden Years (TOKiMONSTA remix)",
         "duration_ms": 181000
+      },
+      {
+        "id": "abbe2996-4641-4f2d-ac52-e463bf2966cb",
+        "title": "Golden Years (TOKiMONSTA remix)",
+        "duration_ms": 182000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/6174625d-f0c4-4cc3-b995-b683a1749380/front-250"
   },
   "db247222-7fd2-4a15-92a3-62a98dca72c6": {
     "title": "PNE Rehearsals 1976",
@@ -61659,7 +64462,8 @@
         "title": "Modern Love",
         "duration_ms": 258279
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/6573fa0d-a076-40ac-ac0f-3232ea407619/front-250"
   },
   "df5fc1e9-d35a-45d0-a571-c62ceac9aa39": {
     "title": "The Rise and Rise of Ziggy Stardust: BBC Radio Session 1967\u20131972",
@@ -62001,6 +64805,291 @@
         "id": "087d8012-0f92-48fa-8359-6f077242a2b2",
         "title": "It Ain\u2019t Easy",
         "duration_ms": 217000
+      },
+      {
+        "id": "284904c0-0af0-4358-8667-fd4496c32d76",
+        "title": "In the Heat of the Morning",
+        "duration_ms": 160104
+      },
+      {
+        "id": "60e5c3ba-d60a-4430-9381-6cf16f4087c8",
+        "title": "When I\u2019m Five",
+        "duration_ms": 184241
+      },
+      {
+        "id": "3c70c534-43ab-470e-ab0a-cbca79496828",
+        "title": "Unwashed & Somewhat Slightly Dazed",
+        "duration_ms": 232960
+      },
+      {
+        "id": "f559d722-304f-4f4e-a316-6b5a3b33966e",
+        "title": "Buzz the Fuzz",
+        "duration_ms": 143882
+      },
+      {
+        "id": "391486fd-bef2-443b-838b-e4cf054c45c4",
+        "title": "Karma Man",
+        "duration_ms": 184555
+      },
+      {
+        "id": "2f503d3a-2374-4888-b18a-969d2d04e7aa",
+        "title": "London Bye Ta\u2010Ta",
+        "duration_ms": 158511
+      },
+      {
+        "id": "851a92e5-8fa5-4b1a-a59e-145391842d25",
+        "title": "An Occasional Dream",
+        "duration_ms": 172068
+      },
+      {
+        "id": "7392afbb-7e58-41b8-8b91-f1a6ce2c7c74",
+        "title": "Janine",
+        "duration_ms": 210808
+      },
+      {
+        "id": "3de861b5-42e7-495f-a83a-5808e26f56b5",
+        "title": "The Wild\u2010Eyed Boy From Freecloud",
+        "duration_ms": 254772
+      },
+      {
+        "id": "4f76b6fe-c22e-4a25-b9be-e9e935921c6e",
+        "title": "Fill Your Heart",
+        "duration_ms": 143203
+      },
+      {
+        "id": "21e42001-8065-48ba-89c1-4ee3f788c89d",
+        "title": "The Prettiest Star",
+        "duration_ms": 159660
+      },
+      {
+        "id": "d9894640-74f1-4a8d-83b3-a3a194b54fce",
+        "title": "The Width of a Circle",
+        "duration_ms": 337711
+      },
+      {
+        "id": "d46b5f85-2a1c-4b80-a6c5-f529022110a2",
+        "title": "The Supermen",
+        "duration_ms": 182987
+      },
+      {
+        "id": "dfa6e91f-b9fe-4592-8846-55ae80c0b7cf",
+        "title": "Queen Bitch",
+        "duration_ms": 233000
+      },
+      {
+        "id": "8de1fba4-20c6-4388-8cf5-e1c1a3c2d468",
+        "title": "The Supermen",
+        "duration_ms": 184000
+      },
+      {
+        "id": "3a16029c-1a90-4567-8842-f73f6fabfc7c",
+        "title": "Song for Bob Dylan",
+        "duration_ms": 326000
+      },
+      {
+        "id": "5a22e3c9-5c16-4df3-941c-59715f600e9a",
+        "title": "Andy Warhol",
+        "duration_ms": 221000
+      },
+      {
+        "id": "203d276e-8933-44bb-bc6c-67d95e976759",
+        "title": "Oh! You Pretty Things",
+        "duration_ms": 199000
+      },
+      {
+        "id": "ae017fdd-0b42-4d1a-bdce-bd4d367cbc04",
+        "title": "Kooks",
+        "duration_ms": 203000
+      },
+      {
+        "id": "46ff84ac-ec3a-43bf-8fc5-15107e4844f6",
+        "title": "Fill Your Heart",
+        "duration_ms": 169000
+      },
+      {
+        "id": "f1aa1ba5-876c-4e1e-98ea-8f6b9159a044",
+        "title": "Port of Amsterdam",
+        "duration_ms": 190000
+      },
+      {
+        "id": "b783529d-a7e0-4928-8a04-e5efc9321115",
+        "title": "Andy Warhol",
+        "duration_ms": 176000
+      },
+      {
+        "id": "1a7db939-3c65-43f2-a36f-03f99919f265",
+        "title": "Ziggy Stardust",
+        "duration_ms": 199000
+      },
+      {
+        "id": "2fe6b723-5aec-4b3f-a9c3-34cee643d66a",
+        "title": "Queen Bitch",
+        "duration_ms": 180000
+      },
+      {
+        "id": "a604216d-9182-4e1b-8390-99cae6a6185a",
+        "title": "I\u2019m Waiting for the Man",
+        "duration_ms": 327000
+      },
+      {
+        "id": "be6c0599-4500-41e0-a22c-f3210f4609c2",
+        "title": "Lady Stardust",
+        "duration_ms": 200000
+      },
+      {
+        "id": "91219af5-4de1-493c-a58b-8c3df6b44219",
+        "title": "White Light/White Heat",
+        "duration_ms": 236000
+      },
+      {
+        "id": "f0536ff1-1beb-431b-b7b1-6d26928ae7e9",
+        "title": "John, I\u2019m Only Dancing",
+        "duration_ms": 181000
+      },
+      {
+        "id": "d2b0d152-77c0-4f55-ac33-4b0149bd49bb",
+        "title": "Lady Stardust",
+        "duration_ms": 199000
+      },
+      {
+        "id": "c571ef46-4d08-4849-a807-b975c20f3bd8",
+        "title": "Star",
+        "duration_ms": 177000
+      },
+      {
+        "id": "0fddbf52-19b7-43c2-bafc-4e5db46dab10",
+        "title": "Interview (Radio Caroline Showboat, Oct. 1966)",
+        "duration_ms": 63826
+      },
+      {
+        "id": "b327dad1-9abd-4ec1-bbe3-8793bcbd71e6",
+        "title": "In the Heat of the Morning",
+        "duration_ms": 159040
+      },
+      {
+        "id": "32f8c94e-7ded-4a48-aa62-56da5dc3dd54",
+        "title": "When I\u2019m Five",
+        "duration_ms": 185333
+      },
+      {
+        "id": "53e30ffd-ee12-4c80-b67d-47085581735b",
+        "title": "Interview (Dave Lee Travis, 26.10.69)",
+        "duration_ms": 88293
+      },
+      {
+        "id": "4a2506df-2d8b-42b7-9587-849ed4db6b7a",
+        "title": "Buzz the Fuzz",
+        "duration_ms": 144533
+      },
+      {
+        "id": "1f2a950e-8230-48f8-bedc-f16f9107b344",
+        "title": "Karma Man",
+        "duration_ms": 184293
+      },
+      {
+        "id": "2751e7d7-e402-47eb-b44f-415fe387eb65",
+        "title": "London Bye Ta\u2010Ta",
+        "duration_ms": 157466
+      },
+      {
+        "id": "6ceacad1-9044-4c14-b603-a41e1df107c2",
+        "title": "An Occasional Dream",
+        "duration_ms": 173506
+      },
+      {
+        "id": "f172dee2-76bf-4ff0-aeb2-f3f8e9eb1d74",
+        "title": "Janine",
+        "duration_ms": 282400
+      },
+      {
+        "id": "9cd67bf5-ccfd-4cb3-8eb9-a1a633e18f8c",
+        "title": "Wild Eyed Boy From Freecloud",
+        "duration_ms": 211333
+      },
+      {
+        "id": "ef744f66-d37f-40af-afb7-4120459750a4",
+        "title": "Fill Your Heart",
+        "duration_ms": 143386
+      },
+      {
+        "id": "c49031b3-2117-4c60-90c2-797785d22634",
+        "title": "The Prettiest Star",
+        "duration_ms": 161066
+      },
+      {
+        "id": "389e376e-1472-4541-adb4-998364ed226e",
+        "title": "The Width of a Circle",
+        "duration_ms": 337240
+      },
+      {
+        "id": "4195f712-bb65-4798-831b-e247145126a8",
+        "title": "Tired of My Life",
+        "duration_ms": 185400
+      },
+      {
+        "id": "af0fcebf-1735-489a-a33c-1265fbeada5c",
+        "title": "All the Madmen",
+        "duration_ms": 281160
+      },
+      {
+        "id": "4a1e0454-f648-4836-a3a0-21b64f87d732",
+        "title": "Queen Bitch",
+        "duration_ms": 277800
+      },
+      {
+        "id": "f3d89390-3db0-4bfa-bdf2-6cf83b4c86b1",
+        "title": "The Supermen",
+        "duration_ms": 190920
+      },
+      {
+        "id": "b11875a3-21ac-4fe2-8355-5063ac3d0518",
+        "title": "Song for Bob Dylan",
+        "duration_ms": 326253
+      },
+      {
+        "id": "1dd1383d-c733-4c75-bebc-d33e033fb2ef",
+        "title": "Andy Warhol",
+        "duration_ms": 229720
+      },
+      {
+        "id": "e6f60236-310c-4cd3-a92e-1252b08b1766",
+        "title": "Kooks",
+        "duration_ms": 206333
+      },
+      {
+        "id": "651dceea-49c5-4abf-b06c-5f40bbf3af04",
+        "title": "Fill Your Heart",
+        "duration_ms": 169666
+      },
+      {
+        "id": "6b451b27-9074-4b8a-9805-bb9f7c7a5b9e",
+        "title": "Amsterdam",
+        "duration_ms": 199733
+      },
+      {
+        "id": "341f362e-73e4-40ce-8f96-60e1e10db9f1",
+        "title": "Andy Warhol (false start)",
+        "duration_ms": 12266
+      },
+      {
+        "id": "c0a0e21c-5bc2-47cb-a98b-b7331147c8a3",
+        "title": "Andy Warhol",
+        "duration_ms": 180933
+      },
+      {
+        "id": "e87bd56f-ec34-4018-9255-9ca7530047df",
+        "title": "Lady Stardust",
+        "duration_ms": 197960
+      },
+      {
+        "id": "d226779d-07eb-4f32-b800-864c44e4b7ba",
+        "title": "White Light/White Heat",
+        "duration_ms": 236040
+      },
+      {
+        "id": "0a009c2c-c6b6-48f1-bb0f-fc55081ef85c",
+        "title": "Starman",
+        "duration_ms": 200053
       }
     ],
     "image_url": "https://coverartarchive.org/release/5c82872d-64e5-47e8-a017-df25654a4517/front-250"
@@ -62051,7 +65140,8 @@
         "title": "White Light/White Heat",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/29c88a1f-5d46-4560-9501-2bc54eda612f/front-250"
   },
   "e0866f13-43ef-4277-b85f-4bf96d7a4333": {
     "title": "Hallo Spaceboy",
@@ -62530,7 +65620,8 @@
         "title": "The Man Who Sold the World (ChangesNowBowie version)",
         "duration_ms": 241000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/f5959284-dad5-465b-b2d9-9f88d19fddaf/front-250"
   },
   "e6161147-a51f-3655-ba9f-d00394493c1c": {
     "title": "Peace on Earth / Little Drummer Boy",
@@ -63596,8 +66687,14 @@
         "id": "8405e7f1-dcaa-4058-9457-9dcf92250706",
         "title": "Sense of Doubt",
         "duration_ms": 0
+      },
+      {
+        "id": "09aeb3c7-1479-407c-ae5f-74f0d1e1efef",
+        "title": "Blackout (live)",
+        "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/7aa2e064-b905-4ad1-b81f-d422227eec84/front-250"
   },
   "ed02d876-5d44-4fd1-9873-5b35be0fe14a": {
     "title": "BBC \u2013 Sound of the 70\u2019s 1971\u20131972",
@@ -63900,7 +66997,8 @@
         "title": "Queen Bitch",
         "duration_ms": 192000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/55141c2d-35e3-4498-a73e-0eb49b786134/front-250"
   },
   "eebd8c66-d310-439c-9254-95b7a74f13e2": {
     "title": "Side by Side: Kingdom Come",
@@ -64986,7 +68084,8 @@
         "title": "I\u2019d Rather Be High (alternatitive Venetian mix)",
         "duration_ms": 241928
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/a07a6c74-8983-411b-804c-61deaaf9ff15/front-250"
   },
   "f196088d-493b-436c-b222-76fa0e47f950": {
     "title": "VH1 Storytellers",
@@ -65178,7 +68277,8 @@
         "title": "Hallo Spaceboy (feat. Trent Reznor)",
         "duration_ms": 349000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/ad2023fd-f6a3-46a8-a14b-e5b0bc89f4f3/front-250"
   },
   "f25980cf-c0ac-4bbb-8f65-ea3d1652b29d": {
     "title": "Reality / A Reality Tour",
@@ -65646,7 +68746,7 @@
   "f3fc7617-8f28-41d3-a913-b1aba47f5ba1": {
     "title": "A New Career in a New Town (1977\u20131982)",
     "type": "Album",
-    "track_count": 94,
+    "track_count": 123,
     "total_duration_ms": 23146278,
     "tracks": [
       {
@@ -66118,8 +69218,179 @@
         "id": "1de93833-43c7-4867-9543-92b7d2234b8f",
         "title": "It\u2019s No Game, Part 2",
         "duration_ms": 266000
+      },
+      {
+        "id": "4ec57a5c-5421-458e-92ea-b33460f49123",
+        "title": "Star",
+        "duration_ms": 157000
+      },
+      {
+        "id": "d9925907-95f6-4f5c-8315-42893d1714d6",
+        "title": "Station to Station",
+        "duration_ms": 531000
+      },
+      {
+        "id": "feee5679-aaeb-48ff-9a3d-fe07def34a95",
+        "title": "Fame",
+        "duration_ms": 248000
+      },
+      {
+        "id": "6a4f0b5d-8761-4b3a-b826-87888c0397ac",
+        "title": "Warszawa",
+        "duration_ms": 413000
+      },
+      {
+        "id": "4d84338d-0f99-4d06-9bbc-aacb1327cfb1",
+        "title": "Speed of Life",
+        "duration_ms": 164000
+      },
+      {
+        "id": "59119381-9a51-4e27-b483-1bf40e902984",
+        "title": "Art Decade",
+        "duration_ms": 190000
+      },
+      {
+        "id": "731bd4aa-ff52-44aa-b3af-278471e60d81",
+        "title": "Sense of Doubt",
+        "duration_ms": 192000
+      },
+      {
+        "id": "dbfe77e9-b7ac-4a8d-97b8-a614d1dbff7a",
+        "title": "Breaking Glass",
+        "duration_ms": 210000
+      },
+      {
+        "id": "790a3b9c-ed52-4383-9d9d-76877f94f9f8",
+        "title": "What in the World",
+        "duration_ms": 265000
+      },
+      {
+        "id": "a61811c3-f5fd-49da-81d1-d5ad504302f2",
+        "title": "Be My Wife",
+        "duration_ms": 169000
+      },
+      {
+        "id": "e99f42d3-d89f-4ab6-a868-64df579d71b8",
+        "title": "The Jean Genie",
+        "duration_ms": 377000
+      },
+      {
+        "id": "2df838fc-5a83-4279-b9cb-fa45ddcb9cd8",
+        "title": "Stay",
+        "duration_ms": 441000
+      },
+      {
+        "id": "006c2804-f0a6-4a7e-9dbc-91763b86c429",
+        "title": "\u201cHeroes\u201d (single version)",
+        "duration_ms": 215000
+      },
+      {
+        "id": "4933a68c-8a63-4477-be13-f324f213ce38",
+        "title": "Beauty and the Beast (extended version)",
+        "duration_ms": 320000
+      },
+      {
+        "id": "1d08220b-59fa-4888-acc0-cca52ff27f95",
+        "title": "Breaking Glass (Australian single version)",
+        "duration_ms": 171000
+      },
+      {
+        "id": "d7dac406-e59c-4cee-bfd9-321efb699712",
+        "title": "Yassassin (single version)",
+        "duration_ms": 187000
+      },
+      {
+        "id": "b27e9d8d-6b55-445f-b7bf-bdb8dac78f83",
+        "title": "D.J. (single version)",
+        "duration_ms": 205000
+      },
+      {
+        "id": "ad31a088-3e6e-4d77-aadf-798df7ed0a4b",
+        "title": "Alabama Song",
+        "duration_ms": 233000
+      },
+      {
+        "id": "697c67d1-9279-4486-b467-5593b5d1e56a",
+        "title": "Space Oddity (1979 version)",
+        "duration_ms": 292000
+      },
+      {
+        "id": "f5b2f3a5-110b-48fc-9350-e685ea9b15fb",
+        "title": "Ashes to Ashes (single version)",
+        "duration_ms": 217000
+      },
+      {
+        "id": "10bec6e6-8044-43bb-a85b-34537c4b3557",
+        "title": "Fashion (single version)",
+        "duration_ms": 204000
+      },
+      {
+        "id": "b6e360da-e36e-40dd-b417-072888f2f293",
+        "title": "Scary Monsters (and Super Creeps) (single version)",
+        "duration_ms": 215000
+      },
+      {
+        "id": "ae2f95e8-42d3-4518-8c35-f82dbdcd91c8",
+        "title": "Crystal Japan",
+        "duration_ms": 189000
+      },
+      {
+        "id": "75c4c85f-1a42-4cb6-8d0e-f9a4ab206621",
+        "title": "Under Pressure (single version)",
+        "duration_ms": 248000
+      },
+      {
+        "id": "a6f6b24b-60de-4185-a8ea-54d2840844c2",
+        "title": "Baal\u2019s Hymn",
+        "duration_ms": 244000
+      },
+      {
+        "id": "ece88ffc-6b1d-45b7-984f-cbdc857f872b",
+        "title": "Remembering Marie A.",
+        "duration_ms": 129000
+      },
+      {
+        "id": "4e1fa6a9-42af-43df-851f-4c72acbb7b39",
+        "title": "Ballad of the Adventurers",
+        "duration_ms": 122000
+      },
+      {
+        "id": "ca9b0f21-6f82-44be-bc6e-74039b87b622",
+        "title": "The Drowned Girl",
+        "duration_ms": 151000
+      },
+      {
+        "id": "309018c3-360b-42b4-88b9-9336732d20f6",
+        "title": "The Dirty Song",
+        "duration_ms": 39000
+      },
+      {
+        "id": "a9b9ebb3-7afd-4115-9794-57059b099c74",
+        "title": "Cat People (Putting Out Fire) (soundtrack album version)",
+        "duration_ms": 401000
+      },
+      {
+        "id": "a463e609-70c3-418a-bf14-88a9834a9058",
+        "title": "Peace on Earth / Little Drummer Boy (mono)",
+        "duration_ms": 266000
+      },
+      {
+        "id": "65750e0e-7654-4c72-af7f-274e6d4be825",
+        "title": "Be My Wife",
+        "duration_ms": 170000
+      },
+      {
+        "id": "c5132085-ad42-42f8-a4bc-c7a9ff92f026",
+        "title": "Star (live)",
+        "duration_ms": 148000
+      },
+      {
+        "id": "8e43313d-4653-4d46-8ea1-81087fbef89a",
+        "title": "Suffragette City",
+        "duration_ms": 238949
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/11a1bd6b-964d-4852-af32-39074e128d17/front-250"
   },
   "f525f61e-678b-3990-b2d5-c0bb0cc6377b": {
     "title": "1983\u201004\u201027: Complete Dallas Rehearsals: Dallas, TX, USA",
@@ -66499,7 +69770,8 @@
         "title": "Waiting for the Man",
         "duration_ms": 360000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/8054ba5c-8126-4043-8c19-22c9b1ad1de5/front-250"
   },
   "f5cc15ea-67a8-3c6b-9887-d45ae13a3156": {
     "title": "Black Tie White Noise",
@@ -67117,7 +70389,7 @@
   "f83f57d0-558a-3083-a592-638dd19a050c": {
     "title": "The Hearts Filthy Lesson",
     "type": "Single",
-    "track_count": 5,
+    "track_count": 8,
     "total_duration_ms": 1079626,
     "tracks": [
       {
@@ -67189,6 +70461,21 @@
         "id": "fabd6a05-bbec-4efc-ac96-051d11906d81",
         "title": "Nothing to Be Desired",
         "duration_ms": 134600
+      },
+      {
+        "id": "15095bf4-3112-4519-8af8-e385dab0291e",
+        "title": "The Hearts Filthy Lesson (Rubber radio mix)",
+        "duration_ms": 286023
+      },
+      {
+        "id": "82449c55-0eb2-4514-a34e-afd8d4f7cce2",
+        "title": "We Prick You (Tim Simenon mix)",
+        "duration_ms": 306410
+      },
+      {
+        "id": "33f9a2d0-6261-4df7-ac80-e8659e117c82",
+        "title": "The Voyeur of Utter Destruction (As Beauty) (Tim Simenon mix)",
+        "duration_ms": 266309
       }
     ],
     "image_url": "https://coverartarchive.org/release/afa1e4c8-229b-3826-9ed0-d11d13b0c826/front-250"
@@ -67281,7 +70568,8 @@
         "title": "Beauty and the Beast (extended version)",
         "duration_ms": 320000
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/b6d7393d-6f23-4b9e-8258-ef941e3306d9/front-250"
   },
   "fa15a2c0-b3c8-4208-a796-ea988c1ba9b3": {
     "title": "Some Soul in a Lonely World",
@@ -67573,7 +70861,8 @@
         "title": "Let\u2019s Dance",
         "duration_ms": 0
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/f198695d-ebe8-4327-ab16-dd8bb8410614/front-250"
   },
   "fb8437f8-940a-4e43-bee1-0d4b1094529f": {
     "title": "1996\u201007\u201020: Balingen Festival, Balingen, Germany",
@@ -67872,8 +71161,19 @@
         "id": "c476e014-23bb-4037-80ce-2da4c5c97c11",
         "title": "And I Say to Myself",
         "duration_ms": 149000
+      },
+      {
+        "id": "5daa1414-6b3b-417e-8752-1390e2faa173",
+        "title": "Can\u2019t Help Thinking About Me",
+        "duration_ms": 205478
+      },
+      {
+        "id": "867596c3-70c9-4768-aaf8-3bfd4930d0f8",
+        "title": "Can\u2019t Help Thinking About Me (live Mark Radcliffe Show BBC Radio 1 session)",
+        "duration_ms": 178870
       }
-    ]
+    ],
+    "image_url": "https://coverartarchive.org/release/04ec213e-00ff-4788-bf7c-0b233649f2c4/front-250"
   },
   "fdf9b5ac-883d-46e1-ba59-3aa1bb31662e": {
     "title": "Rare",
@@ -68694,6 +71994,314 @@
         "id": "0cf2f997-4bcf-4054-b91e-10c5e0ebf2cd",
         "title": "D.J. - Rivaz Funk Remix",
         "duration_ms": 419227
+      }
+    ]
+  },
+  "36644303-650a-4c4e-99bd-0f982cb0755c": {
+    "title": "Omikron: The Nomad Soul",
+    "type": "Album",
+    "track_count": 36,
+    "image_url": "https://coverartarchive.org/release/b19455d5-4831-4e2d-a502-3158c02f7ffc/front-250",
+    "tracks": [
+      {
+        "id": "d18d5952-ff4b-4733-8748-a032231dd399",
+        "title": "Introduction",
+        "duration_ms": 158413
+      },
+      {
+        "id": "6be74523-072f-4423-9f15-597fc4b23781",
+        "title": "The Journey, Pt. I",
+        "duration_ms": 105253
+      },
+      {
+        "id": "31d5c3e1-eab3-4baf-8efd-6fd5e7eb9338",
+        "title": "The Journey, Pt. II",
+        "duration_ms": 181720
+      },
+      {
+        "id": "8864ce66-ffab-4c61-9861-ae4c5d3f826f",
+        "title": "New Angels of Promise (Omikron)",
+        "duration_ms": 139373
+      },
+      {
+        "id": "c8107753-f1f4-4733-92b6-3108f04a589d",
+        "title": "The Journey, Pt. III",
+        "duration_ms": 153306
+      },
+      {
+        "id": "dd21ea64-d69e-4430-9f76-95f88974fd09",
+        "title": "Something in the Air",
+        "duration_ms": 343666
+      },
+      {
+        "id": "2e733d0f-f919-49a7-8cce-118ddaf22fd2",
+        "title": "The Journey, Pt. IV",
+        "duration_ms": 215466
+      },
+      {
+        "id": "50d27a9a-143b-4813-bb7f-998eea861ee9",
+        "title": "The Pretty Things Are Going to Hell",
+        "duration_ms": 285226
+      },
+      {
+        "id": "85346776-43da-4daf-bf11-a46520ac86c5",
+        "title": "The Journey, Pt. V",
+        "duration_ms": 144133
+      },
+      {
+        "id": "0fc42f7d-65c8-4d5b-b6b0-d430236db2ee",
+        "title": "Save Your Soul",
+        "duration_ms": 162520
+      },
+      {
+        "id": "d9bddf34-5e74-49e7-bd1a-1fb4b660276d",
+        "title": "Thursday\u2019s Child",
+        "duration_ms": 331026
+      },
+      {
+        "id": "1424e648-d66f-49d6-8669-4acdc9a41d37",
+        "title": "A Pretty Reprise",
+        "duration_ms": 221773
+      },
+      {
+        "id": "9324bfd0-6ab4-43a5-9782-f09a581ce680",
+        "title": "Survive",
+        "duration_ms": 246493
+      },
+      {
+        "id": "c2fae27f-4710-4eed-a9a9-a79569ada5aa",
+        "title": "The Journey, Pt. VI",
+        "duration_ms": 139986
+      },
+      {
+        "id": "e4df8748-a783-4736-92ce-fe710cc04298",
+        "title": "We All Go Through",
+        "duration_ms": 246320
+      },
+      {
+        "id": "90c22537-b94a-449b-b108-d97a10ec084f",
+        "title": "The Journey, Pt. VII",
+        "duration_ms": 119266
+      },
+      {
+        "id": "6fa1d656-d9d0-419c-a168-23572da98efa",
+        "title": "The Journey, Pt. VIII",
+        "duration_ms": 188773
+      },
+      {
+        "id": "5d6cb0ee-9032-4e8a-aa78-f879b7728ccf",
+        "title": "The Dreamers",
+        "duration_ms": 291733
+      },
+      {
+        "id": "d4894ce1-8c4c-4cd0-a257-1564849dfd51",
+        "title": "The Journey, Pt. IX",
+        "duration_ms": 86266
+      },
+      {
+        "id": "0cd116aa-46d7-41d4-9b5b-b8a40dbf27ae",
+        "title": "The Journey, Pt. X",
+        "duration_ms": 397493
+      },
+      {
+        "id": "f6426bbc-b5f8-4feb-a66d-ca56a5a03283",
+        "title": "Sha\u2019armet Three",
+        "duration_ms": 79320
+      },
+      {
+        "id": "47989e37-f920-4d03-be90-5969c1438031",
+        "title": "1917 (Omikron mix)",
+        "duration_ms": 34333
+      },
+      {
+        "id": "8f90bec9-6d63-4d85-a690-0c1806e0de20",
+        "title": "Quasilar (recorded version)",
+        "duration_ms": 120746
+      },
+      {
+        "id": "408d33d0-bb7d-4d8d-ba42-56af81a8d54f",
+        "title": "Seven",
+        "duration_ms": 247706
+      },
+      {
+        "id": "6921f7ae-fc58-4ab2-8622-6bcb5f191904",
+        "title": "Introduction",
+        "duration_ms": 155000
+      },
+      {
+        "id": "5c270027-b930-4c94-8cef-8b29819fd6a7",
+        "title": "Omikron",
+        "duration_ms": 143000
+      },
+      {
+        "id": "0f745fef-a058-44a4-91a4-f18534ab54d9",
+        "title": "Anekbah",
+        "duration_ms": 182000
+      },
+      {
+        "id": "bfbf28df-f9bc-4860-b34d-596ca2d2ae8b",
+        "title": "Ganhar",
+        "duration_ms": 79000
+      },
+      {
+        "id": "29d78ea3-041d-40b4-9e7d-22eefb0bc282",
+        "title": "Anekbah Reprise",
+        "duration_ms": 44000
+      },
+      {
+        "id": "f9df9fa6-bdbc-49f1-97a4-3d3b4a663ecc",
+        "title": "Quanta Cola",
+        "duration_ms": 60000
+      },
+      {
+        "id": "2ddce24d-01e0-4df7-bbf6-389402f5d0c3",
+        "title": "Aka\u2019s Bar",
+        "duration_ms": 60000
+      },
+      {
+        "id": "b9954584-01ca-4eca-bd2d-0f00aa81d086",
+        "title": "Sha\u2019armet One",
+        "duration_ms": 85000
+      },
+      {
+        "id": "7f787fea-e55a-4930-b569-afd37e61c058",
+        "title": "Sha\u2019armet Two",
+        "duration_ms": 151000
+      },
+      {
+        "id": "5f753b65-2d9c-45ee-be54-d8e5df95b0ba",
+        "title": "Sha\u2019armet Three",
+        "duration_ms": 77000
+      },
+      {
+        "id": "7583f8bf-87ab-4887-ae9b-3b6476aa0785",
+        "title": "Sha\u2019armet Four",
+        "duration_ms": 144000
+      },
+      {
+        "id": "e0889f3e-1f10-454a-af19-6f89d8445466",
+        "title": "Xike Shoes",
+        "duration_ms": 60000
+      },
+      {
+        "id": "eb0d427e-a8b8-41d3-81e8-c7093516965b",
+        "title": "Market Place",
+        "duration_ms": 184000
+      },
+      {
+        "id": "cdc7785b-8f51-458d-b534-9a69385aeb0a",
+        "title": "Snow Level",
+        "duration_ms": 136000
+      },
+      {
+        "id": "029f0c9c-a636-454f-b1a2-d4868e575524",
+        "title": "Jaunpur",
+        "duration_ms": 145000
+      },
+      {
+        "id": "4bd5e4c8-4f3a-493a-8e10-d3d4f10c83b1",
+        "title": "Jaunpur Casbah",
+        "duration_ms": 50000
+      },
+      {
+        "id": "0c9e4574-bac9-4a48-ba64-22cabc71b209",
+        "title": "Kloops Beer",
+        "duration_ms": 60000
+      },
+      {
+        "id": "9780a370-4e04-454f-8243-16cffa15b7e9",
+        "title": "Shooting Gallery",
+        "duration_ms": 56000
+      },
+      {
+        "id": "345ed004-9bfc-4855-b74e-2df692d32ee7",
+        "title": "Shooting One",
+        "duration_ms": 71000
+      },
+      {
+        "id": "efb5e492-d28a-43c3-b714-c7b7bb7a6093",
+        "title": "Shooting Two",
+        "duration_ms": 64000
+      },
+      {
+        "id": "a9767155-8aef-4785-8ba9-d40f8dd00374",
+        "title": "Shooting Three",
+        "duration_ms": 70000
+      },
+      {
+        "id": "6d5d3cb3-6565-4f8c-a011-30857b6fc10d",
+        "title": "Shooting Four",
+        "duration_ms": 67000
+      },
+      {
+        "id": "ca78af33-1db6-4961-97bd-dd74e6b321eb",
+        "title": "Chocovat Bar",
+        "duration_ms": 60000
+      },
+      {
+        "id": "fa027fe2-e5a1-444c-b3f6-cd35a95d5267",
+        "title": "Thrust",
+        "duration_ms": 57000
+      },
+      {
+        "id": "a08b665c-59fd-4e5f-8fd3-b28ecb50858e",
+        "title": "Jangir",
+        "duration_ms": 86000
+      },
+      {
+        "id": "59a926b0-a823-4d79-b74c-da4dac4d66d4",
+        "title": "Nomad Soul",
+        "duration_ms": 88000
+      },
+      {
+        "id": "d6a2e82c-3591-43bf-965f-aa8f3480d82d",
+        "title": "Palace",
+        "duration_ms": 50000
+      },
+      {
+        "id": "a820bb7b-a238-4716-8182-b986762dfa3b",
+        "title": "Khonsu Implants",
+        "duration_ms": 60000
+      },
+      {
+        "id": "699018ac-c66b-4517-9851-46837f2c37c2",
+        "title": "Save Your Soul",
+        "duration_ms": 93000
+      },
+      {
+        "id": "b3668c23-9ef8-4e44-8723-f1cf7f9801b5",
+        "title": "AZ Piano",
+        "duration_ms": 344000
+      },
+      {
+        "id": "93727287-66e3-444a-9e51-e91b2ed9f245",
+        "title": "Seven (rock mix)",
+        "duration_ms": 244000
+      },
+      {
+        "id": "3cae03a1-56cc-47f7-bde2-8f90474d3bd1",
+        "title": "1917 (Omikron mix)",
+        "duration_ms": 32000
+      },
+      {
+        "id": "05ad1a45-3b37-456b-9e58-1057eb6f4634",
+        "title": "Qualisar (recorded version)",
+        "duration_ms": 118000
+      },
+      {
+        "id": "df821b98-b76f-4463-b46c-8af74bd1d714",
+        "title": "Thursday\u2019s Child (rock mix)",
+        "duration_ms": 266000
+      },
+      {
+        "id": "10907e38-3cdf-4610-974c-22eb30b8b8ca",
+        "title": "No One Calls",
+        "duration_ms": 225000
+      },
+      {
+        "id": "d2696d56-5119-4e62-882f-820fdbe9606e",
+        "title": "We All Go Through",
+        "duration_ms": 245000
       }
     ]
   }
