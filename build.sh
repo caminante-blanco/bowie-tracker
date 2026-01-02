@@ -15,5 +15,9 @@ if [ ! -f ./trunk ]; then
     curl -L "https://github.com/trunk-rs/trunk/releases/download/${TRUNK_VERSION}/trunk-x86_64-unknown-linux-gnu.tar.gz" | tar -xzf-
 fi
 
+# Update lookup database
+echo "Generating lookup database..."
+python3 process_lookup.py
+
 # Build project with Trunk
 ./trunk build --release
