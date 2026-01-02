@@ -12,6 +12,7 @@ enum Page { Dashboard, Rewards, Charts, Settings, DayDetail }
 
 fn main() {
     console_error_panic_hook::set_once();
+    web_sys::console::log_1(&"Ziggy Tracker v2026.01.02.1 - Timer Update".into());
     mount_to_body(|| view! { <App/> })
 }
 
