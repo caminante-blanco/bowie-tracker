@@ -3,7 +3,7 @@ use chrono::Utc;
 use std::collections::HashMap;
 
 use bowie_tracker::models::{Listen, ListenBrainzResponse, PlayingNowResponse, BowieLookup, PlayingNowListen};
-use bowie_tracker::analytics::{calculate_metrics, is_bowie_meta, format_relative_time, MonthlyWrapped, DayStats, match_playing_now};
+use bowie_tracker::analytics::{calculate_metrics, format_relative_time, MonthlyWrapped, DayStats, match_playing_now};
 use bowie_tracker::db::{init_db, add_listens, get_all_listens, get_max_timestamp, get_all_album_metadata};
 use bowie_tracker::charts::ListeningHistoryChart;
 use bowie_tracker::api::fetch_with_rate_limit;
@@ -128,9 +128,15 @@ fn App() -> impl IntoView {
 
                     if let Ok(json) = serde_json::from_str::<PlayingNowResponse>(&text) {
                         if let Some(lookup) = &lookup_opt {
+                            // Get hint from last listen
+                            let last_rg_id = listens.get_untracked().first().and_then(|l| {
+                                let id = l.track_metadata.mbid_mapping.as_ref().and_then(|m| m.recording_mbid.as_ref())
+                                    .or_else(|| l.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
+                                id.and_then(|i| lookup.recordings.get(i))
+                            });
+
                             let matches: Vec<_> = json.payload.listens.into_iter().filter(|l| {
-                                is_bowie_meta(&l.track_metadata, lookup) || 
-                                lookup.name_map.contains_key(&l.track_metadata.track_name.to_lowercase())
+                                match_playing_now(&l.track_metadata, lookup, last_rg_id).is_some()
                             }).collect();
 
                             let new_np = matches.first().cloned();
@@ -313,23 +319,26 @@ fn App() -> impl IntoView {
                                     let mut duration = l.track_metadata.additional_info.as_ref().and_then(|i| i.duration_ms).unwrap_or(0);
                                     let mut art_url: Option<String> = None;
 
-                                    // Trusted Lookup
+                                    // Trusted Lookup using robust matching
                                     if let Some(lookup) = bowie_lookup.get() {
-                                        let mbid = l.track_metadata.mbid_mapping.as_ref().and_then(|m| m.recording_mbid.as_ref())
-                                            .or_else(|| l.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
-                                        
-                                        if let Some(id) = mbid {
+                                        // Get hint from last listen to prioritize current album
+                                        let last_rg_id = listens.get().first().and_then(|l| {
+                                            let id = l.track_metadata.mbid_mapping.as_ref().and_then(|m| m.recording_mbid.as_ref())
+                                                .or_else(|| l.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
+                                            id.and_then(|i| lookup.recordings.get(i))
+                                        });
+
+                                        // Use the shared matching logic to find the ID (mbid or name match)
+                                        if let Some((rec_id, rg_id)) = match_playing_now(&l.track_metadata, &lookup, last_rg_id) {
                                             // Get trusted duration
-                                            if let Some(d) = lookup.track_durations.get(id) {
+                                            if let Some(d) = lookup.track_durations.get(&rec_id) {
                                                 duration = *d;
                                             }
                                             
                                             // Get trusted album/art
-                                            if let Some(rg_id) = lookup.recordings.get(id) {
-                                                if let Some((title, art, _, _)) = lookup.release_groups.get(rg_id) {
-                                                    album_name = title.clone();
-                                                    art_url = art.clone();
-                                                }
+                                            if let Some((title, art, _, _)) = lookup.release_groups.get(&rg_id) {
+                                                album_name = title.clone();
+                                                art_url = art.clone();
                                             }
                                         }
                                     }
