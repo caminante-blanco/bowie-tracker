@@ -307,7 +307,33 @@ fn App() -> impl IntoView {
                         Page::Dashboard => view! {
                             <div style="display: flex; flex-direction: column; gap: 15px;">
                                 {move || now_playing.get().map(|l| {
-                                    let duration = l.track_metadata.additional_info.as_ref().and_then(|i| i.duration_ms).unwrap_or(0);
+                                    // Default values from Listen
+                                    let track_name = l.track_metadata.track_name.clone();
+                                    let mut album_name = l.track_metadata.release_name.clone().unwrap_or("Unknown Album".to_string());
+                                    let mut duration = l.track_metadata.additional_info.as_ref().and_then(|i| i.duration_ms).unwrap_or(0);
+                                    let mut art_url: Option<String> = None;
+
+                                    // Trusted Lookup
+                                    if let Some(lookup) = bowie_lookup.get() {
+                                        let mbid = l.track_metadata.mbid_mapping.as_ref().and_then(|m| m.recording_mbid.as_ref())
+                                            .or_else(|| l.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
+                                        
+                                        if let Some(id) = mbid {
+                                            // Get trusted duration
+                                            if let Some(d) = lookup.track_durations.get(id) {
+                                                duration = *d;
+                                            }
+                                            
+                                            // Get trusted album/art
+                                            if let Some(rg_id) = lookup.recordings.get(id) {
+                                                if let Some((title, art, _, _)) = lookup.release_groups.get(rg_id) {
+                                                    album_name = title.clone();
+                                                    art_url = art.clone();
+                                                }
+                                            }
+                                        }
+                                    }
+
                                     let start = playback_start.get().unwrap_or(0);
                                     let now = now_ts.get();
                                     let elapsed_ms = (now - start).max(0) * 1000;
@@ -317,18 +343,24 @@ fn App() -> impl IntoView {
 
                                     view! {
                                     <div class="card now-playing-card" style="border: 2px solid var(--primary); background: #32302f; padding: 12px 15px;">
-                                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                                            <div>
+                                        <div style="display: flex; gap: 15px; align-items: center;">
+                                            {
+                                                if let Some(url) = art_url {
+                                                    view! { <img src=url style="width: 80px; height: 80px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); object-fit: cover;" alt="Album Art"/> }.into_view()
+                                                } else {
+                                                    view! { <div style="width: 80px; height: 80px; border-radius: 6px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 2rem;">"⚡"</div> }.into_view()
+                                                }
+                                            }
+                                            <div style="flex: 1;">
                                                 <div class="stat-label" style="color: var(--primary); font-size: 0.6rem; letter-spacing: 2px; font-weight: 900;">"LIVE ON AIR"</div>
-                                                <div style="font-weight: 900; font-size: 1.3rem; color: var(--fg-color); margin: 4px 0;">{l.track_metadata.track_name}</div>
-                                                <div style="font-size: 0.8rem; color: #a89984; font-weight: 500;">"David Bowie"</div>
+                                                <div style="font-weight: 900; font-size: 1.3rem; color: var(--fg-color); margin: 4px 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{track_name}</div>
+                                                <div style="font-size: 0.8rem; color: #a89984; font-weight: 500;">{album_name}</div>
                                                 <div style="margin-top: 8px; font-size: 0.7rem; font-family: monospace; color: var(--secondary);">
                                                     {fmt_time(elapsed_ms)} " / " {if duration > 0 { fmt_time(duration) } else { "??:??".to_string() }}
                                                 </div>
                                             </div>
-                                            <div class="pulse-icon" style="width: 12px; height: 12px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--primary);"></div>
                                         </div>
-                                        <div style="background: var(--surface); height: 4px; border-radius: 2px; margin-top: 10px; width: 100%; overflow: hidden;">
+                                        <div style="background: var(--surface); height: 4px; border-radius: 2px; margin-top: 15px; width: 100%; overflow: hidden;">
                                             <div style={format!("width: {}%; background: var(--primary); height: 100%; transition: width 1s linear;", pct_clamped)}></div>
                                         </div>
                                     </div>

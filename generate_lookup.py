@@ -17,7 +17,8 @@ def build_lookup():
 
     lookup = {
         "recordings": {},
-        "release_groups": {}
+        "release_groups": {},
+        "track_durations": {}
     }
     
     def rg_score(rg_id, data):
@@ -68,13 +69,18 @@ def build_lookup():
             rec_id = track.get("id")
             if not rec_id: continue
             
+            # Populate track durations
+            duration = track.get("duration_ms")
+            if duration:
+                lookup["track_durations"][rec_id] = duration
+
             if rec_id not in lookup["recordings"]:
                 lookup["recordings"][rec_id] = rg_id
 
     with open("bowie_lookup.json", "w") as f:
         json.dump(lookup, f)
     
-    print(f"Database ready. Recordings: {len(lookup['recordings'])}, Groups: {len(lookup['release_groups'])}")
+    print(f"Database ready. Recordings: {len(lookup['recordings'])}, Groups: {len(lookup['release_groups'])}, Durations: {len(lookup['track_durations'])}")
 
 if __name__ == "__main__":
     build_lookup()
