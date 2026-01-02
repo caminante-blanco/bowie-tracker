@@ -229,8 +229,39 @@ fn App() -> impl IntoView {
 
     create_effect(move |_| {
         let h_handle = gloo_timers::callback::Interval::new(30_000, move || sync_history());
-        let np_handle = gloo_timers::callback::Interval::new(1_000, move || sync_now_playing());
-        move || { drop(h_handle); drop(np_handle); }
+        move || { drop(h_handle); }
+    });
+
+    let (poll_tick, set_poll_tick) = create_signal(0);
+    create_effect(move |_| {
+        poll_tick.get(); // Subscribe to tick
+        
+        sync_now_playing();
+        
+        let mut delay = 1_000; // Default: High Frequency (1s)
+        
+        if let Some(np) = now_playing.get_untracked() {
+             let mut duration = np.track_metadata.additional_info.as_ref().and_then(|i| i.duration_ms).unwrap_or(0);
+             if let Some(lookup) = bowie_lookup.get_untracked() {
+                 if let Some((rec_id, _)) = match_playing_now(&np.track_metadata, &lookup, None) {
+                     if let Some(d) = lookup.track_durations.get(&rec_id) { duration = *d; }
+                 }
+             }
+             
+             if duration > 0 {
+                 let start = playback_start.get_untracked().unwrap_or(0);
+                 let now = Utc::now().timestamp();
+                 let elapsed = (now - start) * 1000;
+                 let remaining = duration - elapsed;
+                 
+                 // If matched and we have more than 5s left, slow down to 3s
+                 if remaining > 5_000 {
+                     delay = 3_000;
+                 }
+             }
+        }
+        
+        gloo_timers::callback::Timeout::new(delay, move || set_poll_tick.update(|x| *x += 1)).forget();
     });
 
     create_effect(move |_| {
