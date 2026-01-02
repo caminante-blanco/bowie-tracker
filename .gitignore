@@ -1,6 +1,7 @@
 /target
 /dist
 /venv
+trunk
 *.log
 *.tmp
 .processed_releases.json
