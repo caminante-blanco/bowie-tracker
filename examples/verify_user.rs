@@ -44,6 +44,39 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Fetched {} listens.", listens.len());
 
+    // Check Playing Now
+    let np_url = format!("https://api.listenbrainz.org/1/user/{}/playing-now", user);
+    println!("Checking Playing Now: {}", np_url);
+    let mut np_req = client.get(&np_url);
+    if let Some(t) = token {
+        np_req = np_req.header("Authorization", format!("Token {}", t));
+    }
+    if let Ok(np_resp) = np_req.send().await {
+        if let Ok(np_json) = np_resp.json::<bowie_tracker::models::PlayingNowResponse>().await {
+            if let Some(track) = np_json.payload.listens.first() {
+                println!("--- PLAYING NOW DETECTED ---");
+                println!("Track: {}", track.track_metadata.track_name);
+                println!("Artist: {}", track.track_metadata.artist_name);
+                
+                let is_match = is_bowie_meta(&track.track_metadata, &lookup);
+                println!("Strict Bowie Match: {}", is_match);
+                
+                if let Some(info) = &track.track_metadata.additional_info {
+                    println!("MBID (Additional Info): {:?}", info.recording_mbid);
+                }
+                if let Some(mapping) = &track.track_metadata.mbid_mapping {
+                    println!("MBID (Mapping): {:?}", mapping.recording_mbid);
+                }
+            } else {
+                println!("--- NO PLAYING NOW DETECTED (API returned empty list) ---");
+            }
+        } else {
+            println!("Failed to parse Playing Now response");
+        }
+    } else {
+        println!("Failed to fetch Playing Now");
+    }
+
     let bowie_listens: Vec<_> = listens.iter().filter(|l| is_bowie_meta(&l.track_metadata, &lookup)).collect();
     println!("Found {} David Bowie listens in the last 100 tracks.", bowie_listens.len());
 

@@ -85,6 +85,8 @@ pub struct AdditionalInfo {
 pub struct BowieLookup {
     pub recordings: std::collections::HashMap<String, String>, // RecID -> RG_ID
     pub release_groups: std::collections::HashMap<String, (String, Option<String>, usize, Option<String>)>, // RG_ID -> (Title, Art, Count, Type)
+    #[serde(default)]
+    pub name_map: std::collections::HashMap<String, Vec<(String, String)>>, // Track Name (lowercase) -> Vec<(Recording MBID, RG MBID)>
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]

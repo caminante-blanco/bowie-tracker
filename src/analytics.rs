@@ -285,6 +285,41 @@ pub fn is_bowie_meta(m: &crate::models::TrackMetadata, lookup: &BowieLookup) -> 
     id.map(|i| lookup.recordings.contains_key(i)).unwrap_or(false)
 }
 
+pub fn match_playing_now(
+    m: &crate::models::TrackMetadata, 
+    lookup: &BowieLookup,
+    last_rg_mbid: Option<&String>
+) -> Option<(String, String)> { // (Recording MBID, Release Group MBID)
+    // 1. Direct MBID match
+    let direct_id = m.mbid_mapping.as_ref()
+        .and_then(|x| x.recording_mbid.as_ref())
+        .or_else(|| m.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
+
+    if let Some(id) = direct_id {
+        if let Some(rg_id) = lookup.recordings.get(id) {
+            return Some((id.clone(), rg_id.clone()));
+        }
+    }
+
+    // 2. Name-based match fallback
+    let norm_name = m.track_name.to_lowercase();
+    if let Some(matches) = lookup.name_map.get(&norm_name) {
+        if matches.is_empty() { return None; }
+        
+        // If we have a last seen album, prioritize a match from that album
+        if let Some(last_rg) = last_rg_mbid {
+            if let Some(preferred) = matches.iter().find(|(_, rg)| rg == last_rg) {
+                return Some(preferred.clone());
+            }
+        }
+        
+        // Otherwise, just take the first match
+        return Some(matches[0].clone());
+    }
+    
+    None
+}
+
 pub fn format_relative_time(ts: i64, now: i64) -> String {
     let d = now - ts;
     if d < 60 { return "Just now".into(); }

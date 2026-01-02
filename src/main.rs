@@ -3,16 +3,17 @@ use chrono::Utc;
 use std::collections::HashMap;
 
 use bowie_tracker::models::{Listen, ListenBrainzResponse, PlayingNowResponse, BowieLookup, PlayingNowListen};
-use bowie_tracker::analytics::{calculate_metrics, is_bowie_meta, format_relative_time, MonthlyWrapped, DayStats};
+use bowie_tracker::analytics::{calculate_metrics, is_bowie_meta, format_relative_time, MonthlyWrapped, DayStats, match_playing_now};
 use bowie_tracker::db::{init_db, add_listens, get_all_listens, get_max_timestamp, get_all_album_metadata};
 use bowie_tracker::charts::ListeningHistoryChart;
+use bowie_tracker::api::fetch_with_rate_limit;
 
 #[derive(Clone, Copy, PartialEq)]
 enum Page { Dashboard, Rewards, Charts, Settings, DayDetail }
 
 fn main() {
     console_error_panic_hook::set_once();
-    web_sys::console::log_1(&"Ziggy Tracker v2026.01.02.1 - Timer Update".into());
+    web_sys::console::log_1(&"Ziggy Tracker v2026.01.02.2 - High Frequency Sync".into());
     mount_to_body(|| view! { <App/> })
 }
 
@@ -30,6 +31,8 @@ fn App() -> impl IntoView {
 
     let (playback_start, set_playback_start) = create_signal(None::<i64>);
     let (now_ts, set_now_ts) = create_signal(Utc::now().timestamp());
+
+    let (last_np_json, set_last_np_json) = create_signal(String::new());
 
     create_effect(move |_| {
         let handle = gloo_timers::callback::Interval::new(1_000, move || {
@@ -84,7 +87,7 @@ fn App() -> impl IntoView {
         });
     };
 
-    let perform_sync = move || {
+    let sync_history = move || {
         let user = username.get_untracked();
         let user_token = token.get_untracked();
         let lookup_opt = bowie_lookup.get_untracked();
@@ -92,13 +95,10 @@ fn App() -> impl IntoView {
         
         spawn_local(async move {
             set_is_syncing.set(true);
-            set_status.set("SYNCING".to_string());
             if let Ok(db) = init_db().await {
                 let latest_ts = get_max_timestamp(&db).await.unwrap_or(None).unwrap_or(0);
                 let url = format!("https://api.listenbrainz.org/1/user/{}/listens?count=1000&min_ts={}", user, latest_ts + 1);
-                let mut req = reqwest::Client::new().get(&url);
-                if !user_token.is_empty() { req = req.header("Authorization", format!("Token {}", user_token)); }
-                if let Ok(resp) = req.send().await {
+                if let Ok(resp) = fetch_with_rate_limit(&url, &user_token).await {
                     if let Ok(json) = resp.json::<ListenBrainzResponse>().await {
                         let batch = json.payload.listens;
                         if !batch.is_empty() {
@@ -107,26 +107,44 @@ fn App() -> impl IntoView {
                         }
                     }
                 }
-                let np_url = format!("https://api.listenbrainz.org/1/user/{}/playing-now", user);
-                let mut np_req = reqwest::Client::new().get(&np_url);
-                if !user_token.is_empty() { np_req = np_req.header("Authorization", format!("Token {}", user_token)); }
-                if let Ok(resp) = np_req.send().await {
-                    if let Ok(json) = resp.json::<PlayingNowResponse>().await {
+            }
+            set_is_syncing.set(false);
+        });
+    };
+
+    let sync_now_playing = move || {
+        let user = username.get_untracked();
+        let user_token = token.get_untracked();
+        let lookup_opt = bowie_lookup.get_untracked();
+        if user.is_empty() || lookup_opt.is_none() { return; }
+
+        spawn_local(async move {
+            let url = format!("https://api.listenbrainz.org/1/user/{}/playing-now", user);
+            if let Ok(resp) = fetch_with_rate_limit(&url, &user_token).await {
+                if let Ok(text) = resp.text().await {
+                    // Optimization: Only process if the JSON content changed
+                    if text == last_np_json.get_untracked() { return; }
+                    set_last_np_json.set(text.clone());
+
+                    if let Ok(json) = serde_json::from_str::<PlayingNowResponse>(&text) {
                         if let Some(lookup) = &lookup_opt {
-                            let new_np = json.payload.listens.into_iter().find(|l| {
-                                is_bowie_meta(&l.track_metadata, lookup)
-                            });
-                            
+                            let matches: Vec<_> = json.payload.listens.into_iter().filter(|l| {
+                                is_bowie_meta(&l.track_metadata, lookup) || 
+                                lookup.name_map.contains_key(&l.track_metadata.track_name.to_lowercase())
+                            }).collect();
+
+                            let new_np = matches.first().cloned();
                             let current_np = now_playing.get_untracked();
+                            
                             let new_id = new_np.as_ref().map(|l| (l.track_metadata.track_name.clone(), l.track_metadata.artist_name.clone()));
                             let old_id = current_np.as_ref().map(|l| (l.track_metadata.track_name.clone(), l.track_metadata.artist_name.clone()));
-                            
+
                             if let Some(nid) = &new_id {
                                 let mut start_ts = playback_start.get_untracked();
                                 
                                 if start_ts.is_none() || new_id != old_id {
+                                    // 1. Try to restore from local storage
                                     let mut restored = false;
-                                    // Try to restore from local storage first to handle refreshes
                                     if let Some(win) = web_sys::window() {
                                         if let Ok(Some(s)) = win.local_storage() {
                                             if let (Ok(Some(saved_id_str)), Ok(Some(saved_ts_str))) = (s.get_item("np_id"), s.get_item("np_start_ts")) {
@@ -141,6 +159,15 @@ fn App() -> impl IntoView {
                                             }
                                         }
                                     }
+
+                                    // 2. Try to cross-reference with history for perfect start time
+                                    if let Some(l) = listens.get_untracked().first() {
+                                        // Match on name and artist
+                                        if l.track_metadata.track_name == nid.0 && l.track_metadata.artist_name == nid.1 {
+                                            start_ts = Some(l.listened_at);
+                                            restored = true;
+                                        }
+                                    }
                                     
                                     if !restored {
                                         let now = Utc::now().timestamp();
@@ -153,6 +180,15 @@ fn App() -> impl IntoView {
                                         }
                                     }
                                     set_playback_start.set(start_ts);
+                                } else {
+                                    // Even if track didn't change, history might have appeared now
+                                    if let Some(l) = listens.get_untracked().first() {
+                                        if l.track_metadata.track_name == nid.0 && l.track_metadata.artist_name == nid.1 {
+                                            if start_ts != Some(l.listened_at) {
+                                                set_playback_start.set(Some(l.listened_at));
+                                            }
+                                        }
+                                    }
                                 }
                             } else {
                                 set_playback_start.set(None);
@@ -168,21 +204,20 @@ fn App() -> impl IntoView {
                     }
                 }
             }
-            set_is_syncing.set(false);
-            set_status.set("Ready".to_string());
         });
     };
 
     create_effect(move |_| {
-        // Trigger sync immediately once DB is ready and user is setup
         if bowie_lookup.get().is_some() && is_setup.get() {
-            perform_sync();
+            sync_history();
+            sync_now_playing();
         }
     });
 
     create_effect(move |_| {
-        let handle = gloo_timers::callback::Interval::new(30_000, move || perform_sync());
-        move || drop(handle)
+        let h_handle = gloo_timers::callback::Interval::new(30_000, move || sync_history());
+        let np_handle = gloo_timers::callback::Interval::new(1_000, move || sync_now_playing());
+        move || { drop(h_handle); drop(np_handle); }
     });
 
     create_effect(move |_| {
@@ -197,7 +232,7 @@ fn App() -> impl IntoView {
         refresh_data();
     });
 
-    let sync_action = create_action(move |_: &()| async move { perform_sync(); });
+    let sync_action = create_action(move |_: &()| async move { sync_history(); sync_now_playing(); });
 
     let deep_sync = create_action(move |_: &()| {
         let user = username.get();
@@ -210,9 +245,7 @@ fn App() -> impl IntoView {
                 for i in 0..20 {
                     set_status.set(format!("DEEP SYNC {}/20", i+1));
                     let url = format!("https://api.listenbrainz.org/1/user/{}/listens?count=1000&max_ts={}", user, oldest_ts - 1);
-                    let mut req = reqwest::Client::new().get(&url);
-                    if !user_token.is_empty() { req = req.header("Authorization", format!("Token {}", user_token)); }
-                    if let Ok(resp) = req.send().await {
+                    if let Ok(resp) = fetch_with_rate_limit(&url, &user_token).await {
                         if let Ok(json) = resp.json::<ListenBrainzResponse>().await {
                             let batch = json.payload.listens;
                             if batch.is_empty() { break; }
@@ -221,11 +254,11 @@ fn App() -> impl IntoView {
                             refresh_data();
                         } else { break; }
                     } else { break; }
-                    gloo_timers::future::sleep(std::time::Duration::from_millis(300)).await;
                 }
                 set_status.set("HISTORY READY".to_string());
             }
             set_is_syncing.set(false);
+            set_status.set("Ready".to_string());
         }
     });
 
@@ -242,7 +275,7 @@ fn App() -> impl IntoView {
                     <div style="width: 100%; max-width: 350px; display: flex; flex-direction: column; gap: 15px;">
                         <label for="username_setup" class="visually-hidden">"ListenBrainz Username"</label>
                         <input id="username_setup" type="text" placeholder="ListenBrainz Username" on:input=move |ev| { let v = event_target_value(&ev); set_username.set(v.clone()); if let Some(win) = web_sys::window() { if let Ok(Some(s)) = win.local_storage() { let _ = s.set_item("lb_username", &v); } } } style="padding: 15px; font-size: 1.1rem;"/>
-                        <button on:click=move |_| { perform_sync(); deep_sync.dispatch(()); set_is_setup.set(true); } style="padding: 20px; background: var(--primary); font-weight: bold; letter-spacing: 2px;">"INITIALIZE"</button>
+                        <button on:click=move |_| { sync_history(); sync_now_playing(); deep_sync.dispatch(()); set_is_setup.set(true); } style="padding: 20px; background: var(--primary); font-weight: bold; letter-spacing: 2px;">"INITIALIZE"</button>
                     </div>
                 </div>
             }.into_view() } else { view! { <div></div> }.into_view() }}
