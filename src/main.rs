@@ -1,6 +1,6 @@
 use leptos::*;
-use chrono::{Utc, TimeZone};
-use std::collections::{HashMap, HashSet};
+use chrono::Utc;
+use std::collections::HashMap;
 
 use bowie_tracker::models::{Listen, ListenBrainzResponse, PlayingNowResponse, BowieLookup, PlayingNowListen};
 use bowie_tracker::analytics::{calculate_metrics, is_bowie_meta, format_relative_time, MonthlyWrapped, DayStats};
@@ -26,6 +26,16 @@ fn App() -> impl IntoView {
     
     let (track_counts, set_track_counts) = create_signal(HashMap::<String, usize>::new());
     let (bowie_lookup, set_bowie_lookup) = create_signal(None::<BowieLookup>);
+
+    let (playback_start, set_playback_start) = create_signal(None::<i64>);
+    let (now_ts, set_now_ts) = create_signal(Utc::now().timestamp());
+
+    create_effect(move |_| {
+        let handle = gloo_timers::callback::Interval::new(1_000, move || {
+            set_now_ts.set(Utc::now().timestamp());
+        });
+        move || drop(handle)
+    });
 
     create_effect(move |_| {
         spawn_local(async move {
@@ -102,9 +112,57 @@ fn App() -> impl IntoView {
                 if let Ok(resp) = np_req.send().await {
                     if let Ok(json) = resp.json::<PlayingNowResponse>().await {
                         if let Some(lookup) = &lookup_opt {
-                            set_now_playing.set(json.payload.listens.into_iter().find(|l| {
+                            let new_np = json.payload.listens.into_iter().find(|l| {
                                 is_bowie_meta(&l.track_metadata, lookup)
-                            }));
+                            });
+                            
+                            let current_np = now_playing.get_untracked();
+                            let new_id = new_np.as_ref().map(|l| (l.track_metadata.track_name.clone(), l.track_metadata.artist_name.clone()));
+                            let old_id = current_np.as_ref().map(|l| (l.track_metadata.track_name.clone(), l.track_metadata.artist_name.clone()));
+                            
+                            if let Some(nid) = &new_id {
+                                let mut start_ts = playback_start.get_untracked();
+                                
+                                if start_ts.is_none() || new_id != old_id {
+                                    let mut restored = false;
+                                    // Try to restore from local storage first to handle refreshes
+                                    if let Some(win) = web_sys::window() {
+                                        if let Ok(Some(s)) = win.local_storage() {
+                                            if let (Ok(Some(saved_id_str)), Ok(Some(saved_ts_str))) = (s.get_item("np_id"), s.get_item("np_start_ts")) {
+                                                if let Ok(saved_id) = serde_json::from_str::<(String, String)>(&saved_id_str) {
+                                                    if &saved_id == nid {
+                                                        if let Ok(ts) = saved_ts_str.parse::<i64>() {
+                                                            start_ts = Some(ts);
+                                                            restored = true;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    if !restored {
+                                        let now = Utc::now().timestamp();
+                                        start_ts = Some(now);
+                                        if let Some(win) = web_sys::window() {
+                                            if let Ok(Some(s)) = win.local_storage() {
+                                                let _ = s.set_item("np_start_ts", &now.to_string());
+                                                let _ = s.set_item("np_id", &serde_json::to_string(nid).unwrap_or_default());
+                                            }
+                                        }
+                                    }
+                                    set_playback_start.set(start_ts);
+                                }
+                            } else {
+                                set_playback_start.set(None);
+                                if let Some(win) = web_sys::window() {
+                                    if let Ok(Some(s)) = win.local_storage() {
+                                        let _ = s.remove_item("np_start_ts");
+                                        let _ = s.remove_item("np_id");
+                                    }
+                                }
+                            }
+                            set_now_playing.set(new_np);
                         }
                     }
                 }
@@ -214,18 +272,33 @@ fn App() -> impl IntoView {
                     match current_page.get() {
                         Page::Dashboard => view! {
                             <div style="display: flex; flex-direction: column; gap: 15px;">
-                                {move || now_playing.get().map(|l| view! {
+                                {move || now_playing.get().map(|l| {
+                                    let duration = l.track_metadata.additional_info.as_ref().and_then(|i| i.duration_ms).unwrap_or(0);
+                                    let start = playback_start.get().unwrap_or(0);
+                                    let now = now_ts.get();
+                                    let elapsed_ms = (now - start).max(0) * 1000;
+                                    let pct = if duration > 0 { (elapsed_ms as f64 / duration as f64) * 100.0 } else { 0.0 };
+                                    let pct_clamped = pct.min(100.0);
+                                    let fmt_time = |ms: i64| format!("{}:{:02}", ms / 60000, (ms % 60000) / 1000);
+
+                                    view! {
                                     <div class="card now-playing-card" style="border: 2px solid var(--primary); background: #32302f; padding: 12px 15px;">
                                         <div style="display: flex; justify-content: space-between; align-items: center;">
                                             <div>
                                                 <div class="stat-label" style="color: var(--primary); font-size: 0.6rem; letter-spacing: 2px; font-weight: 900;">"LIVE ON AIR"</div>
                                                 <div style="font-weight: 900; font-size: 1.3rem; color: var(--fg-color); margin: 4px 0;">{l.track_metadata.track_name}</div>
                                                 <div style="font-size: 0.8rem; color: #a89984; font-weight: 500;">"David Bowie"</div>
+                                                <div style="margin-top: 8px; font-size: 0.7rem; font-family: monospace; color: var(--secondary);">
+                                                    {fmt_time(elapsed_ms)} " / " {if duration > 0 { fmt_time(duration) } else { "??:??".to_string() }}
+                                                </div>
                                             </div>
                                             <div class="pulse-icon" style="width: 12px; height: 12px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--primary);"></div>
                                         </div>
+                                        <div style="background: var(--surface); height: 4px; border-radius: 2px; margin-top: 10px; width: 100%; overflow: hidden;">
+                                            <div style={format!("width: {}%; background: var(--primary); height: 100%; transition: width 1s linear;", pct_clamped)}></div>
+                                        </div>
                                     </div>
-                                })}
+                                }})}
 
                                 <div class="card" style="border-left: 4px solid var(--accent); padding: 15px;">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">

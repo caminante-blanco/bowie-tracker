@@ -1,7 +1,9 @@
-use bowie_tracker::models::ListenBrainzResponse;
-use bowie_tracker::analytics::is_bowie;
+use bowie_tracker::models::{ListenBrainzResponse, BowieLookup};
+use bowie_tracker::analytics::is_bowie_meta;
 use reqwest::Client;
 use std::env;
+use std::fs::File;
+use std::io::BufReader;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -13,6 +15,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let user = &args[1];
     let token = args.get(2);
+
+    println!("Loading bowie_lookup.json...");
+    let file = File::open("bowie_lookup.json").expect("Failed to open bowie_lookup.json");
+    let reader = BufReader::new(file);
+    let lookup: BowieLookup = serde_json::from_reader(reader).expect("Failed to parse lookup");
 
     println!("--- Headless Verification for user: {} ---", user);
 
@@ -37,7 +44,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Fetched {} listens.", listens.len());
 
-    let bowie_listens: Vec<_> = listens.iter().filter(|l| is_bowie(l)).collect();
+    let bowie_listens: Vec<_> = listens.iter().filter(|l| is_bowie_meta(&l.track_metadata, &lookup)).collect();
     println!("Found {} David Bowie listens in the last 100 tracks.", bowie_listens.len());
 
     println!("\n--- Data Preview (MBID Mapping Only) ---");
