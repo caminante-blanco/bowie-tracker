@@ -129,7 +129,10 @@ fn App() -> impl IntoView {
                     if let Ok(json) = serde_json::from_str::<PlayingNowResponse>(&text) {
                         if let Some(lookup) = &lookup_opt {
                             // Get hint from last listen
-                            let last_rg_id_string = listens.get_untracked().first().and_then(|l| {
+                            let first_listen = listens.get_untracked().first().cloned();
+                            web_sys::console::log_1(&format!("DEBUG: History Tip: {:?}", first_listen.as_ref().map(|l| &l.track_metadata.track_name)).into());
+                            
+                            let last_rg_id_string = first_listen.as_ref().and_then(|l| {
                                 match_playing_now(&l.track_metadata, lookup, None).map(|(_rec_id, rg_id)| rg_id)
                             });
                             let last_rg_id = last_rg_id_string.as_ref();
@@ -326,11 +329,10 @@ fn App() -> impl IntoView {
                                     // Trusted Lookup using robust matching
                                     if let Some(lookup) = bowie_lookup.get() {
                                         // Get hint from last listen to prioritize current album
-                                        let last_rg_id = listens.get().first().and_then(|l| {
-                                            let id = l.track_metadata.mbid_mapping.as_ref().and_then(|m| m.recording_mbid.as_ref())
-                                                .or_else(|| l.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
-                                            id.and_then(|i| lookup.recordings.get(i))
+                                        let last_rg_id_string = listens.get().first().and_then(|l| {
+                                            match_playing_now(&l.track_metadata, &lookup, None).map(|(_rec_id, rg_id)| rg_id)
                                         });
+                                        let last_rg_id = last_rg_id_string.as_ref();
 
                                         // Use the shared matching logic to find the ID (mbid or name match)
                                         if let Some((rec_id, rg_id)) = match_playing_now(&l.track_metadata, &lookup, last_rg_id) {
