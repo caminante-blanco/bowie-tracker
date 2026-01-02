@@ -129,17 +129,21 @@ fn App() -> impl IntoView {
                     if let Ok(json) = serde_json::from_str::<PlayingNowResponse>(&text) {
                         if let Some(lookup) = &lookup_opt {
                             // Get hint from last listen
-                            let last_rg_id = listens.get_untracked().first().and_then(|l| {
-                                let id = l.track_metadata.mbid_mapping.as_ref().and_then(|m| m.recording_mbid.as_ref())
-                                    .or_else(|| l.track_metadata.additional_info.as_ref().and_then(|i| i.recording_mbid.as_ref()));
-                                id.and_then(|i| lookup.recordings.get(i))
+                            let last_rg_id_string = listens.get_untracked().first().and_then(|l| {
+                                match_playing_now(&l.track_metadata, lookup, None).map(|(_rec_id, rg_id)| rg_id)
                             });
+                            let last_rg_id = last_rg_id_string.as_ref();
+                            
+                            web_sys::console::log_1(&format!("DEBUG: Last RG ID Hint: {:?}", last_rg_id).into());
 
                             let matches: Vec<_> = json.payload.listens.into_iter().filter(|l| {
-                                match_playing_now(&l.track_metadata, lookup, last_rg_id).is_some()
+                                let is_match = match_playing_now(&l.track_metadata, lookup, last_rg_id).is_some();
+                                web_sys::console::log_1(&format!("DEBUG: Checking '{}': Match? {}", l.track_metadata.track_name, is_match).into());
+                                is_match
                             }).collect();
 
                             let new_np = matches.first().cloned();
+                            web_sys::console::log_1(&format!("DEBUG: New NP found: {:?}", new_np.as_ref().map(|n| &n.track_metadata.track_name)).into());
                             let current_np = now_playing.get_untracked();
                             
                             let new_id = new_np.as_ref().map(|l| (l.track_metadata.track_name.clone(), l.track_metadata.artist_name.clone()));

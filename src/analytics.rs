@@ -302,19 +302,32 @@ pub fn match_playing_now(
     }
 
     // 2. Name-based match fallback
-    let norm_name = m.track_name.to_lowercase();
-    if let Some(matches) = lookup.name_map.get(&norm_name) {
-        if matches.is_empty() { return None; }
-        
-        // If we have a last seen album, prioritize a match from that album
-        if let Some(last_rg) = last_rg_mbid {
-            if let Some(preferred) = matches.iter().find(|(_, rg)| rg == last_rg) {
-                return Some(preferred.clone());
+    let normalize = |s: &str| -> String {
+        s.trim().to_lowercase().replace('’', "'").replace('‘', "'").replace('`', "'")
+    };
+
+    let base_norm = normalize(&m.track_name);
+    
+    // Try variations: Base, & <-> and, etc.
+    let mut variations = vec![base_norm.clone()];
+    if base_norm.contains(" and ") { variations.push(base_norm.replace(" and ", " & ")); }
+    if base_norm.contains(" & ") { variations.push(base_norm.replace(" & ", " and ")); }
+    
+    // Check all variations
+    for v in variations {
+        if let Some(matches) = lookup.name_map.get(&v) {
+            if matches.is_empty() { continue; }
+            
+            // If we have a last seen album, prioritize a match from that album
+            if let Some(last_rg) = last_rg_mbid {
+                if let Some(preferred) = matches.iter().find(|(_, rg)| rg == last_rg) {
+                    return Some(preferred.clone());
+                }
             }
+            
+            // Otherwise, just take the first match
+            return Some(matches[0].clone());
         }
-        
-        // Otherwise, just take the first match
-        return Some(matches[0].clone());
     }
     
     None
